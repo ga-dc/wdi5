@@ -1,5 +1,10 @@
 # GitHub
 
+## Video Recordings
+
+- [github](https://vimeo.com/122563352)
+- [submitting hw](https://vimeo.com/122563351)
+
 ## Learning Objectives
 
 - Differentiate between Git and Github
