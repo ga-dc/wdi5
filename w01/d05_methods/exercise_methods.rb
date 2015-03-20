@@ -80,3 +80,10 @@ def surround_with_curly_brackets(text)
 end
 
 assert_true( surround_with_curly_brackets("I'm surrounded by handlebar mustaches") == "{I'm surrounded by handlebar mustaches}" )
+
+
+##(BONUS)##
+
+#	What happens if you put a method inside a method?
+#	Can you call variables INSIDE the method FROM OUTSIDE the method?
+#	Can you call variables OUTSIDE the method from INSIDE the method?
