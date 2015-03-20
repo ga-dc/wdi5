@@ -322,20 +322,23 @@ puts my_lunch
 ##	Nested methods
 
 ```
-def microwave(tray)
+def toaster(tray)
 
-	def explode(material)
-		if(material == "metal")
-			return "BOOM!"
+	def test_for_sandwich(substance)
+		if(substance == "BLT" || substance == "turkey_sub")
+			return substance + "(Toasty!)"
+		else
+			return "That ain't no sammich!"
 		end
 	end
 
- 	contents = tray
+	contents = tray
 
-	return "It went " + explode(contents)
+	return test_for_sandwich(contents)
+
 end
 
-puts microwave("metal")
+puts toaster("BLT")
 ```
 
 -	To put some of this in English: the method "explode" returns "BOOM!" if its argument equals "metal"
