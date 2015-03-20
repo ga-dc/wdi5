@@ -208,7 +208,7 @@ my_lunch = toaster()
 puts my_lunch
 ```
 
--	**WHY DOES THIS WORK?**
+-	**WHY DOES THIS NOT WORK?**
 	-	Methods inherit any variables "outside" them.
 	-	It only works **ONE DIRECTION**
 		-	The machine can't get `sandwich` without me placing the sandwich on the tray
