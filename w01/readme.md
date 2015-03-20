@@ -1,11 +1,11 @@
-# Learning Objectives
+# Learning Objectives, W01
 
 ## CLI
 
-- Describe the difference between a command, its flags, and its arguments
-- Create and modify folders and files using the shell
-- Describe the difference between an absolute and a relative path
-- Distinguish between safe and unsafe commands
+-	Describe the difference between a command, its flags, and its arguments
+-	Create and modify folders and files using the shell
+-	Describe the difference between an absolute and a relative path
+-	Distinguish between safe and unsafe commands
 
 ## Git
 
@@ -46,11 +46,12 @@
 
 ## Collections
 
-- Describe the differences between arrays, hashes, sets, and ranges
-- Use Ruby methods to create collections from data, combine and modify them, and make them interact with each other
-- Build tree structures using arrays of arrays
-- Create both hashes that use strings as keys, and hashes that use symbols, and explain the difference
-- Explain the difference between mutability and immutability.
+-	Describe the differences between arrays, hashes, sets, and ranges
+-	Use Ruby methods to create collections from data, combine and modify them, and make them interact with each other
+-	Build tree structures using arrays of arrays
+-	Create both hashes that use strings as keys, and hashes that use symbols, and explain the difference
+-	Explain the difference between mutability and immutability.
+
 
 ## Enumeration
 
@@ -61,3 +62,11 @@
 - Compare and contrast "break" and "next", and when you would use each
 - Use "break" and "next" to appropriately exit a loop
 - Explain what 'yielding' to a block means, and why it is necessary
+
+## Methods
+
+- Define methods that incorporate...
+    - Explicit and implicit returns
+    - Are passed arguments
+    - Nested methods
+- Distinguish between internal and external variables
