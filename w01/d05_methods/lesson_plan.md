@@ -211,7 +211,8 @@ puts my_lunch
 -	**WHY DOES THIS WORK?**
 	-	Methods inherit any variables "outside" them.
 	-	It only works **ONE DIRECTION**
-		-	The machine can get `sandwich` from outside it, but I can't get `tray` from inside the machine
+		-	The machine can't get `sandwich` without me placing the sandwich on the tray
+		-	...nor can I get `tray` from inside the machine
 
 ---
 
