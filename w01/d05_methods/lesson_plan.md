@@ -76,7 +76,7 @@ puts my_lunch
 ```
 def toaster
 	tray = "BLT"
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 
@@ -103,7 +103,7 @@ puts my_lunch
 
 ```
 def toaster(tray)
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 
@@ -115,7 +115,7 @@ puts my_lunch
 ####Incorrect argument
 ```
 def toaster("turkey_sub")
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 ```
@@ -125,7 +125,7 @@ end
 ####Variable scope
 ```
 def toaster(tray)
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 
@@ -150,7 +150,7 @@ puts tray
 
 ```
 def toaster(tray)
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 
@@ -169,7 +169,7 @@ puts my_lunch
 
 ```
 def toaster(tray)
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 
@@ -188,6 +188,24 @@ puts my_lunch
 
 ---
 
+##	Multiple arguments
+
+```
+sandwich = "BLT"
+toastiness = "(Really toasty!)"
+
+def toaster(tray, dial_setting)
+	tray = tray + dial_setting
+	return tray
+end
+
+my_lunch = toaster(sandwich, toastiness)
+
+puts my_lunch
+```
+
+---
+
 ##	Variable scope
 
 ```
@@ -199,7 +217,7 @@ end
 
 def toaster()
 	tray = sandwich
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	return tray
 end
 
@@ -208,8 +226,8 @@ my_lunch = toaster()
 puts my_lunch
 ```
 
--	**WHY DOES THIS NOT WORK?**
-	-	Methods inherit any variables "outside" them.
+-	**WHY DOESN'T THIS WORK?**
+	-	Methods can't access variables outside themselves unless they're passed to the method as arguments
 	-	It only works **ONE DIRECTION**
 		-	The machine can't get `sandwich` without me placing the sandwich on the tray
 		-	...nor can I get `tray` from inside the machine
@@ -228,7 +246,7 @@ puts my_lunch
 ```
 def toaster(tray)
 	if(tray == "BLT" || tray == "turkey_sub")
-		tray += "(Toasty!)"
+		tray = tray + "(Toasty!)"
 		return tray
 	else
 		return tray
@@ -244,7 +262,7 @@ puts my_lunch
 ```
 def toaster(tray)
 	if(tray == "BLT" || tray == "turkey_sub")
-		tray += "(Toasty!)"
+		tray = tray + "(Toasty!)"
 		return tray
 	end
 
@@ -264,7 +282,7 @@ puts my_lunch
 
 ```
 def toaster(tray)
-	tray += "(Toasty!)"
+	tray = tray + "(Toasty!)"
 	tray
 end
 
@@ -285,7 +303,7 @@ puts my_lunch
 ```
 def toaster(tray)
 	if(tray == "BLT" || tray == "turkey_sub")
-		tray += "(Toasty!)"
+		tray = tray + "(Toasty!)"
 		tray
 	end
 
@@ -298,6 +316,29 @@ my_lunch = toaster("BLT")
 puts my_lunch
 ```
 -	Why did it say a BLT isn't a sandwich?
+
+---
+
+##	Nested methods
+
+```
+def microwave(tray)
+
+	def explode(material)
+		if(material == "metal")
+			return "BOOM!"
+		end
+	end
+
+ 	contents = tray
+
+	return "It went " + explode(contents)
+end
+
+puts microwave("metal")
+```
+
+-	To put some of this in English: the method "explode" returns "BOOM!" if its argument equals "metal"
 
 ---
 
