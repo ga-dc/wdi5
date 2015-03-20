@@ -6,7 +6,7 @@ An implicit returned is what is returned by a method that **does not** have a `r
 
 A side effect is something that takes place **outside** of a method as a result of that method being executed, but is **not** explicitly returned by the method, nor necessarily implicitly returned.
 
-For example:
+####For example:
 
 ```
 def toaster(tray)
@@ -49,7 +49,7 @@ Forking a repository makes a copy of it that *you* exclusively own. It's as if y
 
 Making a branch within a repository makes a copy of it that is owned by whoever owns the whole repository. You are still subject to their rules. The changes you make to your branch affect what is seen by everyone else contributing to that repository. The repository's owner can choose to accept or reject your changes.
 
-For example:
+####For example:
 
 The US Bureau of Engraving and Printing makes the nation's money. They want to make some tweaks to the molds they use to stamp coins, and have hired you as a designer. You make a copy of the mold, and make some changes to your copy. If the Bureau likes your changes, they'll swap out the existing mold with your new one. This is like making a **branch**.
 
@@ -61,12 +61,65 @@ Unfortunately, the Bureau doesn't like your changes, and rejects them. You reall
 
 A method does not have access to variables *outside* the method. Something outside a method does not have access to variables *inside* it. The only way you can pass variables into a method is by explicitly passing it arguments, and the only way you can get variables out of a method is by that method returning those variables.
 
+####For example:
+
 In the same way, you can't put a sandwich into a Quizno's toaster if there isn't a hatch you can stick your hand into so you can put the sandwich on the tray on the conveyer belt.
 
 You can't get a sandwich *out* of a Quizno's toaster if there isn't a hatch on the other end through which the sandwich can exit once it's been toasted.
+
+Here are the notes from our discussion of methods and variable scope:
+
+https://github.com/ga-students/addbass/blob/master/w01/d05_methods/lesson_plan.md
 
 ---
 
 ##	Truthy vs true vs falsy vs false
 
+Ruby considers a value to be "falsy" if the value is either `false` or `nil`. This is different from Ruby considering a value to be just "false", which means the value is explicitly `false` (and not `nil`).
 
+Ruby considers a value to be "truthy" if the value is anything *but* `false` or `nil`. This is different from Ruby considering a value to be just "true", which means the value is explicitly `true`.
+
+####For example:
+
+```
+#	Things that are FALSY:
+
+my_variable
+#Note that my_variable has no value
+
+my_variable = nil
+
+my_variable = false
+
+"a" == "b"
+
+1 > 2
+
+#	Things that are TRUTHY:
+
+my_variable = ""
+
+my_variable = 0
+
+my_variable = -1
+
+my_variable = "false"
+#Note that "false" is a string
+
+my_variable = []
+
+my_variable = {}
+
+my_variable = [nil, nil, nil]
+
+my_variable
+#Because my_variable has been assigned a value in the previous lines
+
+#You can test all these with code like this:
+
+if(my_variable)
+	puts "truthy"
+else
+	puts "falsy"
+end
+```
