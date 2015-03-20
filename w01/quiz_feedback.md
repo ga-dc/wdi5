@@ -123,3 +123,7 @@ else
 	puts "falsy"
 end
 ```
+
+Here's where Boolean logic and truthy/falsiness is discussed in the pre-work:
+
+http://fundamentals.generalassemb.ly/03_chapter/08_lesson.html
