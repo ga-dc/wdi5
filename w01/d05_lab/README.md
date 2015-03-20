@@ -1,37 +1,56 @@
-# ![](http://clipart.coolclips.com/AGifm/tf05247/CoolClips_wb030954.gif) AddBass-o'matic PDA.
+# AddBass PDA Lab
 
-## Let's get retro
-- Everyone knows that hipster chic is what it's all about right now.
-- A key aspect of tapping this market is to shun our modern technology and go back to a simpler time.
-- The way we are going to achieve this is by making a command line PDA (because hipsters are always on their MacBooks -- but only ironically).
+## 1. Titleizr
 
-## Specs
+AddBass loved what you did with the temperature converter and they want you to add to the personal assistant commandline app!
 
-- First and foremost we want to bring in the functionality of our temperature converter.
-- Feel free to copy your code from the in class exercise into this app.
+- Add to your existing program (Starter code in the pda.rb file) that contains the temperature converter
 
-- Next, we know we will be adding new features and functionalities to our PDA, so it would make sense to have a menu to present to the user to allow them to make choices.
-- We'll start simply...
-  - *A user should be able to see a menu offering multiple option.*
-  - Something like:
-    ```
-    Enter 1 for a nice greeting!
-    Enter 2 to convert a temperature.
-    Enter 3 to see your personal information.
-    etc...
-    ```
----
-- *When a user enters '1' they should be greeted however you like.*
-- *When a user enters '2' they should be prompted for a temp, starting format, and ending format.*
-- *When a user enters '3' their 'hard-coded' personal information should be displayed in a legible format.*
-- *When a user enters 'Q' the program should exit.*
-- *After each option is selected and the corresponding action is completed, the user should again be prompted with the menu so they continue in the program until choosing 'Q'.*
-- *When a user enters '4' they should be given an option to help them decide if they need to turn on their heater or AC unit.*
-    - Ask the user what the current temperature is, if the A/C is functional, and what temperature they wish it was.
-    - If the AC is functional and the current temperature is above the the desired temperature... display "Turn on the AC Please"
-    - If the AC is non-functional and the current temperature is above the the desired temperature... display "Fix the AC now! It's hot!"
-    - If the AC is non-functional and the current temperature is below the the desired temperature... display "Fix the AC whenever you have the chance... It's cool..."
+- the new function of the app should receive user input
 
-## __BONUS__
-- __PLEASE NOTE: This is a stretch goal if you are able to complete all the other specification, it is not required or expected.__
-- Add any other functionality you think would be cool (calculator, to-do list, whateva!)
+- Through the use of enumerables, titleize the input!
+  - If the string `"dogs are so cute and cuddly"` is inputed:
+  - You should puts something like this: `"The titleized version of the string you entered is: Dogs Are So Cute And Cuddly"`
+
+- The program should still have the same temperature converter function, and should loop back to the main menu after it has titleized the string.
+
+<b>*BONUS*</b>
+- have small words like "a", "are", "the", "is", "and" not be capitalized in the puts.
+
+
+## 2. Todo List
+
+Let's use our newfound knowledge of arrays to add a to-do list to AddBass PDA.
+
+* When the user selects the 'Task Manager' option in the main menu, they should be directed to a sub-menu with the following info
+  * A list of all tasks
+  * 'Add task' option
+  * 'Finish task' option
+  * Prompt for user input
+* Selecting 'Add task' should prompt the user to enter text for a new task, add it to the existing list of tasks, and redirect to the main menu
+* Selecting 'Finish task' should prompt the user to enter the task number, remove the corresponding task, and redirect to the main menu
+* Bonus: After performing task manager operations, the user should be redirected to the task manager menu instead of the main menu
+
+## 3. Personal Information Manager
+
+Let's add our personal information to AddBass PDA.
+
+* Step 1 - Add our personal info
+  * Instantiate a hash with your personal info in it at the beginning of our program
+  * Add an option in our menu to view our personal info.
+  * When the user selects this option, the program should print our personal info and redirect to the main menu
+
+Here's an example of what we should see.
+
+```
+Name: Randy
+Age: 42
+Occupation: Co-Founder, AddBass Enterprises Global
+Favorite Food: Fig Newtons
+```
+
+* Step 2 - Add an option in the main menu for the user to edit their personal info
+  * When the user selects this option, the personal info should be displayed
+  * The user should then be prompted to enter which piece of info they wish to edit
+  * The user should then be prompted to enter the new value for the piece of info they selected
+  * The new personal info should then be displayed and the user should then be redirected to the main menu
