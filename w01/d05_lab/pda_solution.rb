@@ -1,5 +1,12 @@
 loop do
 
+  personal_info = {
+    name: "Jesse",
+    age: 26,
+    occupation: "WDI Instructor",
+    favorite_food: "Macaroni and Cheese"
+  }
+
   # Main Menu
   puts("-----------------------------------------")
   puts("Welcome to AMAco PDA (c) 1988")
@@ -7,6 +14,7 @@ loop do
   puts("Type 2 for the Task Manager")
   puts("Type 3 for PieDrop (TM) - Drone Delivery of Pizza")
   puts("Type 4 for Titleizr")
+  puts("Type 5 for Personal Info Manager")
   puts("Type 6 to quit")
   puts("-----------------------------------------")
 
@@ -103,15 +111,46 @@ loop do
   elsif menu_choice == "3"
     puts("PieDrop (TM) - Drone Delivery of Pizza is currently in private beta...")
 
-  # Quit
   elsif menu_choice == "4"
     puts("Tilteizr - Please enter a sentence to titleize:")
     input = gets.chomp
     sentence = input.split.map do |word|
       word.match(/^(a|are|the|is|and)$/) ? word : word.capitalize
     end
-    puts("The titleized version of the string you entered is:")
-    puts(sentence.join(" "))
+    next
+  elsif menu_choice == "5"
+    puts(`clear`)
+    loop do
+      puts("Personal Info Manager - Please choose one of the following options:")
+      puts("1 - View Personal Info")
+      puts("2 - Edit Personal Info")
+      puts("3 - Exit")
+      choice = gets.chomp
+      puts("")
+      case choice
+      when "1"
+        personal_info.each do |key, value|
+	  attribute = key.to_s.gsub('_',' ').split.map(&:capitalize).join(' ')
+	  puts("#{attribute}: #{value}")
+	end
+	puts("\n")
+	next
+      when "2"
+        personal_info.each do |key, value|
+	  attribute = key.to_s.gsub('_',' ').split.map(&:capitalize).join(' ')
+	  puts("#{attribute}: #{value}")
+	  puts("Enter #{attribute} : [#{value}]")
+	  user_input = gets.chomp
+	  personal_info[key] = user_input == "" ? value : user_input
+	end
+	next
+      when "3"
+	break
+      end
+    end
+
+  # Quit
+  elsif menu_choice == "6"
     exit
 
   # Invalid main menu option
