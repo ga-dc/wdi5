@@ -6,7 +6,8 @@ loop do
   puts("Type 1 to Convert temperatures")
   puts("Type 2 for the Task Manager")
   puts("Type 3 for PieDrop (TM) - Drone Delivery of Pizza")
-  puts("Type 4 to quit")
+  puts("Type 4 for Titleizr")
+  puts("Type 6 to quit")
   puts("-----------------------------------------")
 
   puts("Enter a number: ")
@@ -55,7 +56,13 @@ loop do
 
   # Quit
   elsif menu_choice == "4"
-    puts("Goodbye!")
+    puts("Tilteizr - Please enter a sentence to titleize:")
+    input = gets.chomp
+    sentence = input.split.map do |word|
+      word.match(/^(a|are|the|is|and)$/) ? word : word.capitalize
+    end
+    puts("The titleized version of the string you entered is:")
+    puts(sentence.join(" "))
     exit
 
   # Invalid main menu option
