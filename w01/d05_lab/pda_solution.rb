@@ -48,7 +48,56 @@ loop do
 
   # Task Manager
   elsif menu_choice == "2"
-    puts("Task Management isn't implemented yet.")
+    puts(`clear`)
+    while true
+      all_tasks ||= []
+      puts("Welcome to TaskManager! Please choose one of the following options:")
+      puts("1 - A list of all tasks")
+      puts("2 - Add new task")
+      puts("3 - Mark task completed")
+      puts("4 - Clear completed")
+      puts("5 - Exit TaskManager")
+      puts("")
+      input = gets.chomp
+      case input
+	when "1"
+	  puts "Listing all tasks:"
+	  if all_tasks.empty?
+            puts("No tasks found.")
+	  else
+	    all_tasks.each_with_index do |task, index|
+	      puts("[#{task[:completed]}] #{index} - #{task[:description]}")
+	    end
+	  end
+	  next
+	when "2"
+	  puts("Add new task description:")
+	  task = { description: gets.chomp, completed: " " }
+	  all_tasks << task
+	  next
+	when "3"
+	  puts("Please enter the number of the task you’ve completed:")
+	  all_tasks.each_with_index do |task, index|
+	    puts("[#{task[:completed]}] #{index} - #{task[:description]}")
+	  end
+	  index = gets.chomp.to_i
+	  all_tasks[index][:completed] = "\u2713"
+	  puts(`clear`)
+	  next
+	when "4"
+	  all_tasks = all_tasks.each_with_index.map { |task, index|
+	     task if task[:completed] == " "
+	  }.delete( nil )
+	  next
+	when "5"
+	  puts(`clear`)
+	  break
+	default
+	  puts("That is not a valid menu option.")
+	  next
+      end
+    end
+
 
   # PieDrop
   elsif menu_choice == "3"
