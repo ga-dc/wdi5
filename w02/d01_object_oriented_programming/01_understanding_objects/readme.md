@@ -8,12 +8,12 @@ For each object in General Assembly, identify:
 
 ### Your Turn
 
-- a zoo
-- wmata
-- a live sporting event
-- a nuclear family
-- a computer
-- an airport
+1. a zoo
+2. wmata
+3. a live sporting event
+4. a nuclear family
+5. a computer
+6. an airport
 
 When you’re ready to share, please take a photo or screenshot and post it into slack.
 
