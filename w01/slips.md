@@ -1,3 +1,4 @@
+```
 slips = [ 
     "What are Ruby's 5 main data types?",
     "What are the two types of collections in Ruby, and what are the differences between them?",
@@ -24,3 +25,4 @@ slips = [
     "'I'm the world's #0 programmer!' Explain the joke.",
     "What's the difference between an index and a key?" 
 ]
+```
