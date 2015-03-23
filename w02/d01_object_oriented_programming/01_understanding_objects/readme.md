@@ -2,20 +2,9 @@ Group each of the following institutions into objects (we’ll do one together f
 
 ### General Assembly
 
+For each object in General Assembly, identify:
 - Things it can do
-  - increase your knowlege
-  - build your community
-  - help you get employed
 - Properties it has
-  - classes
-    - wdi
-      - eskimo kisses
-      - addbass
-    - uxdi
-  - teachers
-    - Jesse
-    - Robin
-    - Randy
 
 ### Your Turn
 
