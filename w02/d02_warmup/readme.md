@@ -1,4 +1,8 @@
-#Homework
+# Warmup
+
+## Screencast
+
+- [warmup review](https://vimeo.com/123093892)
 
 ### Part I. The "self" Examination
 
