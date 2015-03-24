@@ -120,15 +120,32 @@ puts "The temperature is #{temp} #{unit_out}."
 - Each programmer will have different "code smells"
   - Bad habits they have
   - Their code might work, but there are things that are still "off"
+  - [Bad Code](badcode.jpg)
 
+- [Good Code](goodcode.png)
+- [What is spaghetti code?](spaghetti.jpg)
 
 - Compiled a list of refactoring types and naming conventions
   - As a class, we need to fill in the blanks 
+  - Write in your own definitions. I'll randomly call on people. 
+
 
 - https://www.refactoring.guru/smells/smells
 - https://www.refactoring.guru/refactorings/refactorings
 - https://github.com/bbatsov/ruby-style-guide
 
-https://docs.google.com/spreadsheets/d/1LJ7Drfy85HnMKe_EhcO_1PdnCzvMoUTKWcQSEGW9hS0/edit?pli=1#gid=0
+- https://docs.google.com/a/generalassemb.ly/spreadsheets/d/1LJ7Drfy85HnMKe_EhcO_1PdnCzvMoUTKWcQSEGW9hS0/edit?usp=sharing
 
 ---
+
+##  Let's actually refactor!
+
+- Pick some code you made LAST week and refactor it
+  - Searching for Obi-Wan
+  - Dirty Words
+  - Deck o' Cards
+  - Sundae Shoppe
+- When you can't possible refactor it any more, you'll be switching with someone else
+- When done, write tests for it
+---
+
