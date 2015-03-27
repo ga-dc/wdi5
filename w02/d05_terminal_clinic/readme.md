@@ -23,15 +23,15 @@
   - PS1 - https://www.kirsle.net/wizards/ps1.html
   - add color to prompt
 
-## Git (10:15)
+## Git
 
 - config
-  - color?
+  - color? # does git status have colored output?
   - --global
   - --user && email
   - auto rebase
-- Merge Messages
-- http://viget.com/extend/only-you-can-prevent-git-merge-commits
+    - Merge Messages
+    - http://viget.com/extend/only-you-can-prevent-git-merge-commits
 - Delinquent Pull Requests
   - think before you commit
     - `git status`
