@@ -2,6 +2,11 @@
 
 - [whiteboard](https://docs.google.com/a/generalassemb.ly/drawings/d/1Xf3JK3IXtj7bD4uQ8B1uZPHs8Po4g1CZILDQHvBt50k/edit)
 
+## Screencasts
+
+- [intro to active record](https://vimeo.com/123422765)
+- [more active record](https://vimeo.com/123422764)
+
 ## Objectives
 
 - Explain what an ORM is and why we use it (vs. writing SQL)
