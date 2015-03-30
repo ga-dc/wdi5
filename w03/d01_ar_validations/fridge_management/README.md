@@ -5,7 +5,7 @@ We're going to building a fridge management app to keep track of all of our food
 # Part 1 - Database Schemas
 - Create a new database called kitchen_db.
 - Create the database tables to model Fridge, Food, and Drink and their relationships and validations (See specs below).
-- Save this to a file called kitchen.sql
+- Create your tables using ActiveRecord migrations.
 
 # Part 2 - Setting up ActiveRecord
 - Hook up your main ruby file to the kitchen_db
