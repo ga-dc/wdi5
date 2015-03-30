@@ -80,8 +80,8 @@
   - Mac: http://postgresapp.com/
     - `export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin`
     - Then open the app and click "Open psql"
-  - Linux: Should already have it
-    - Try `psql`
+  - Linux
+    - `apt-get install postgresql-9.4`
 
 ---
 # BREAK!
