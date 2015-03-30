@@ -208,7 +208,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-# Validations and Testing
+### Validations and Testing
 - To test or not to test.
   - Reasons not to test
     - Using well established tools often allows us to not have to worries about testing these tools as they have been throughly vetted.
