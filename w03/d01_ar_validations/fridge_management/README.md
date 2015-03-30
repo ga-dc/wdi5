@@ -1,6 +1,6 @@
 # Fridge Management App
 
-We're going to building a fridge management app to keep track of all of our food and drink using ActiveRecord. It may be helpful to review the docs for [ActiveRecord Basics](http://edgeguides.rubyonrails.org/active_record_basics.html) and [ActiveRecord Associations](http://edgeguides.rubyonrails.org/association_basics.html) for this.
+We're going to building a fridge management app to keep track of all of our food and drink using ActiveRecord. It may be helpful to review the docs for [ActiveRecord Basics](http://edgeguides.rubyonrails.org/active_record_basics.html), [ActiveRecord Associations](http://edgeguides.rubyonrails.org/association_basics.html) and [ActiveRecord Validations](http://edgeguides.rubyonrails.org/active_record_validations.html) for this.
 
 # Part 1 - Database Schemas
 - Create a new database called kitchen_db.

@@ -1,0 +1,145 @@
+d01_ar_associations $ ruby controller.rb 
+WARN: Unresolved specs during Gem::Specification.reset:
+      json (>= 1.7.7, ~> 1.7)
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+
+From: /Library/WebServer/Documents/ga/addbass-instructors/w03/d01_ar_associations/controller.rb @ line 17 :
+
+    12:   ActiveRecord::Base.connection.tables.each do |table|
+    13:     ActiveRecord::Base.connection.drop_table(table)
+    14:   end
+    15: end
+    16: 
+ => 17: binding.pry
+
+[1] pry(main)> babys_bottom
+=> ["users", "posts", "comments"]
+[2] pry(main)> CreateBlog.new
+-- create_table(:users)
+   -> 0.0207s
+-- create_table(:posts)
+   -> 0.0075s
+-- create_table(:comments)
+   -> 0.0077s
+=> #<CreateBlog:0x007ffb23896b08>
+[3] pry(main)> @bob = User.create(name: "Bob")
+=> #<User:0x007ffb235306f8 id: 1, name: "Bob">
+[4] pry(main)> @ali = User.create(name: "Alice")
+=> #<User:0x007ffb23b24de8 id: 2, name: "Alice">
+[5] pry(main)> @bob2 = User.create(name: "Bob")
+=> #<User:0x007ffb23b96df8 id: 3, name: "Bob">
+[6] pry(main)> User.create(name: "Bertha")
+=> #<User:0x007ffb234453b0 id: 4, name: "Bertha">
+[7] pry(main)> @bob2.name = "Hernando"
+=> "Hernando"
+[8] pry(main)> @bob2.update(name: "Juan")
+=> true
+[9] pry(main)> User.find_by(name: "Juan").update(name: "Steve")
+=> true
+[10] pry(main)> @bob.update(name: "Matt")
+=> true
+[11] pry(main)> babys_bottom
+=> ["users", "posts", "comments"]
+[12] pry(main)> 
+d01_ar_associations $ ruby controller.rb 
+WARN: Unresolved specs during Gem::Specification.reset:
+      json (>= 1.7.7, ~> 1.7)
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+controller.rb:3:in `require_relative': /Library/WebServer/Documents/ga/addbass-instructors/w03/d01_ar_associations/models2.rb:9: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '(' (SyntaxError)
+  validates :name, uniqueness :true
+                               ^
+	from controller.rb:3:in `<main>'
+d01_ar_associations $ ruby controller.rb 
+WARN: Unresolved specs during Gem::Specification.reset:
+      json (>= 1.7.7, ~> 1.7)
+      minitest (~> 5.1)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+
+From: /Library/WebServer/Documents/ga/addbass-instructors/w03/d01_ar_associations/controller.rb @ line 17 :
+
+    12:   ActiveRecord::Base.connection.tables.each do |table|
+    13:     ActiveRecord::Base.connection.drop_table(table)
+    14:   end
+    15: end
+    16: 
+ => 17: binding.pry
+
+[1] pry(main)> @bob = User.create(name: "Bob")
+ActiveRecord::StatementInvalid: PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+from /Users/robertthomas/.rvm/gems/ruby-2.2.0/gems/activerecord-4.2.1/lib/active_record/connection_adapters/postgresql_adapter.rb:592:in `async_exec'
+[2] pry(main)> CreateBlog.new
+-- create_table(:users)
+   -> 0.0201s
+-- create_table(:posts)
+   -> 0.0064s
+-- create_table(:comments)
+   -> 0.0079s
+=> #<CreateBlog:0x007feb418da980>
+[3] pry(main)> @bob = User.create(name: "Bob")
+=> #<User:0x007feb4112de80 id: 1, name: "Bob">
+[4] pry(main)> @bob2 = User.create(name: "Bob")
+=> #<User:0x007feb4120c810 id: nil, name: "Bob">
+[5] pry(main)> @bob2.update(name: "Bobby")
+=> true
+[6] pry(main)> babys_bottom
+=> ["users", "posts", "comments"]
+[7] pry(main)> CreateBlog.new
+-- create_table(:users)
+   -> 0.0239s
+-- create_table(:posts)
+   -> 0.0064s
+-- create_table(:comments)
+   -> 0.0066s
+=> #<CreateBlog:0x007feb41c6b590>
+[8] pry(main)> @robin = User.create(name: "Robin")
+=> #<User:0x007feb41c4b600 id: 1, name: "Robin">
+[9] pry(main)> @jesse = User.create(name: "Jesse")
+=> #<User:0x007feb41e64b30 id: 2, name: "Jesse">
+[10] pry(main)> @robin.posts.create(content: "I like turtles.")
+=> #<Post:0x007feb41b432d0 id: 1, content: "I like turtles.", user_id: 1>
+[11] pry(main)> @jesse.posts.create(content: "Actually, turtles aren't that great.")
+=> #<Post:0x007feb41ae3650
+ id: 2,
+ content: "Actually, turtles aren't that great.",
+ user_id: 2>
+[12] pry(main)> @robin.posts.create(content: "Shush, Jesse.")
+=> #<Post:0x007feb414cf638 id: 3, content: "Shush, Jesse.", user_id: 1>
+[13] pry(main)> @contentious_post = @jesse.posts.create(content: "I don't think much of Robin's opinions.")
+=> #<Post:0x007feb41f0d4b0
+ id: 4,
+ content: "I don't think much of Robin's opinions.",
+ user_id: 2>
+[14] pry(main)> @contentious_post.comments.create(user_id: @robin.id, content: "Hey man, that's pretty hurtful.")
+=> #<Comment:0x007feb414f7e08
+ id: 1,
+ user_id: 1,
+ post_id: 4,
+ content: "Hey man, that's pretty hurtful.">
+[15] pry(main)> @robin.destroy
+=> #<User:0x007feb41c4b600 id: 1, name: "Robin">
+[16] pry(main)> @hootlesnort = User.create(name: "Joe")
+=> #<User:0x007feb41f7fe20 id: 3, name: "Joe">
+[17] pry(main)> @jesse.posts
+=> [#<Post:0x007feb41ae3650
+  id: 2,
+  content: "Actually, turtles aren't that great.",
+  user_id: 2>,
+ #<Post:0x007feb41f0d4b0
+  id: 4,
+  content: "I don't think much of Robin's opinions.",
+  user_id: 2>]
+[18] pry(main)> 
