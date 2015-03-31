@@ -13,7 +13,7 @@ the Hyperloop and SpaceX to focus on building what he thinks will be the next
 big thing... Personal Finance.
 
 Personal Finance is a revolutionary new way to manage your expenses from the
-command line, and
+command line.
 
 ## Features
 
