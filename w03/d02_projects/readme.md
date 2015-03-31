@@ -2,6 +2,8 @@
 
 ## Requirements
 
+You will have Tuesday afternoon, all of Wednesday, and Thursday afternoon to work on this project.
+
 We will be presenting projects on Friday. Your project must have:
 
 - validations
