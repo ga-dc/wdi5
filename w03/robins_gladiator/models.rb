@@ -85,3 +85,61 @@ class Arena
   end
 
 end
+
+class Gladiator
+  
+  attr_accessor :name, :weapon 
+
+  def self.allowed_weapons
+    return ["trident", "spear", "club"]
+  end
+
+  def initialize name = nil, weapon = nil
+    christen name
+    arm_with weapon
+  end
+
+  def christen name = nil
+    until /^[a-zA-Z\-]+$/.match(name)
+      puts "Give the gladiator a name."
+      name = gets.chomp
+    end
+    @name = name.capitalize
+  end
+
+  def arm_with weapon = nil
+    until Gladiator.allowed_weapons.include? weapon
+      puts "Give #{@name} a trident, spear, or club."
+      weapon = gets.chomp.to_s.downcase
+    end
+    @weapon = weapon
+  end
+end
+
+class Fight
+
+  attr_accessor :winner
+
+  def initialize gladiatorA, gladiatorB
+    if gladiatorA.name == "Maximus"
+      @winner = gladiatorA
+    elsif gladiatorB.name == "Maximus"
+      @winner = gladiatorB
+    elsif test [gladiatorA.weapon, gladiatorB.weapon]
+      @winner = gladiatorA
+    elsif test [gladiatorB.weapon, gladiatorA.weapon]
+      @winner = gladiatorB
+    else
+      @winner = false
+    end
+  end
+
+  def test weapons
+    if weapons == ["trident", "spear"] || weapons == ["spear", "club"] || weapons == ["club", "trident"]
+      return true
+    else
+      return false
+    end
+  end
+
+end

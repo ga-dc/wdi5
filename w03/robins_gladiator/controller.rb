@@ -1,6 +1,4 @@
-require_relative "Gladiator.rb"
-require_relative "Arena.rb"
-require_relative "Fight.rb"
+require_relative "models.rb"
 
 class Run
 
