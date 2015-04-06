@@ -9,25 +9,26 @@ set :environment, :development
 DB.open
 
 get "/" do
-  if params[:reset]
-    DB.clear
-    DB.setup
-  end
-
-  if params[:delete]
-    id = params[:delete]
-    if Post.find(id)
-      Post.destroy(params[:delete])
-    end
-    redirect to("/")
-  end
-  
   @posts = []
   Post.all.each do |post|
     @posts << post
   end
 
   erb :template
+end
+
+get "/reset" do
+  DB.clear
+  DB.setup
+  redirect to("/")
+end
+
+get "/delete/:id" do
+    id = params[:id]
+    if Post.find(id)
+      Post.destroy(id)
+    end
+    redirect to("/")
 end
 
 post "/" do

@@ -9,7 +9,7 @@
     <% @posts.each do |post| %>
       <div>
 	<p><%= post.content %></p>
-	<a href="?delete=<%= post.id %>"><button type="button">Delete</button></a>
+	<a href="/delete/<%= post.id %>"><button type="button">Delete</button></a>
       </div>
     <% end %>
 
