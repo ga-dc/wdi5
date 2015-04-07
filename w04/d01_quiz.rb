@@ -22,7 +22,7 @@ def numbers_plus_two(numbers)
 end
 
 numbers = [1,2,3,4,5]
-numbers_plus_two(numbers)
+puts numbers_plus_two(numbers)
 
 ## Problem 3
 =begin
@@ -48,6 +48,7 @@ end
 
 ActiveRecord::Migration.create_table :students do |column|
   column.string :name, null: false
+  column.belongs_to :teacher
 end
 
 class Teacher < ActiveRecord::Base
@@ -58,13 +59,11 @@ class Student < ActiveRecord::Base
   belongs_to :teacher
 end
 
-=begin
-3.A) Create a teacher object and save it to a variable.
+# 3.A) Create a teacher object and save it to a variable.
 
-3.B) Create two students that belong to the teacher object you created in 3.A.
+# 3.B) Create two students that belong to the teacher object you created in 3.A.
 
-3.C) Puts the names of all students that belong to the variable you created in 3.A.
-=end
+# 3.C) Puts the names of all students that belong to the variable you created in 3.A.
 
 ## Problem 4
 =begin
