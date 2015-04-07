@@ -1,0 +1,16 @@
+<% @posts.each do |post| %>
+  <div>
+    <p><%= post.content %></p>
+    <a href="/delete/<%= post.id %>">
+      <button type="button">Delete</button>
+    </a>
+  </div>
+<% end %>
+
+<div>
+  <h2>Add a new post!</h2>
+  <form method="post" action="http://localhost:4567">
+    <textarea name="content"></textarea>
+    <button type="submit">Send 'er in!</button>
+  </form>
+</div>

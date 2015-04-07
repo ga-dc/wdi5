@@ -15,7 +15,7 @@ get "/" do
     @posts << post
   end
 
-  erb :template
+  erb :posts
 end
 
 get "/reset" do
