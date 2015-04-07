@@ -1,8 +1,9 @@
+require "active_record"
 require "sinatra"
 require "sinatra/reloader"
-require "active_record"
-require_relative "connection.rb"
-require_relative "models.rb"
+
+require_relative "db/connection.rb"
+require_relative "db/models.rb"
 
 set :environment, :development
 
