@@ -69,4 +69,6 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "activerecord"
 gem "pry"
+gem "rspec"
+gem "pg"
 ```
