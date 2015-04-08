@@ -1,0 +1,12 @@
+<form method="post" action="/items/<%= @item.id %>"> 
+    <input type="hidden" name="_method" value="patch">
+    <label for="title">Title</label>
+    <input type="text" name="title" value="<%= @item.title %>" placeholder="Enter title">
+    <label for="description">Description</label>
+    <input type="text" name="description" value="<%= @item.description %>" placeholder="Enter description">
+    <button type="submit">Update</button>
+</form>
+<form method="post" action="/items/<%= @item.id %>"> 
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit">Delete Item</button>
+</form>

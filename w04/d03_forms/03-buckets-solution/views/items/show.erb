@@ -1,2 +1,8 @@
 <h2><%= @item.title %></h2>
 <p><%= @item.description %></p>
+
+<form method="post" action="/items/<%= @item.id %>"> 
+    <input type="hidden" name="_method" value="delete">
+    <a href="/items/<%= @item.id %>/edit">Edit Item</a>
+    <button type="submit">Delete Item</button>
+</form>

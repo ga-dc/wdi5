@@ -1,4 +1,5 @@
-<ul>
+<ul class="items">
+  <li><a href="/items/new">&plus; Create New Item</a></li>
   <% @items.each do |item| %>
     <li><a href="/items/<%= item.id %>"><%= item.title %></a></li>
   <% end %>

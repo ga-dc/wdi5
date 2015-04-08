@@ -1,0 +1,54 @@
+body{
+  max-width:40em;
+  margin:auto;
+  padding:2em;
+  font-family:"Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1 a{
+  text-decoration:none;
+  color:inherit;
+  letter-spacing:-.04em;
+  font-size:1.25em;
+  border-bottom:1px dashed #aaa;
+  display:block;
+  padding-bottom:.25em;
+  margin-bottom: 1em;
+}
+
+.items{
+  padding:0; 
+  margin:0;
+  list-style:none;
+}
+
+.items li{
+  font-size:1.5em;
+}
+
+.items li a{
+  text-decoration:none;
+  color: #29A4F3;
+  display:block;
+  padding:1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+label, input[type="text"]{
+  display: block;
+  width:100%;
+  font:inherit;
+}
+
+input[type="text"]{
+  padding: .5em 1em;
+}
+
+label{
+  margin: 1em 0 .5em 0;
+  font-weight:bold;
+}
+
+button{
+  margin-top: 1em;
+}
