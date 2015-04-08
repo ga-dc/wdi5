@@ -1,4 +1,13 @@
 <!-- form here -->
+<form method="post" action="/students">
+  <input type="text" name="student_name" placeholder="Student Name">
+  <button type="submit">Create new student</button>
+</form>
+
+<form method="get" action="/">
+  <input type="search" name="query" placeholder="Search students">
+  <button type="submit">Search Students</button>
+</form>
 
 <ul>
 <% @students.each do |student| %>
