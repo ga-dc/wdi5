@@ -20,6 +20,9 @@
   - `touch Gemfile`
   - At the top of it, write `source "https://rubygems.org"`. This is the URL from which Bundler will get any missing gems.
   - Write `gem "insert_gem_here"` for every gem you'll need. For example:
+    - `gem 'sinatra'`
+    - `gem 'sinatra-contrib'`
+    - `gem 'activerecord'`
 - Have Bundler get all your gems
   - `bundle install`
 - Establish a Database connection
