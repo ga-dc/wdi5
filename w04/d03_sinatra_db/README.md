@@ -1,5 +1,10 @@
-1. Initialize rspec
-  - `rspec --init`
+# How to start a Sinatra app
+## (And more-or-less any other Ruby app)
+
+1. Make a folder in which to work on your project
+  - Do NOT just make the folder on your Desktop, or in your "home" (`~`) folder. Otherwise, your computer will get all cluttered up and it'll be hard to find anything. At the very least, have a "projects" folder. If this is an assignment for class, it should be in an appropriate folder in your GA directory.
+- Initialize rspec
+  - `cd` into the folder you just made, then `rspec --init`
 - Write your RSpec
   - Think up a bunch of user stories and make some sweet ERDs
   - Translate your user stories into a bunch of `it "whatever"` statments *without* `do...end`
