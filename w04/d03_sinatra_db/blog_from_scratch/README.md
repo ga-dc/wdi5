@@ -9,7 +9,6 @@
   - Add in a `views` folder, and make your `layout.erb`, including `<!DOCTYPE html>`, etc., and `<%= yield %>` somewhere
   - Add in a `models` folder for all of your models, oddly enough
   - Add a `controller.rb` file in the main directory
-  -
   ```
   .
 ├── Gemfile
