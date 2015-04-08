@@ -10,6 +10,7 @@
     $ createdb buckets
     $ psql -f db/schema.sql -d buckets
     $ bundle install
+    $ ruby db/seeds.rb
     $ bundle exec ruby app.rb
 
 ##The details
