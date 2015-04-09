@@ -1,5 +1,10 @@
 # CSS
 
+## Screencasts
+
+- [CSS Part 1](https://vimeo.com/124535782)
+- [CSS Part 2](https://vimeo.com/124535822)
+
 ## Objectives
 
 - Define what CSS is and explain its role in separation of concerns
