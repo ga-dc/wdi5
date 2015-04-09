@@ -1,0 +1,47 @@
+td
+{
+height:30px;
+width:400px;
+}
+tr:nth-of-type(odd) td
+{
+background-color:red;
+}
+tr td[rowspan]
+{
+background-color:blue;
+}
+
+
+/*With stars*/
+/*
+td
+{
+width:400px;
+height:28px;
+vertical-align:top;
+text-align:center;
+}
+td[colspan]
+{
+width:800px;
+}
+tr:nth-child(odd) td
+{
+background-color:red;
+}
+tr td[rowspan]
+{
+background-color:blue;
+}
+td[rowspan]:before
+{
+content:"......\A.....\A......\A.....\A......\A.....\A......\A.....\A......";
+white-space: pre;
+display:block;
+color:white;
+font-size:144px;
+line-height:18px;
+letter-spacing:24px;
+}
+*/
