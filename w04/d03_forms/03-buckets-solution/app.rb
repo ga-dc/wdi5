@@ -44,3 +44,26 @@ patch '/items/:id' do
     redirect "/items/#{params[:id]}"
   end
 end
+
+get '/items/:item_id/comments/:id/edit' do
+  @comment = Comment.find( params[:id] )
+  erb :"comments/edit"
+end
+
+patch '/items/:item_id/comments/:id' do
+  @comment = Comment.find( params[:id] )
+  @comment.update( body: params[:body] )
+  redirect "/items/#{params[:item_id]}"
+end
+
+post '/items/:id/comments' do
+  @item = Item.find( params[:id] )
+  @item.comments.create( body: params[:body] )
+  redirect :"/items/#{@item.id}"
+end
+
+delete '/items/:item_id/comments/:id' do
+  @comment = Comment.find( params[:id] )
+  @comment.destroy
+  redirect "/items/#{params[:item_id]}"
+end

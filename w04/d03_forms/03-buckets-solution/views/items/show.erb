@@ -2,7 +2,25 @@
 <p><%= @item.description %></p>
 
 <form method="post" action="/items/<%= @item.id %>"> 
-    <input type="hidden" name="_method" value="delete">
-    <a href="/items/<%= @item.id %>/edit">Edit Item</a>
-    <button type="submit">Delete Item</button>
+  <input type="hidden" name="_method" value="delete">
+  <a href="/items/<%= @item.id %>/edit">Edit Item</a>
+  <button type="submit">Delete Item</button>
 </form>
+
+<h3>Comments</h3>
+<form method="post" action="/items/<%= @item.id %>/comments">
+  <input type="text" name="body" placeholder="Your Comment...">
+  <button type="submit">Submit New Comment</button>
+</form>
+<ul>
+  <% @item.comments.reverse.each do |comment| %>
+    <li>
+      <%= comment.body %>
+      <a href="/items/<%= @item.id %>/comments/<%= comment.id %>/edit">Edit</a> | 
+      <form method="post" action="/items/<%= @item.id %>/comments/<%= comment.id %>"> 
+	<input type="hidden" name="_method" value="delete">
+	<button type="submit">Delete</button>
+      </form>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,9 @@
+<form method="post" action="/items/<%= @comment.item.id %>/comments/<%= @comment.id %>"> 
+    <input type="hidden" name="_method" value="patch">
+    <input type="text" name="body" value="<%= @comment.body %>" placeholder="Your Comment...">
+    <button type="submit">Update</button>
+</form>
+<form method="post" action="/items/<%= @comment.item.id %>/comments/<%= @comment.id %>"> 
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit">Delete</button>
+</form>

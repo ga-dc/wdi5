@@ -19,11 +19,11 @@ h1 a{
 .items{
   padding:0; 
   margin:0;
-  list-style:none;
 }
 
 .items li{
   font-size:1.5em;
+  list-style:none;
 }
 
 .items li a{
@@ -51,4 +51,8 @@ label{
 
 button{
   margin-top: 1em;
+}
+
+li form{
+  display: inline-block;
 }
