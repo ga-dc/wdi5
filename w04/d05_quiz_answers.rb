@@ -41,10 +41,6 @@ class Doctor < ActiveRecord::Base
   def has_degree?
     return true
   end
-
-  def specialty
-    return @specialty
-  end
 end
 
 #####################################
