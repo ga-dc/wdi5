@@ -51,8 +51,8 @@ end
 # app.rb
 require 'sinatra'
 require 'sinatra/reloader'
-require ‘active_record’
-require ‘pg’
+require 'active_record'
+require 'pg'
 
 get ‘/doctors’ do
   #index
