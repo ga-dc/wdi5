@@ -1,61 +1,75 @@
 # How HTTP is like a plane
 
-## 1. An HTTP request is initiated
-*What actually happens:*
-- The user clicks "Submit" on a form (a `POST` request) on your website
-- The user clicks "Submit" on Postman
-- The user enters a URL in their web browser and hits Return (a `GET` request)
+## 1. The plane rolls out onto the tarmac.
+An HTTP request is initiated when...
+- ...the user clicks "Submit" on a form (a `POST` request) on your website
+- ...the user clicks "Submit" on Postman
+- ...the user enters a URL in their web browser and hits Return (a `GET` request)
 
-## 2. The request's information is packaged
-*What it's like:* The user's web browser "packs" a plane with the info the user submitted in the form -- the **parameters** -- and gets the plane ready to be sent to an airport.
+## 2. The plane is loaded up with cargo and prepped to fly to another airport.
+The web browser packages the information the user submitted in the form -- the **parameters** -- and gets it ready to be sent to your server.
 
 Let's say the form looks like this:
 ```
-<form method="post" action="/form_processor">
-  <input type="text" name="fruit" value="banana" />
-  <input type="text" name="veg" value="carrot" />
+<form method="post" action="/thugs">
+  <input type="text" name="name" value="Robin" />
+  <input type="text" name="title" value="Straight-up gangster" />
   <button type="submit">Let 'er rip</button>
 </form>
 ```
 
-The airport in this case is `/form_processor`, the destination URL taken from the `action` attribute of the form.
+The request will be sent to the URL `/thugs`, which was taken from the `action` attribute of the `form`.
 
-### 2.a If the `method` is `GET`...
-*What it's like:* The user's web browser straps the parameters to the roof of the plane.
+### 2.a The cargo is strapped to the roof of the plane.
 
-*What actually happens:* The web browser turns the parameters into a querystring, attached to the end of the request's destination URL. (See 3.a)
+If the `method` is `GET`, the web browser turns the parameters into a querystring, attached to the end of the request's destination URL:
+```
+/thugs?name=Robin&title=Straight-up%20gangster
+```
 
-### 2.b If the `method` is `POST`...
-*What it's like:* The web browser packs the parameters into the cargo hold of the plane.
+### 2.b The cargo is placed in plane's cargo hold.
 
-*What actually happens:* The web browser turns the parameters into a hash. In this case, something like:
+If the `method` is `POST`, the web browser turns the parameters into a hash. In this case, something like:
 ```
 {
-  fruit: "banana",
-  veg: "planerot"
+  name: "Robin",
+  title: "Straight-up gangster"
 }
 ```
 
-## 3. The HTTP request is sent
-*What it's like:* The web browser sends the plane to `/form_processor`.
+## 3. The plane takes off!
+*What actually happens:* The HTTP request is sent from the user's browser to your server.
 
-### 3.a If the `method` is `GET`...
-*What actually happens:* The web browser sends a request to  `/form_processor?fruit=banana&veg=planerot`.
+If the `method` is `GET`, The web browser sends a request to  `/thugs?name=Robin&title=Straight-up%20gangster`.
 
-### 3.b If the `method` is `POST`...
-*What actually happens:* The web browser sends a request to `/form_processor`, with the parameters sent behind-the-scenes in the request's "headers", invisible to the user.
+If the `method` is `POST`, the web browser sends a request to `/thugs`, with the parameters sent behind-the-scenes in the request's "headers", invisible to the user.
 
-## 4. The HTTP request arrives at the server and is routed
-*What it's like:* The plane arrives at the destination airport, and is directed to land at a specific runway by the Air Traffic Control tower.
+## 4. The plane arrives at the destination airport, and is routed to land at a specific runway by the Air Traffic Control tower.
 
-*What actually happens:* The `controller.rb` file on the server receives the request and directs it to one of the "routes" specified in the controller.
+*What actually happens:* The `controller.rb` file on your server receives the HTTP request and directs it to one of the "routes" specified in the controller.
 
-If the request is `GET` it'll get sent to the `get "/form_processor" do` route, and if it's `POST` it'll get sent to the `post "/form_processor" do` route.
+If the request is `GET` it'll be sent to the `get "/thugs" do` route.
 
-## 5. The HTTP request is parsed
-*What it's like:* The plane is unloaded.
+If the request is `POST` it'll be sent to the `post "/thugs" do` route.
 
-*What actually happens:* The server takes the parameters from either the URL (for `GET`) or the headers (for `POST`) and stores it in a `params` hash.
+## 5. The cargo is unloaded from the plane.
+*What actually happens:* The HTTP request is parsed. The server takes the parameters from either the URL (`GET`) or the headers (`POST`) and stores it in a `params` hash.
 
-## 6. The server runs any code associated with that route
-*What it's like:* 
+## 6. The cargo is processed.
+*What actually happens:* The server runs the code that's inside the route. Generally, this does something *to* or *with* the information contained in the `params`.
+
+For example:
+
+```
+post "/thugs" do
+  Thug.create(name: params[:name], title: [:title])
+end
+```
+This will add a row to the `Thugs` table that has `Robin` in the `name` column, and `Straight-up gangster` in the `title` column.
+
+## 7. The processed cargo is sent back to the first airport.
+*What actually happens:* A server sends something back a string of information in response to every HTTP request.
+
+When you type a URL in your browser's address bar and hit Return, your browser makes a `GET` request to another server. The string of information the server sends back is HTML/CSS/Javascript, which your browser reads and turns into a webpage.
+
+When you make a `POST` request, the server might respond with a string that tells your web browser to redirect you to another page. 
