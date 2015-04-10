@@ -67,9 +67,37 @@ end
 ```
 This will add a row to the `Thugs` table that has `Robin` in the `name` column, and `Straight-up gangster` in the `title` column.
 
-## 7. The processed cargo is sent back to the first airport.
+## 7. The processed cargo is (maybe) sent to a packaging plant.
+*What actually happens:* If the route indicates that a `.erb` should be used, the information that was manipulated in the `route` is sent to the `.erb`.
+
+```
+post "/thugs" do
+  @thug = Thug.create(name: params[:name], title: [:title])
+  erb: dossier_of_true_thugs
+end
+```
+
+The information is then inserted into the `.erb`, replacing the relevant `<% %>` tag.
+
+For example:
+
+```
+<h1>Introducing <%= thug.name %>, also known as <%= thug.title %></h1>
+```
+
+This becomes:
+
+```
+<h1>Introducing Robin, also known as Straight-up gangster</h1>
+```
+
+If you view the source code of a page in your Sinatra app, you will see **no ERB tags** -- just HTML.
+
+## 8. The packaged cargo is sent back to the first airport.
 *What actually happens:* A server sends something back a string of information in response to every HTTP request.
 
 When you type a URL in your browser's address bar and hit Return, your browser makes a `GET` request to another server. The string of information the server sends back is HTML/CSS/Javascript, which your browser reads and turns into a webpage.
 
-When you make a `POST` request, the server might respond with a string that tells your web browser to redirect you to another page. 
+When you make a `POST` request, the server might respond with a string that tells your web browser to redirect you to another page. It might also respond with the HTML/CSS/Javascript to make a full webpage. It might also just return a short string saying the request was successful. That's up to the developer, and depends on what they want the app to do.
+
+In this case, the HTML of the rendered thug page is the string that will be sent back.
