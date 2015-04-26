@@ -22,6 +22,6 @@ would do differently. Please pair up and list:
 - one thing you wish you could have done in the last 6 weeks
 - one thing you would like to accomplish in the next 6 weeks
 
-## A Familiar Morning Excersize
+## A Familiar Morning Exercise
 
 Try the challenge for the full stack engineer here: https://www.rainforestqa.com/jobs/
