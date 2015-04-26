@@ -20,3 +20,7 @@ would do differently. Please pair up and list:
 - things you liked
 - things you would do differently
 - one thing you would like to accomplish in the next 6 weeks
+
+## A Familiar Morning Excersize
+
+Try the challenge for the full stack engineer here: https://www.rainforestqa.com/jobs/
