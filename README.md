@@ -1,4 +1,4 @@
-# Milk
+# Milk and Cookies
 
 ## CLI, Git(Hub), Programming Basics - 3/16
 - CLI
