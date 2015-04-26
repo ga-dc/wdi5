@@ -122,3 +122,5 @@ while(counter < 5){
   counter++
 }
 ```
+
+### JS basics exercise
