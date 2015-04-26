@@ -124,3 +124,4 @@ while(counter < 5){
 ```
 
 ### JS basics exercise
+FIZZBUZZ!~
