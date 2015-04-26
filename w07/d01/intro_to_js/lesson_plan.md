@@ -57,13 +57,14 @@ The primary(primitive) data types:
 
 The composite data types:
 - object `var person = {name: "andy", job: "instructor"}`
+  - won't go too much into objects as the next lesson will dive deeper into them. For now, they are like hashes in ruby.
 - array `var numbers = [11,21,13,24,35]`
   - just like in ruby we can access values in the array `numbers[2]`
   - or modify values `numbers[1] = 55`
     -
     ```
     > numbers
-    
+
     [11, 55, 13, 24, 35]
     ```
 
