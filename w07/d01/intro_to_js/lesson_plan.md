@@ -60,7 +60,8 @@ The composite data types:
 - array `var numbers = [11,21,13,24,35]`
   - just like in ruby we can access values in the array `numbers[2]`
   - or modify values `numbers[1] = 55`
-    - ```
+    -
+    ```
     > numbers
     [11, 55, 13, 24, 35]
     ```
@@ -91,6 +92,7 @@ The following values are always falsy:
 - NaN (a special Number value meaning- Not-a-Number!)
 
 #### conditional statements
+
 ```
 if (<condition 1>){
 };
@@ -101,6 +103,7 @@ else{
 ```
 
 #### loops
+
 ```
 var numbers = [1,2,3,4,5];
 for (var i = 0; i < numbers.length; i++){
