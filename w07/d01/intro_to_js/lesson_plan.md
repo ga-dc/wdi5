@@ -63,6 +63,7 @@ The composite data types:
     -
     ```
     > numbers
+    
     [11, 55, 13, 24, 35]
     ```
 
