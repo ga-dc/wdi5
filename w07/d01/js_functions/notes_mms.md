@@ -127,11 +127,11 @@ not_hoisted = function() {
 * Implement `each` in javascript
   * for each element in a collection, perform a function
   * Given:
-  ```
-  var prefix = "The element is ";
-  var printer = function(el) {
-    console.log(prefix + el);
-  }
+  ```js
+var prefix = "The element is ";
+var printer = function(el) {
+  console.log(prefix + el);
+}
   ```
 
   * `each([2,"abc"],printer)`
@@ -148,12 +148,32 @@ not_hoisted = function() {
     * `reduce([2,3], product); #=> 6`
     * `reduce([2,3,2], product); #=> 12`
 
-* ECMAScript 6 [Optional]
+
+### Closures
+
+* Closures are one of the most powerful features of JavaScript
+  * nesting of functions
+  * grants the inner function full access to all the variables and functions defined inside the outer function (and all other variables and functions that the outer function has access to). * * outer function does NOT have access to the variables and functions defined inside the inner function.
+* example: note `name` in `getName`
+```js
+var pet = function(name) {   // The outer function defines a variable called "name"
+  var getName = function() {
+    return name;             // The inner function has access to the "name" variable of the outer function
+  }
+  return getName;            // Return the inner function, thereby exposing it to outer scopes
+},
+myPet = pet("Vivie");
+
+myPet();  
+```
+
+
+### ECMAScript 6 [Optional]
+
   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
   * default params
   * rest parameters
   * shorter functions (=>), anonymous
-
 
 
 # Lesson Plan - Review Notes
