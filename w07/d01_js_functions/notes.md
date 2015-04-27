@@ -10,10 +10,11 @@ Delivery Tips:
 
 ## Learning Objectives
 
-* Define and call functions in Javascript
-* Explain how functions are closures in JS
-  * Store and pass around functions in variables
-  * Explain how scope works in Javascript functions
+- Define what a function is in Javascript and how it compares to a Ruby method
+- Describe how function arguments and return values are different from Ruby
+- Differentiate between function declarations and expressions
+- Define `hoisting`
+- Define a closure in the context of programming
 
 ## Outline
 
@@ -39,8 +40,8 @@ Delivery Tips:
    statements
 }
 
-* Review signatures
-  * function statement
+* Review signatures (on board)
+  * function declaration (or function statement)
     * function func(a,b) {};
   * function expression
     * var funcName = function(a, b) {};
@@ -66,6 +67,8 @@ Delivery Tips:
 * Demonstrate loose arguments
   * Extra arguments are ignored
   * Undefined arguments are undefined
+
+* Did anyone try both declaration and expression?  Did you notice any difference?
 
 ** You Do:** Function exercises
 
@@ -113,6 +116,10 @@ not_hoisted = function() {
 ### Scope
 
 * Variables in the scope of the function's creation.
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope
+  * Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function.
+  * However, a function can access all variables and functions defined inside the scope in which it is defined.
+
 * Pass a function to a function as a parameter, call it inside.
 
 **We do**
