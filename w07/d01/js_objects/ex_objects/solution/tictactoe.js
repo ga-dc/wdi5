@@ -12,15 +12,15 @@ function TicTacToe() {
     }
   };
 
-  this.play = function(player, i, j) {
+  this.play = function(player, row, column) {
     player = player.toUpperCase();
     if (player != this.currentPlayer) {
       return false
     }
-    if (this.board[i][j] != null) {
+    if (this.board[row][column] != null) {
       return false;
     } else {
-      this.board[i][j] = player;
+      this.board[row][column] = player;
       this.toggleCurrent();
       return true;
     }
@@ -42,18 +42,18 @@ function TicTacToe() {
   };
 
   this.checkRows = function() {
-    for (var i = 0; i < 3; i++) {
-      if (this.board[i][0] === this.board[i][1] && this.board[i][0] === this.board[i][2] && this.board[i][0]) {
-        return this.board[i][0];
+    for (var row = 0; row < 3; row++) {
+      if (this.board[row][0] === this.board[row][1] && this.board[row][0] === this.board[row][2] && this.board[row][0]) {
+        return this.board[row][0];
       }
     }
     return false;
   };
 
   this.checkColumns = function() {
-    for (var i = 0; i < 3; i++) {
-      if (this.board[0][i] === this.board[1][i] && this.board[0][i] === this.board[2][i] && this.board[0][i]) {
-        return this.board[0][i];
+    for (var column = 0; column < 3; column++) {
+      if (this.board[0][column] === this.board[1][column] && this.board[0][column] === this.board[2][column] && this.board[0][column]) {
+        return this.board[0][column];
       }
     }
     return false;
