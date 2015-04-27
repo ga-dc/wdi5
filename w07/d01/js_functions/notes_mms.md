@@ -161,8 +161,8 @@ var pet = function(name) {   // The outer function defines a variable called "na
     return name;             // The inner function has access to the "name" variable of the outer function
   }
   return getName;            // Return the inner function, thereby exposing it to outer scopes
-},
-myPet = pet("Vivie");
+}
+var myPet = pet("Vivie");
 
 myPet();  
 ```
@@ -175,6 +175,32 @@ myPet();
   * rest parameters
   * shorter functions (=>), anonymous
 
+## Closing
+
+Please come to the board and...
+- Write the function definition (just the signature) for a method that would return a full name and accepts first, last, middle.
+- Make that function work
+- Test it.
+- Test it without passing a middle name.  Fix it (if necessary).
+- Demonstrate hoisting using this code.
+- define a variable for you, as a function that accepts last, first, middle.  And contains the above function.
+
+```js
+var person = function(last, first, middle) {
+  var getFullName = function() {
+    var fullName = first;
+    if(middle) {
+      fullName += " " + middle;
+    }
+    fullName += " " + last;  
+    return fullName;
+  }
+  return getFullName;
+};
+
+var me = person("Scilipoti", "Matt", "M.");
+me();
+```
 
 # Lesson Plan - Review Notes
 
