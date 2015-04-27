@@ -114,7 +114,7 @@ for (property in car) {
   `Object.getOwnPropertyNames(car)`
   Compare and contrast in/hasOwnProperty()
 
-### Monkey Exercise
+### [Optional] Monkey Exercise
 
 Create a monkey object, which has the following properties:
 * name
@@ -131,13 +131,8 @@ methods defined.
 Exercise your monkeys by retrieving their properties and using their methods.
 Practice using both syntaxes for retrieving properties.
 
-### Deeper into This [optional]
 
-Create a person object with a name, species and things eaten. Have it 'steal'
-the speak method from our monkey and notice that it
-
-
-### Larger Exercise: TicTacToe
+### Bonus Exercise: TicTacToe
 
 Write a TicTacToe constructor ('class') in JavaScript. Your class should have
 the following:
