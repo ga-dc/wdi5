@@ -125,7 +125,28 @@ not_hoisted = function() {
 **We do**
 
 * Implement `each` in javascript
+  * for each element in a collection, perform a function
+  * Given:
+  ```
+  var prefix = "The element is ";
+  var printer = function(el) {
+    console.log(prefix + el);
+  }
+  ```
+
+  * `each([2,"abc"],printer)`
+  ```
+  The element is 2
+  The element is abc
+  ```
+
 * Implement `reduce` in javascript
+  * for each element in collection, perform a function and use the result to perform the next function
+    * Given the functions `sum` and `product`:
+    * `reduce([2,3], sum); #=> 5`
+    * `reduce([2,3,1], sum); #=> 6`
+    * `reduce([2,3], product); #=> 6`
+    * `reduce([2,3,2], product); #=> 12`
 
 # Lesson Plan - Review Notes
 

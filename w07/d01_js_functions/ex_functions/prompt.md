@@ -6,5 +6,7 @@
   * false if you cannot drink
 * Write a function to accept an array and print the elements in order
 
+---
+
 * Implement `each` in javascript
 * Implement `reduce` in javascript
