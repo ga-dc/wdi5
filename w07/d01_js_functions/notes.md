@@ -6,7 +6,7 @@ Delivery Tips:
 * Revisit LOs
 * Defer questions when appropriate
 
-# Rails Path and Link Helpers
+# Javascript Functions
 
 ## Learning Objectives
 
@@ -21,18 +21,55 @@ Delivery Tips:
 
 **I do**
 
+* How do we define a method in Ruby?
+* How do we define a method in JavaScript?
+  * Trick question.  We don't.  We define **functions**.
+
+
+* Pro Tip:  MDN Reference vs. Guide
+  * Google: `mdn js function`
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+
+* Reference Scavenger Hunt (5 min): 2 ways to define a function named 'sum' that accepts 2 addends.
+  * var sum = new Function('addend1', 'addend2', 'return addend1 + addend2');
+  * var sum = function(addend1, addend2) { ... }
+  * function sum(addend1, addend2) { ... }
+  * ([param] [, param]) => {
+   statements
+}
+
+* Review signatures
+  * function statement
+    * function func(a,b) {};
+  * function expression
+    * var funcName = function(a, b) {};
+    * **anonymous** function
+
 * Operations on different data types
 
-* Different ways to define a function
-  * var funcName = function(a, b) {};
-  * function func(a,b) {};
-  * Loose input arguments
-  * Explicit returns
+**You do** Our First Function
 
-**You do**
+* (6 min, productive struggle) Write a function to sum two addends.
+
+```
+> sum(1,2);
+<- 3
+```
+
+* What did we learn?
+  * Parenthesis
+  * Explicit returns
+  * Missing arguments
+  * Too many arguments
+
+* Demonstrate loose arguments
+  * Extra arguments are ignored
+  * Undefined arguments are undefined
+
+** You Do:** Function exercises
 
 * Write a function to accept three numbers and return their product.
-
 * Write a function to accept an age and returns
   * true if you can vote
   * false if you cannot vote
@@ -41,12 +78,37 @@ Delivery Tips:
 **I do**
 
 * What is hoisting?
-* Demonstrate loose arguments
-  * Extra arguments are ignored
-  * Undefined arguments are undefined
+
+```
+hoisted(); // logs "hoisted"
+
+function hoisted() {
+  console.log("hoisted");
+}
+```
+**not**
+```
+not_hoisted(); // ReferenceError: not_hoisted is not defined
+
+not_hoisted = function() {
+  console.log("hoisted");
+}
+```
+
+### Fundamental Objects
+
+* some of you may have noticed that 'every function is actually a Function object'
+  * First-class object
+  * Ruby: "abc".size #=> 3
+  * JS:
+    * sum.length;
+    * product.length;
+* Review MDN Fundamental Objects https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
 * Difference between parentheses and no parentheses
   * Referring to a function vs...
   * Calling a function
+
 
 ### Scope
 
