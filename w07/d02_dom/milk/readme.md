@@ -51,9 +51,9 @@ Each web page loaded in the browser has its own document object. The Document in
 - .appendChild
 - .removeChild
 
-## Break
-
 ### You do: Logo hijack
+
+## Break
 
 ### You do: About Me
 

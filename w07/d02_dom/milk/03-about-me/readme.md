@@ -4,7 +4,7 @@
 - Change the body style so it has a font-family of "Arial, sans-serif".
 - Replace each of the spans (nickname, favorites, hometown) with your own information.
 - Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
-- Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+- Create a new img element and set its src attribute to a picture of you. Append that element to the list.
 
 ## Bonus
 

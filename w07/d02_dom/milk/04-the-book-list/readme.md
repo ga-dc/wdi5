@@ -4,12 +4,12 @@
       {
 	title: 'The Design of EveryDay Things',
 	author: 'Don Norman',
-	alreadyRead: false
+	isRead: false
       },
       { 
 	title: 'The Most Human Human',
 	author: 'Brian Christian',
-	alreadyRead: true
+	isRead: true
       }
     ];
 
