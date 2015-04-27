@@ -12,3 +12,14 @@ var car = {
 };
 
 car.drive();
+
+console.log("***** adding gas****");
+car.gas();
+
+console.log(car.speed);
+
+
+console.log("***** adding gas****");
+car.gas();
+
+console.log(car.speed);

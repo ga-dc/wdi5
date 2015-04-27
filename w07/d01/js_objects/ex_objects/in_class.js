@@ -18,16 +18,16 @@ var adam = {
   introduce: introduceFunction
 };
 
-var hari = {
-  name: "Hari",
+var jeff = {
+  name: "Jeff",
   species: "Emperor Tamarin",
   foodsEaten: [],
   eatSomething: eatSomethingFunction,
   introduce: introduceFunction
 };
 
-var mck = {
-  name: "McKenneth",
+var robin = {
+  name: "Robin",
   species: "Baby Pygmy Marmoset",
   foodsEaten: [],
   eatSomething: eatSomethingFunction,
@@ -36,41 +36,20 @@ var mck = {
 };
 
 adam.introduce();
-hari.introduce();
-mck.introduce();
+jeff.introduce();
+robin.introduce();
 
 adam.eatSomething("coffee");
 adam.eatSomething("bagel");
-hari.eatSomething("bananas");
-mck.eatSomething("coffee");
-mck.eatSomething("coffee");
-mck.eatSomething("coffee");
-mck.eatSomething("coffee");
+jeff.eatSomething("bananas");
+robin.eatSomething("coffee");
+robin.eatSomething("coffee");
+robin.eatSomething("coffee");
+robin.eatSomething("coffee");
+
+
 
 adam.name;
 adam.name = "Bob";
 adam["name"];
 adam["name"] = "Charlie"
-
-var dumbo = {
-  name: "Dumbo",
-  species: "elephant",
-  foodsEaten: ["grass"],
-  sayHi: introduceFunction
-}
-
-Object.keys(dumbo)
-Object.getOwnPropertyNames(dumbo)
-
-for (property in dumbo) {
-  console.log(property + ": " + dumbo[property]);
-}
-
-
-function makeObj() {
-
-}
-
-function makeMonkey() {
-  
-}

@@ -97,7 +97,7 @@ Practice using both syntaxes for retrieving properties.
 ### Deeper into This
 
 Create a person object with a name, species and things eaten. Have it 'steal'
-the speak method from our monkey and notice that it
+the speak method from our monkey and notice that it still works.
 
 
 ### Larger Exercise: TicTacToe
