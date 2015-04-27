@@ -30,12 +30,9 @@ Delivery Tips:
 
 
 * Reference Scavenger Hunt (5 min): 2 ways to define a function named 'sum' that accepts 2 addends.
-  * var sum = new Function('addend1', 'addend2', 'return addend1 + addend2');
-  * var sum = function(addend1, addend2) { ... }
-  * function sum(addend1, addend2) { ... }
-  * ([param] [, param]) => {
-   statements
-}
+  * `var sum = new Function('addend1', 'addend2', 'return addend1 + addend2');`
+  * `var sum = function(addend1, addend2) { return addend1 + addend }`
+  * `function sum(addend1, addend2) { return addend1 + addend }`
 
 * #ProTip:  MDN Reference vs. Guide
   * Google: `mdn js function`
@@ -150,6 +147,14 @@ not_hoisted = function() {
     * `reduce([2,3,1], sum); #=> 6`
     * `reduce([2,3], product); #=> 6`
     * `reduce([2,3,2], product); #=> 12`
+
+* ECMAScript 6 [Optional]
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+  * default params
+  * rest parameters
+  * shorter functions (=>), anonymous
+
+
 
 # Lesson Plan - Review Notes
 
