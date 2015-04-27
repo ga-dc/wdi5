@@ -24,7 +24,7 @@ Delivery Tips:
 
 Start by discussing what's missing from our JS Knowledge:
 * Hashes
-* Objects / OOP / Inheritance (won't discuss inheritance)
+* Objects / OOP / Inheritance (won't discuss inheritance much today)
 
 In JS, we solve both of these with a concept called an object. Objects are like
 hashes in Ruby in that they have key / value pairs, but they are different in
@@ -44,15 +44,22 @@ Demo creating a car object using literal syntax.
 ```js
 var car = {
   model: "Honda",
-    color: "Red",
+  color: "Red",
   speed: 0,
 };
-
-car.model;
-car["model"];
-prop = "color";
-car[prop];
 ```
+
+* Just like ruby
+
+`car["model"];`
+
+```js
+property = "color";
+car[property];
+```
+
+* new!!!
+`car.model;`
 
 Demo making a car with methods:
 
@@ -71,11 +78,41 @@ var car = {
 };
 ```
 
+**Y'all** Play with this for a couple minutes.  If something isn't working, look for hints in the code.
+  `car.drive()` vs
+  `car.drive`
+
+
+** I do **
 Explain what `this` is. It's basically self in ruby.
+
+`console.log(this);` vs.
+`console.log("this:" + this)` vs
+`console.log("this:" + JSON.stringify(this));`
+
 
 Enumerate over object properties with:
 * for...in loops
-* Object.keys(obj)
+
+```js
+for (property in car) {
+  console.log(property);
+}
+```
+
+`car.drive` vs. `car.drive()`
+
+```js
+for (property in car) {
+  console.log(property + ": " + car[property]);
+}
+```
+
+* `Object.keys(car)`
+
+* Save hasOwnProperty/getOwn for inheritence talk
+  `Object.getOwnPropertyNames(car)`
+  Compare and contrast in/hasOwnProperty()
 
 ### Monkey Exercise
 
@@ -94,7 +131,7 @@ methods defined.
 Exercise your monkeys by retrieving their properties and using their methods.
 Practice using both syntaxes for retrieving properties.
 
-### Deeper into This
+### Deeper into This [optional]
 
 Create a person object with a name, species and things eaten. Have it 'steal'
 the speak method from our monkey and notice that it
