@@ -53,3 +53,35 @@ adam.name;
 adam.name = "Bob";
 adam["name"];
 adam["name"] = "Charlie"
+
+
+
+
+
+
+
+
+var eatSomethingFunction =
+
+var introduceFunction =
+
+function makeMonkey(initialName, initialSpecies) {
+
+  var newMonkey = {
+    name: initialName,
+    species: initialSpecies,
+    foodsEaten: [],
+    eatSomething: function(food) {
+      this.foodsEaten.push(food);
+      return food;
+    },
+    introduce: function() {
+      return "Hi, I'm " + this.name + " and I'm a " + this.species + " who has eaten " + this.foodsEaten;
+    }
+  };
+
+  return newMonkey;
+}
+
+
+var nabil = makeMonkey("Nabil", "chimpanzee");
