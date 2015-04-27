@@ -60,13 +60,13 @@ if (hoodieSwagLevel < 10) {
 // Truthiness //
 ////////////////
 
-t = true;     // true
-fullString = "Hi";  // true
-f = false;    // false
-n = null;     // false
-u = undefined; // false
-z = 0;         // FALSE!!!!!!
-empty = "";    // FALSE!!!!!!
+t = true;
+fullString = "Hi";
+f = false;
+n = null;
+u = undefined;
+z = 0;
+emptyString = "";
 
 if (t) {
   console.log("true is true");
@@ -98,10 +98,10 @@ if (z) {
   console.log("0 is false");
 }
 
-if (empty) {
-  console.log("empty string is true");
+if (emptyString) {
+  console.log("emptyString string is true");
 } else {
-  console.log("empty string is false");
+  console.log("emptyString string is false");
 }
 
 if (fullString) {
