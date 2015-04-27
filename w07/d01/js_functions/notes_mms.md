@@ -6,7 +6,7 @@ Delivery Tips:
 * Revisit LOs
 * Defer questions when appropriate
 
-# Functions in JavaScript
+# Javascript Functions
 
 ## Learning Objectives
 
@@ -22,35 +22,134 @@ Delivery Tips:
 
 **I do**
 
-* Different ways to define a function
-  * var func = function(a, b) {};
-  * function func(a,b) {};
-* Loose input arguments
-* Explicit returns
+* It's Ruby... but different
 
-**You do**
+* How do we define a method in Ruby?
+* How do we define a method in JavaScript?
+  * Trick question.  We don't.  We define **functions**.
+
+
+* Reference Scavenger Hunt (5 min): 2 ways to define a function named 'sum' that accepts 2 addends.
+  * var sum = new Function('addend1', 'addend2', 'return addend1 + addend2');
+  * var sum = function(addend1, addend2) { ... }
+  * function sum(addend1, addend2) { ... }
+  * ([param] [, param]) => {
+   statements
+}
+
+* #ProTip:  MDN Reference vs. Guide
+  * Google: `mdn js function`
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+
+
+* Review signatures (on board)
+  * function declaration (or function statement)
+    * `function func(a,b) {};`
+  * function expression
+    * `var funcName = function(a, b) {};`
+    * **anonymous** function
+
+* Operations on different data types
+
+**You do** Our First Function
+
+* (6 min, productive struggle) Write a function to sum two addends.
+
+```
+> sum(1,2);
+<- 3
+```
+
+* What did we learn?
+  * Parenthesis
+  * Explicit returns
+  * Missing arguments
+  * Too many arguments
+
+* Demonstrate loose arguments
+  * Extra arguments are ignored
+  * Undefined arguments are undefined
+
+* Did anyone try both declaration and expression?  Did you notice any difference?
+
+** You Do:** Function exercises
 
 * Write a function to accept three numbers and return their product.
 * Write a function to accept an age and returns
-  * true if you can rent a car without additional fees
-  * false if you cannot rent a car without additional fees
+  * true if you can vote
+  * false if you cannot vote
 * Write a function to accept an array and print the elements in order
 
 **I do**
 
 * What is hoisting?
-* Demonstrate loose arguments
-  * Extra arguments are ignored
-  * Undefined arguments are undefined
+
+```
+hoisted(); // logs "hoisted"
+
+function hoisted() {
+  console.log("hoisted");
+}
+```
+**not**
+```
+not_hoisted(); // ReferenceError: not_hoisted is not defined
+
+not_hoisted = function() {
+  console.log("hoisted");
+}
+```
+
+### Fundamental Objects
+
+* some of you may have noticed that 'every function is actually a Function object'
+  * First-class object
+  * Ruby: "abc".size #=> 3
+  * JS:
+    * sum.length;
+    * product.length;
+* Review MDN Fundamental Objects https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+
 * Difference between parentheses and no parentheses
   * Referring to a function vs...
   * Calling a function
 
+
 ### Scope
 
-Demonstrate how functions have access to variables in the scope they were defined.
+* Variables in the scope of the function's creation.
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope
+  * Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function.
+  * However, a function can access all variables and functions defined inside the scope in which it is defined.
 
-Demonstrate how we can pass a function in as an argument.
+* Pass a function to a function as a parameter, call it inside.
+
+**We do**
+
+* Implement `each` in javascript
+  * for each element in a collection, perform a function
+  * Given:
+  ```
+  var prefix = "The element is ";
+  var printer = function(el) {
+    console.log(prefix + el);
+  }
+  ```
+
+  * `each([2,"abc"],printer)`
+  ```
+  The element is 2
+  The element is abc
+  ```
+
+* Implement `reduce` in javascript
+  * for each element in collection, perform a function and use the result to perform the next function
+    * Given the functions `sum` and `product`:
+    * `reduce([2,3], sum); #=> 5`
+    * `reduce([2,3,1], sum); #=> 6`
+    * `reduce([2,3], product); #=> 6`
+    * `reduce([2,3,2], product); #=> 12`
 
 # Lesson Plan - Review Notes
 
