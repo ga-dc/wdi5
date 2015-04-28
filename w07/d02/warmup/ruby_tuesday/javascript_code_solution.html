@@ -16,22 +16,24 @@
 <script type="text/javascript">
 
   console.log("hi ruby!");
-  // JAVASCRIPT
-  // Comments with //
 
   // Variables
+  var number = 10
 
+
+  ///////////////////
+  // Control Flow  //
+  ///////////////////
 
   // Conditionals
   // If number is less than 5 return "Too Small"
-  // If number equals 10 return "Just Right"
+  // If number equals 5 return "Just Right"
   // If number is greater than 10 return "Too Big"
-  var number = 10
   if (number < 5) {
     console.log("Too Small");
-  } else if (number === 10) {
+  } else if (number === 5) {
     console.log("Just Right");
-  } else if (number > 10) {
+  } else if (number > 5) {
     console.log("Too Big");
   }
 
@@ -60,9 +62,9 @@
   }
 
 
-  ///////////////////////
-
-  // Functions
+  ////////////////
+  // Functions  //
+  ////////////////
 
   // named
   // Create a function named "add" that will add two passed numbers
@@ -76,6 +78,11 @@
     return x * y;
   }
 
+
+  ////////////////
+  // Arrays     //
+  ////////////////
+
   // Arrays
   var myNameArray  = ['Adam', 'Elaine', 'Tom'];
   // Return the first element of the array
@@ -87,15 +94,21 @@
   var dwarves = ['Doc', 'Grumpy', 'Happy', 'Sleepy', 'Bashful', 'Sneezy', 'Dopey'];
 
   // Print out to the console, "Hi Ho! I am" + the dwarfs name
-  dwarves.forEach(function(dwarf_name) { console.log("Hi Ho! I am " + dwarf_name); });
+  dwarves.forEach(function(dwarf_name) {
+                    console.log("Hi Ho! I am " + dwarf_name);
+                  });
 
   // Use the forEach method to iterate over the array and return:
   // dwarf name + "is part of the gang." using both the index and specific value in the array (LOOK UP forEach)!!!
-  dwarves.forEach(function(dwarf_name, index) { console.log(dwarf_name + " is part of the game (#" + index + ")"); });
+  dwarves.forEach(function(dwarf_name, index) {
+                    console.log(dwarf_name + " is part of the game (#" + index + ")");
+                  });
 
-  ///////////////////
 
-  // Objects
+  ////////////////
+  // Objects    //
+  ////////////////
+
   // Example:
   var myObject = {name: 'Snow White', age: 20, weakness: 'apples'};
   // Print out myObjects name using both bracket and dot notation.
