@@ -8,6 +8,7 @@
 
 - second through fifth link when clicked
   - should display different parts of the song
+  - hint: starting with the third link, notice the href has changed, maybe we should prevent a default action
 
 #### BONUS!
 - the last link when clicked
