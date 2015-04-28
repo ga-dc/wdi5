@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>asdf</title>
+  <style>
+  img
+  {
+    border:5px dotted red;
+  }
+  </style>
+  <script>
+  var images = [
+    {
+      "url" : "http://www.w3schools.com/images/w3schools.png",
+      "caption" : "My caption"
+    },
+    {
+      "url" : "http://www.w3schools.com/images/colorpicker.gif",
+      "caption" : "Color picker"
+    }
+  ]
+  function gallery(){
+    for(var x = 0; x < images.length; x++){
+      var imageInfo = images[x];
+      var image = document.createElement("IMG");
+      image.src = imageInfo["url"];
+
+      var caption = document.createElement("P");
+      caption.innerText = imageInfo["caption"];
+
+      document.querySelector(".gallery").appendChild(image);
+      document.querySelector(".gallery").appendChild(caption);
+    }
+  }
+  </script>
+</head>
+<body onload="gallery()">
+
+  <div class="gallery">
+  </div>
+
+</body>
+</html>

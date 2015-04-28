@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foo</title>
+    <style>
+      *
+      {
+      font-family:Futura;
+      font-size:24px;
+      }
+      div
+      {
+        display:none;
+      }
+      div:target
+      {
+        display:block;
+      }
+      input:checked+label
+      {
+      color:red;
+      border:1px solid black;
+      }
+      input:focus
+      {
+        background-color:black;
+        color:white;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <nav>
+    <a href="#about">About Me</a>
+    <a href="#contact">Contact Info</a>
+    <a href="#quiz">Quiz!</a>
+    </nav>
+
+    <div id="about">
+      <h1>My name is Robin. Hope you're not sobbin'.</h1>
+    </div>
+
+    <div id="contact">
+      <h1>My number's 867-5309.</h1>
+    </div>
+
+    <div id="quiz">
+      <p>Is Robin cool?</p>
+      <input type="radio" name="isCool" id="yes" /><label for="yes">Yes!</label><br />
+      <input type="radio" name="asdf" id="very" /><label for="very">Very yes!</label>
+      <input type="radio" /><label>Something</label>
+      <input type="text" />
+    </div>
+
+  </body>
+</html>
