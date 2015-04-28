@@ -1,20 +1,17 @@
-var form = $('#form');
-var input = $('#color-field');
-var brush = $('.brush');
+var form = document.getElementById('form');
+var input = document.querySelector('#color-field');
+var brush = document.querySelector('.brush');
 
-form.submit(function(event) {
-  event.preventDefault(event);
-  brush.css("backgroundColor", input.val());
+form.addEventListener('submit', function(event){
+  event.preventDefault();
+  brush.style.backgroundColor = input.value;
 });
 
-// $('#brush').click(function(){
-//   $('#form').submit(function());
-// });
-
-for( var i = 0; i < 3000; i++){
-  var div = $('<div class="square"></div>');
-  div.hover(function(){
-  $(this).css("backgroundColor",brush.css("backgroundColor"));
+for( var i = 0; i < 8000; i++){
+  var div = document.createElement('div');
+  div.classList.add('square');
+  div.addEventListener('mouseover', function(){
+    this.style.backgroundColor = brush.style.backgroundColor;
   });
-  $("body").append(div)
+  document.body.appendChild(div);
 }
