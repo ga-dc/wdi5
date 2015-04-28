@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This</title>
+    <style>
+      *
+      {
+        position:relative;
+      }
+    </style>
+    <script>
+      function move(which){
+        var currentLeft   = parseInt(which.style.left);
+        var changeAmount  = 50;
+        var newLeft       = currentLeft + changeAmount;
+        if(isNaN(currentLeft)){
+          newLeft = changeAmount;
+        }
+        console.log(newLeft);
+        which.style.left = newLeft + "px"; 
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <img src="https://avatars3.githubusercontent.com/u/6268177?v=3&s=460" id="robz" alt="My shining face" />
+    </div>
+
+    <button type="button" id="myButton" onclick="move(document.getElementById('robz'));">Move!</button>
+  </body>
+</html>
