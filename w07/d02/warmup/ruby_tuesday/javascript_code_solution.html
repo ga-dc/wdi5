@@ -14,6 +14,7 @@
 </ol>
 
 <script type="text/javascript">
+  console.log(multiply(10, 5));
 
   console.log("hi ruby!");
 
@@ -81,6 +82,7 @@
     return x * y;
   }
 
+  console.log(multiplied(4, 4));
 
   ////////////////
   // Arrays     //
@@ -96,10 +98,13 @@
   // Iteration
   var dwarves = ['Doc', 'Grumpy', 'Happy', 'Sleepy', 'Bashful', 'Sneezy', 'Dopey'];
 
-  // Print out to the console, "Hi Ho! I am" + the dwarfs name
-  dwarves.forEach(function(dwarf_name) {
+  var pd = function (dwarf_name) {
                     console.log("Hi Ho! I am " + dwarf_name);
-                  });
+                  };
+
+  // Print out to the console, "Hi Ho! I am" + the dwarfs name
+  dwarves.forEach(pd);
+
 
   // Use the forEach method to iterate over the array and return:
   // dwarf name + "is part of the gang." using both the index and specific value in the array (LOOK UP forEach)!!!
@@ -129,6 +134,15 @@
                   fly:   function() { return "I am like a bird.  I want to fly away.  I dont know where my home is. I dont know where my soul is."},
                   greet: function() { return "Hi my name is " + this.name}
                };
+
+
+  // example of 'taking a function' from one object and
+  // adding it to another object.
+  // the context of the function changes when we call e.g.
+  // me.speak();
+  var me = { name: "Adam"};
+  me.speak = myBird.greet;
+  console.log(me.speak());
 
   console.log(myBird.name);
   console.log(myBird.chirp());
