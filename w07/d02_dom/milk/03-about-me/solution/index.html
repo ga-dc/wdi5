@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>About Me</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      html{
+        background: #fff;
+	height: 100%;
+      }
+      body{
+        max-width:50em;
+	color: #333;
+	height: 100%;
+	padding:4em;
+	margin:auto;
+	background:#eee;
+	border: 4px solid #ddd;
+	border-width: 0 4px 0 4px;
+      }
+      .listitem{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About Me</h1> 
+    <ul>
+      <li>Nickname: <span id="nickname"></span>
+      <li>Favorites:  <span id="favorites"></span>
+      <li>Hometown: <span id="hometown"></span>
+    </ul>
+    <script>
+      document.body.style.fontFamily = "Arial, sans-serif"
+      document.querySelector("#nickname").innerHTML = "J-Dog"
+      document.querySelector("#favorites").innerHTML = "CSS and Git"
+      document.querySelector("#hometown").innerHTML = "n/a - I'm a navy brat!"
+      var listItems = document.querySelectorAll("li")
+      for( var i = 0; i < listItems.length; i++ ){
+        var listItem = listItems[i]
+	listItem.classList.add("listitem")
+      }
+      var img = document.createElement("img")
+      img.src = "https://avatars2.githubusercontent.com/u/3824954?v=3&s=460"
+      var li = document.createElement("li")
+      li.appendChild( img )
+      document.querySelector("ul").appendChild( li )
+    </script>
+  </body>
+</html>
