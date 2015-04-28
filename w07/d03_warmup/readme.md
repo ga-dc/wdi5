@@ -1,6 +1,6 @@
 # Take the Money and Run!
 
-## Main Rule - *Do Not Touch Anything in the Body Tags.* You are only allowed to write code inside of the `script` tag.
+**Do Not Touch Anything in the `body` tag.** You are only allowed to write code inside of the `script` tag.
 
 ## Write some JS to do the following
 
