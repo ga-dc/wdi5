@@ -1,6 +1,6 @@
 #Pixart
 
-Warmup to help nail down Event Listeners. Use the starter code in [pixart-starter](./pixart-starter), and commit each step of the exercise.
+Warmup to help nail down Event Listeners. Use the starter code in [pixart_starter](./pixart_starter), and commit each step of the exercise.
 
 You will not be submitting a pull request for this warmup exercise. Place the code somewhere outside of any other git repositories, and use `git init` to start a new local repo.
 
