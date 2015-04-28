@@ -9,23 +9,32 @@
       }
     </style>
     <script>
-      function move(which){
-        var currentLeft   = parseInt(which.style.left);
-        var changeAmount  = 50;
-        var newLeft       = currentLeft + changeAmount;
-        if(isNaN(currentLeft)){
-          newLeft = changeAmount;
-        }
-        console.log(newLeft);
-        which.style.left = newLeft + "px"; 
+      function addEvents(){
+        var input = document.getElementById("input");
+        input.addEventListener("keyup", function(){
+          document.getElementById("charCount").innerText = input.value.length;
+        });
       }
-    </script>
-  </head>
-  <body>
-    <div>
-      <img onmouseover="move(this);" src="https://avatars3.githubusercontent.com/u/6268177?v=3&s=460" id="robz" alt="My shining face" />
-    </div>
 
-    <button type="button" id="myButton" onclick="move(document.getElementById('robz'));">Move!</button>
-  </body>
+    function move(which){
+      var currentLeft   = parseInt(which.style.left);
+      var changeAmount  = 50;
+      var newLeft       = currentLeft + changeAmount;
+      if(isNaN(currentLeft)){
+        newLeft = changeAmount;
+      }
+      which.style.left = newLeft + "px"; 
+    }
+  </script>
+</head>
+<body onload="addEvents()">
+  <div>
+    <img src="https://avatars3.githubusercontent.com/u/6268177?v=3&s=460" id="robz" alt="My shining face" />
+  </div>
+
+  <input id="input" type="text" />
+  <p id="charCount"></p>
+
+  <button type="button" id="myButton" >Move!</button>
+</body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foo</title>
+    <script>
+
+      function preventTabbing(){
+        var inputs = document.querySelectorAll("input");
+        for(var x = 0; x < inputs.length; x++){
+          inputs[x].addEventListener("keydown", function(evt){
+            if(evt.keyCode === 9){
+              evt.preventDefault();
+              console.log("Tabbing out prevented!");
+              }else{
+              console.log("That wasn't tab. It was " + evt.keyCode);
+            }
+          });
+        }
+      }
+
+    </script>
+  </head>
+  <body onload="preventTabbing()">
+
+    <div>
+      <input type="text" id="tabOut" /><label for="tabOut">Try to tab out of this!</label>
+    </div>
+
+    <div>
+      <input type="text" id="tabIn" /><label for="tabIn">Try to tab into me!</label>
+    </div>
+
+  </body>
+</html>

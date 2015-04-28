@@ -38,10 +38,20 @@ getElementsByTagName
 getElementsByClassname
 ```
 
+---
+
+# Afternoon
+
+## CSS
+
+```
+var style = window.getComputedStyle(element)
+style.getPropertyValue('top');
+```
+
 ## Changing stuff
 
 ```
-setAttribute(name, value)
 classList.toggle(name, [false to add, true to remove])
 ```
 
@@ -50,5 +60,14 @@ classList.toggle(name, [false to add, true to remove])
 1. Create the element in memory
 2. Then put it somewhere
 
+```
+createElement
+appendChild
+removeChild
+```
+
 ## Events
 
+```
+addEventListener(event, callback)
+```
