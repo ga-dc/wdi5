@@ -48,6 +48,14 @@
 
 ### Scope and Context
 
+- Define "variable scope" in the context of a program.
+- Explain what global scope is
+- List some problems associated with global scope.
+- Explain variable scoping rules in Javascript
+- Describe what a closure is and how it relates to scope.
+- Explain function context, and how it relates to the `this` keyword.
+- Explain what the default context of Javascript executing in the browser is.
+
 ### Callbacks and Promises
 
 - Compare and contrast Ruby methods to Javascript functions.
