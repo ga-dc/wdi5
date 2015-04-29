@@ -105,6 +105,9 @@ function goBoom() {
 
 goBoom();
 // this === window
+
+// This is the same as:
+window.goBoom();
 ```
 
 **Context**: `this` refers to the "window" object (global scope).
