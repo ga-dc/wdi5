@@ -34,14 +34,7 @@ var user = {
         // This line is printing a random person's name and age from
         // the data array
         console.log( randomName + ' ' + randomAge);
-
     }
 };
 
-// The button is wrapped inside a jQuery $ wrapper, so it is
-// now a jQuery object.
-// And the output will be undefined because
-// there is no data property on the button object
-
-// Cannot read property '0' of undefined
-$('button').click (user.clickHandler);
+document.querySelector('button').addEventListener('click', user.clickHandler);

@@ -38,4 +38,4 @@ var user = {
 // be invoked in WHEN IT IS INVOKED/EXECUTED/RAN.
 // And the 'this' variable always points to the runtime
 // Context of function!
-$('button').click (user.clickHandler.bind(user));
+document.querySelector('button').addEventListener('click', user.clickHandler.bind(user));
