@@ -1,0 +1,5 @@
+walkingCat();
+
+function walkingCat() {
+
+}
