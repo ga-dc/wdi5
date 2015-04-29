@@ -1,5 +1,3 @@
-'use strict';
-
 var user = {
     data:[
         {name:'T. Woods', age:37},

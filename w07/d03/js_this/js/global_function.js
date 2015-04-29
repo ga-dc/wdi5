@@ -1,5 +1,3 @@
-'use strict';
-
 // Global variables
 var firstName = "Peter",
 lastName = "Ally";

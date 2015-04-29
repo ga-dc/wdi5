@@ -1,5 +1,3 @@
-'use strict';
-
 var user = {
     tournament:'The Masters',
     data      :[

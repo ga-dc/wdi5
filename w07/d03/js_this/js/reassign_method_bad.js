@@ -1,5 +1,3 @@
-'use strict';
-
 // This data variable is a global variable
 var data = [
     {name:'Samantha', age:12},
