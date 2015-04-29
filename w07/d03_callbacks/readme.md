@@ -53,9 +53,8 @@ do( function(){
 ## Synchronous vs. Asynchronous
 
 We have mentioned this before. Why is synchronous behavior not conducive
-to frond end development?
+to front end development?
 
+How does this relate to events?
 
-
-
-
+## You do: Catch me if you can
