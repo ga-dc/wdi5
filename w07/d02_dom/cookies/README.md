@@ -45,8 +45,7 @@ getElementsByClassname
 ## CSS
 
 ```
-var style = window.getComputedStyle(element)
-style.getPropertyValue('top');
+window.getComputedStyle(document.getElementById("mySweetElement"))["background-color"]`
 ```
 
 ## Changing stuff

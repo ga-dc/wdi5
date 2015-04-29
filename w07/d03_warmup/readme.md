@@ -1,15 +1,13 @@
-## Take the Money and Run!
+# Take the Money and Run!
 
-### Main Rule- Do Not Touch Anything in the Body Tags, you are only allowed to write code inside of the script tag
+**Do Not Touch Anything in the `body` tag.** You are only allowed to write code inside of the `script` tag.
 
-### Write some JS to do the following
-- first link when clicked
-  - should change the background color to something thats not white, blue, or black
+## Write some JS to do the following
 
-- second through fifth link when clicked
-  - should display different parts of the song
-  - hint: starting with the third link, notice the href has changed, maybe we should prevent a default action
+- When the first link on the page is clicked, the background color should change to something that is **not** white, blue, or black.
 
-#### BONUS!
-- the last link when clicked
-  - should display 1 line of the chorus, each subsequent click will dispaly one additional line of the chorus until all 6 lines are displayed
+- When the second through fifth links are clicked, the relevant part of the song should be displayed. *(Hint: Notice that the `href` of the third link isn't `#`. Maybe some kind of default action should be prevented...)
+
+## BONUS!
+
+- When the last link is clicked, one line of the chorus should be displayed. Each subsequent click should display an additional line of the chorus until all 6 lines are displayed.

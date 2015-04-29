@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Async Academy</title>
+  <style>
+  body {
+    font: 16px/1.4 Helvetica, sans-serif;
+    margin: 30px;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+
+  hr {
+    margin: 40px 0;
+  }
+  </style>
+</head>
+<body>
+  <h1>Async Academy</h1>
+
+  <h2>I will <b>callback</b> once every second...</h2>
+  <p id="callback-message">...</p>
+  
+  <hr>
+
+  <h2>I respond in the <b>event</b> of a button click...</h2>
+  <button id="event-bttn">Click Me!</button>
+  <p id="event-message">...</p>
+  <script type="text/javascript">
+    // Callback:
+    // --------------------------
+    // Give setInterval a "callback" to trigger after each interval.
+    setInterval(function() {
+      var message = document.getElementById('callback-message');
+      message.innerHTML = '<b>Callback at:</b> ' + new Date().toTimeString();
+    }, 1000);
+
+    // Event:
+    // --------------------------
+    // Bind an event handler onto a DOM element,
+    // it will be invoked each time the named event occurs.
+    var eventButton = document.getElementById('event-bttn');
+    eventButton.addEventListener('click', function(evt) {
+      var date = new Date(evt.timeStamp);
+      var message = document.getElementById('event-message'); 
+      message.innerHTML = '<b>Event "'+ evt.type +'"occured at:</b> ' + date.toTimeString();
+    });
+
+  </script>  
+</body>
+</html>
