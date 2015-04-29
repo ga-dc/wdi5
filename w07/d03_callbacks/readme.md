@@ -21,17 +21,17 @@ Code along the solution from the start.
 https://twitter.com/sw1tch/status/513363051987218432
 
 ```js
-function do(callback){
+function doThing(callback){
   callback()
 }
 function doWhenDone(){
   console.log("done")
 }
-do( doWhenDone )
+doThing( doWhenDone )
 
 //or
 
-do( function(){
+doThing( function(){
   
 })
 ```
