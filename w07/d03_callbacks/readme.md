@@ -16,20 +16,6 @@ Code along the solution from the start.
 
 ## Reference vs. invoking a function
 
-```js
-var button = document.querySelector("button")
-
-// complete the next line to reference the validateForm function
-button.addEventListener
-
-button.onclick  
-// 
-
-function validateForm( event ){
-  event.preventDefault()
-}
-```
-
 ## Callbacks
 
 https://twitter.com/sw1tch/status/513363051987218432
