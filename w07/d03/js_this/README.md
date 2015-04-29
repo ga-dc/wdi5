@@ -159,20 +159,6 @@ var deathstar = new Deathstar();
 
 **Context**: `this` refers to the newly-created object instance.
 
-## jQuery's `$(this)`
-
-When we select an element using jQuery, `$(this)` will point to the element selected. `$(this)` is most often used with event handlers, in which case it points to the target of the event callback.
-
-```js
-$('button').click(function () {
-    $(this).css('background-color', 'red');
-});
-
-// click the button, observe background changes to red
-```
-
-Using `$(this)` with jQuery should be your default choice, since `this` is a JavaScript keyword and won't have any jQuery methods (`.css`, `.append`, `.val`, etc.).
-
 ## Summary
 
 > 1. Is the function called with `new` (**new binding**)? If so, `this` is the newly constructed object.
