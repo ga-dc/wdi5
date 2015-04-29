@@ -1,5 +1,10 @@
 # JavaScript && The DOM
 
+## Screencasts
+
+- https://vimeo.com/126371833
+- https://vimeo.com/126371834
+
 ```js
 var html = "<!DOCTYPE html><html><head><title>My Site</title></head><body></body></html>"; // lol
 ```
