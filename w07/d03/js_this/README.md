@@ -176,12 +176,13 @@ var deathstar = new Deathstar();
 > Source: [You-Dont-Know-JS/ch2.md](https://github.com/getify/You-Dont-Know-JS/blob/58dbf4f867be0d9c51dfc341765e4e4211608aa1/this%20&%20object%20prototypes/ch2.md)
 
 Inside a jQuery method, `$(this)` refers to the document element that was selected.
+Note that `this` is not a variable. It is a keyword. You cannot change the value of `this`.
 
 ## Lab (Pair)
 
 Pair with a partner and review each of the following examples in order. Your goal in this assignment is to read and understand the code examples presented. Take time to contemplate the execution flow, and note any questions you have for discussion.
 
-For each example, you will edit `./this.html` to include the appropriate script from `./js`.  Review the script for instructions before you refresh your browser window. Many of this scripts use the special `debugger` keyword to stop JS execution and open your console. Use this opportunity to inspect your environment (perhaps by looking at `this`?) and then [continue](https://developer.chrome.com/devtools/docs/javascript-debugging).
+For each example, you will edit `./this.html` to include the appropriate script from `./js/`.  Review the script for instructions before you refresh your browser window. Many of these scripts use the special `debugger` keyword to stop JS execution and open your console. Use this opportunity to inspect your environment (perhaps by looking at `this`?) and then [continue](https://developer.chrome.com/devtools/docs/javascript-debugging).
 
 - `object_literal.js` - 'this' in an object literal.
 - `global_function.js` - 'this' in a global function.

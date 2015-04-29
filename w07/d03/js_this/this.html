@@ -5,9 +5,31 @@
     <title>Advanced JS Functions</title>
   </head>
   <body>
-    <h3> 'this' pointer and function 'Context'</h3>
+    <h2>Instructions:</h2>
+    <ol>
+      <li>Open the javascript console.</li>
+      <li>Review the script for instructions.</li>
+      <li>Refresh this page.</li>
+      <li>Review the comments in the loaded javascript file.
+      Many of these scripts use the special <a href="https://developer.chrome.com/devtools/docs/javascript-debugging">debugger</a> keyword to stop JS execution and open your console.
+      Use this opportunity to inspect your environment (perhaps by looking at `this`?)
+      and then continue.</li>
+      <li>Then update `this.html` to use the next javascript file and repeat.</li>
+        <ul>
+          <li><code>object_literal.js</code> - ‘this’ in an object literal.</li>
+          <li><code>global_function.js</code> - ‘this’ in a global function.</li>
+          <li><code>event_handler_broken.js</code> - Broken button event handler.</li>
+          <li><code>event_handler_fixed.js</code> - Fixed button event handler.</li>
+          <li><code>inner_function_bad.js</code> - Broken inner function.</li>
+          <li><code>inner_function_fixed.js</code> - Fixed inner function.</li>
+          <li><code>reassign_method_bad.js</code> - Changing the runtime context of a method to the global object.</li>
+          <li><code>reassign_method_fixed.js</code> - Changing the runtime context of a method with the javscript <em>bind</em> function.</li>
+        </ul>
+      </ol>
+    <hr>
+    <h3> Reviewing 'this' and function 'Scope' and 'Context'</h3>
     <div id='container'>
-      <button>Press Me</button>
+      <button>Press Me (when appropriate)</button>
     </div>
     <!-- Add the javascript to test here -->
     <script src='js/object_literal.js'></script>
