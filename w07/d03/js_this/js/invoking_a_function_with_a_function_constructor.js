@@ -4,17 +4,17 @@
 //It looks like you create a new function, but since JavaScript functions are objects you actually create a new object:
 
 // This is a function constructor:
-function person(firstName, lastName) {
-  console.log("this(in person):", this);
+function Person(firstName, lastName) {
+  console.log("this(in Person):", this);
   this.firstName = firstName;
   this.lastName  = lastName;
 }
 
 // This	creates a new object
-var ada = new person("Ada","Lovelace");
+var ada = new Person("Ada","Lovelace");
 ada.firstName;
 typeof ada;
-typeof person;
+typeof Person;
 
 // Note the difference between this and...
 // var ada = {
@@ -24,5 +24,5 @@ typeof person;
 // ada.firstName;
 
 // This is reusable...
-// var grace = new person("Grace", "Hopper");
+// var grace = new Person("Grace", "Hopper");
 // grace.firstName;
