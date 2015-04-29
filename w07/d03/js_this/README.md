@@ -6,20 +6,60 @@
 
 ## Objectives
 
-By the end of this, students should be able to:
+By the end of this lesson, students should be able to:
 
+- Describe the difference between global and local scope in JavaScript.
+- Recall which part(s) of JavaScript create new scope.
+- Give an example of which part(s) of JavaScript do not create new scope.
 - Recall whether or not `this` is determined at declaration.
 - Explain what `this` points to in each calling context.
 - Read and follow the execution context of code that uses different `this` idioms.
 
-## Instructions
+## Global and Local Scope
 
-1. Fork and clone.
-1. `npm install`
-1. `bower install`
-1. Follow along.
+Suppose we add the following as the first line to a new file called `cookies.js`:
 
-## `this` Is A Referent
+```js
+var favoriteCookie = "Snickerdoodle";
+```
+
+The `favoriteCookie` variable is created in "global" scope. Global scope is simply the default scope, or top-most scope, we work within in JavaScript.
+
+Local scope, on the other hand, is scope that is limited to a new function. For example:
+
+```js
+// global scope
+var favoriteCookie = "Snickerdoodle";
+
+var takeFromJar = function takeFromJar () {
+    var who = "Adam took the cookie from the cookie jar!"; // `who` is defined in the local scope (the function scope)
+    console.log("Who took the cookie from the cookie jar?", who);
+};
+
+who; //=> undefined
+```
+
+The rule for scope in JavaScript is simple: only functions create new scope. Nothing else in the language creates a scope: not loops, not conditionals. All function scopes are said to be *nested* within the global scope, since they are defined within the global scope.
+
+**Hint:** Following indentation style guidelines can help you follow scope when you're reading or writing nested functions.
+
+Now that we know a bit more about how scope is created in JavaScript, we begin to see the importance of the `var` keyword. If you assign something to a variable in JavaScript *without* using `var`, that variable floats up to global scope. This is a Bad Idea™.
+
+```js
+var oreo = "DoubleStuf";
+
+var bestOreo = function bestOreo () {
+    oreo = "Mint";
+    console.log(oreo);
+};
+
+bestOreo(); //=> "Mint"
+oreo; //=> "Mint" overwrote "DoubleStuf"
+```
+
+If we don't use the `var` keyword, we have to always be aware of what is in global scope. That's hard to do, it makes understanding scope more complex. Our advice is to always use `var` when assigning something to a variable.
+
+## `this` Is A Reference
 
 > We use this similar to the way we use pronouns in natural languages like English and French. We write: “John is running fast because he is trying to catch the train.” Note the use of the pronoun “he.” We could have written this: “John is running fast because John is trying to catch the train.” We don’t reuse “John” in this manner, for if we do, our family, friends, and colleagues would abandon us. Yes, they would. In a similar aesthetic manner, we use the this keyword as a shortcut, a referent to refer to an object.
 >
@@ -166,6 +206,8 @@ For each example, you will edit `app/this.html` to include the appropriate scrip
 
 ## Additional Resources
 
+- [Functions - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Everything you wanted to know about JavaScript scope](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
+- [What You Need To Know About JavaScript Scope - Smashing Magazine](http://www.smashingmagazine.com/2009/08/01/what-you-need-to-know-about-javascript-scope/)
 - [Understand JavaScript’s “this” With Clarity, and Master It | JavaScript is Sexy](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 - [You-Dont-Know-JS/README.md at master · getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes)
-- [codepaq: jQuery - this vs $(this)](http://codepaq.blogspot.com/2013/11/jquery-this-vs-this.html)
