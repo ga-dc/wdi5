@@ -112,6 +112,9 @@ window.goBoom();
 
 **Context**: `this` refers to the "window" object (global scope).
 
+**Gotcha**: This behavior has changed in ECMAScript 5
+  only when using strict mode[2]: `'use strict';`
+
 ### Method Invocation Pattern
 
 When a function is defined on an object, it is said to be a *method* of the object. When a method is invoked through its host object, the method is bound to its host:
