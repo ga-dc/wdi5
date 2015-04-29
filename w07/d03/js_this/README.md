@@ -180,18 +180,9 @@ Note that `this` is not a variable. It is a keyword. You cannot change the value
 
 ## Lab (Pair)
 
-Pair with a partner and review each of the following examples in order. Your goal in this assignment is to read and understand the code examples presented. Take time to contemplate the execution flow, and note any questions you have for discussion.
+Pair with a partner and follow the instructions in [`this.html`](./this.html). Your goal in this assignment is to read and understand the code examples presented. Take time to contemplate the execution flow, and note any questions you have for discussion.
 
-For each example, you will edit `./this.html` to include the appropriate script from `./js/`.  Review the script for instructions before you refresh your browser window. Many of these scripts use the special `debugger` keyword to stop JS execution and open your console. Use this opportunity to inspect your environment (perhaps by looking at `this`?) and then [continue](https://developer.chrome.com/devtools/docs/javascript-debugging).
-
-- `object_literal.js` - 'this' in an object literal.
-- `global_function.js` - 'this' in a global function.
-- `event_handler_broken.js` - Broken button event handler.
-- `event_handler_fixed.js` - Fixed button event handler.
-- `inner_function_bad.js` - Broken inner function.
-- `inner_function_fixed.js` - Fixed inner function.
-- `reassign_method_bad.js` - Changing the runtime context of a method to the global object.
-- `reassign_method_fixed.js` - Changing the runtime context of a method with the javscript _bind_ function.
+Many of these scripts use the special `debugger` keyword to stop JS execution and open your console. Use this opportunity to inspect your environment (perhaps by looking at `this`?) and then [continue](https://developer.chrome.com/devtools/docs/javascript-debugging).
 
 ## Additional Resources
 
