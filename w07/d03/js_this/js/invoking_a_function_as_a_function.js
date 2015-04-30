@@ -24,5 +24,9 @@ hello("World!")
 // WARNING
 // !!!!!!!!!!!!!!!!!!
 
-// Global variables, methods, or functions can easily
+// **GOTCHA** Global variables, methods, or functions can easily
 // create name conflicts and bugs in the global object.
+
+
+// **Gotcha**: This behavior has changed in ECMAScript 5
+//  only when using strict mode[2]: 'use strict';

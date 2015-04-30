@@ -112,6 +112,9 @@ window.goBoom();
 
 **Context**: `this` refers to the "window" object (global scope).
 
+**Gotcha**: This behavior has changed in ECMAScript 5
+  only when using strict mode[2]: `'use strict';`
+
 ### Method Invocation Pattern
 
 When a function is defined on an object, it is said to be a *method* of the object. When a method is invoked through its host object, the method is bound to its host:
@@ -129,6 +132,10 @@ deathstar.goBoom();
 
 **Context**: `this` refers to the host object.
 
+#### We do
+  Exercise: object_literal.js within this.html
+
+
 ### Call/Apply Invocation Pattern
 
 Function objects have their own set of native methods, most notably are `.call` and `.apply`. These methods will invoke the function with a provided contextual object.
@@ -144,6 +151,11 @@ goBoom.call(deathstar);
 ```
 
 **Context**: `this` refers to the passed object.
+
+
+** TODO ** Instead of assigning all the exercises at the end, we are working to move them with the appropriate invocation pattern - throughout the lesson.  THis is partially completed.
+#### We do
+  Exercise: global_function.js within this.html
 
 ### Constructor Invocation Pattern
 
