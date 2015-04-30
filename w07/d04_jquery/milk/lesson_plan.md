@@ -103,3 +103,6 @@ A page can't be manipulated safely until the document is "ready." jQuery detects
 
 ### Class Exercise
 - Refactor Pixel Art or Timer to incorporate jQuery
+
+## Documentation
+[jQuery Docs](https://jquery.com/)
