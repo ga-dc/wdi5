@@ -7,7 +7,7 @@
 - Use jQuery to create, modify, and add responsiveness to nodes in the DOM.
 
 
-### Opening Framing
+### Opening Framing (15m)
 So we've learned alot of javascript this week. We've learned how to access the DOM, add event listeners to it, and manipulate it. Wouldn't it be nice if there was a nice little library that abstracts some of this code out? Well there is.
 
 Enter jQuery.
@@ -21,7 +21,7 @@ jQuery is a fast, small, and feature-rich JavaScript library. It makes things li
 - When should I use jQuery and when should i use vanilla JS? I'll be honest, jQuery might be a bit of a crutch for me. But its super important to understand the underlying JS behind it all. Often times run times are much faster with vanilla JS.
 
 [Cool website that shows runtimes for vanilla js vs jquery](http://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/)
-### CDN
+### CDN(10m)
 - What's a CDN?
   - content delivery network
   - The goal of a CDN is to serve content to end-users with high availability and high performance
@@ -30,7 +30,7 @@ Create an html page and include jquery cdn
 - google jquery cdn, show different versions, highlight compatibilities, show you can select minified/uncompressed
 - `<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>`
 
-### Important jQuery functions
+### Important jQuery functions(Gigantic CodeAlong 60m /w break)
 #### Read/selecting
 - The most basic concept of jQuery is to "select some elements and do something with them."
 - `$()`selecting elements by:
@@ -84,6 +84,7 @@ Create an html page and include jquery cdn
   - setter: pass in an argument
   - getter: pass in no argument
 
+## BREAK(10m)
 #### Other
 - `.show()`
   - changes a `display:none` to `display:block` or whatever it initially was
