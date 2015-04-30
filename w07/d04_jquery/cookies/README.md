@@ -127,11 +127,48 @@ https://docs.google.com/spreadsheets/d/1Eni5RxgHvfY42rxiKH7P5oeFhdcWU1RyS61ZiOG6
 
 ```
 
+## Things to note
+
+`$()` runs through the whole DOM every single time, so it's good to save `$()` to a variable.
+
+```
+var header = $("#header");
+header.css("color", "red");
+```
+
+Most jQuery methods return the object on which they were called. This means you can "chain" methods together.
+
+```
+$("#header").css("color", "red").next().css("font-weight", "bold").next("textarea").fadeOut();
+```
+
+You can't use jQuery methods on things you've "gotten" **without** using `$`.
+
+```
+document.getElementById("header").css("color", "red");
+// This won't work
+
+$("#header").css("color", "red");
+// This will work
+```
+
 ## Do something!
 
 - Redo the PixelArt homework using jQuery!
 - Redo the Timer homework!
 - Or https://github.com/ga-dc/milk-and-cookies/tree/master/w07/d03_callbacks/03-catch-me-if-you-can
+
+## When vs when not to use jQuery
+
+It's really tempting to use jQuery for **everything**. If all you want to do is get the value of something on your page, it's not practical to include the whole jQuery library. Just use regular JS.
+
+- http://youmightnotneedjquery.com/
+- http://needsmorejquery.com/
+
+## Stuff you can do now
+
+- http://www.findtheinvisiblecow.com
+- http://gabrielecirulli.github.io/2048/
 
 ## AJAX
 
@@ -151,6 +188,3 @@ https://docs.google.com/spreadsheets/d/1Eni5RxgHvfY42rxiKH7P5oeFhdcWU1RyS61ZiOG6
   - Settles (fulfilled or rejected)
 `$("something").fadeOut().then()`
 
-## Giphy gallery!
-
-User types something into an input. When they click a button, you load an image from Giphy using their search term and then display it on the page.
