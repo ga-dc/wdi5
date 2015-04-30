@@ -172,6 +172,10 @@ It's really tempting to use jQuery for **everything**. If all you want to do is 
 
 ## AJAX
 
+Normally you have to refresh your browser window in order to send or receive data from a server. AJAX is a way of sending or receiving data without having to refresh.
+
+It lets you use Javascript to access APIs, for example.
+
 ```
 .get()
 .post()
