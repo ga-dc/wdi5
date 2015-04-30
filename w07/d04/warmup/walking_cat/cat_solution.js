@@ -5,9 +5,7 @@ function walkingCat() {
 
   var distance = 0;
   setInterval(function() {
-    // cat.style.webkitTransform = 'rotate('+-distance*3+'deg)';
     cat.style.left = distance + 'px';
-    // cat.style.top = (-(distance - window.innerHeight + 100)  + 'px');
 
     if (distance == window.innerWidth) {
       distance = 0;
