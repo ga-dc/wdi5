@@ -34,6 +34,7 @@ Create an html page and include jquery cdn
   - can also use psuedo selectors like: `$("someHTMLTag:checked")`
 
 
+- you can only call jQuery methods on something with a `$()`
 
 - use css selectors to select dom elements, but really what's returned is a jQuery object and not a DOM object, which is why we can't use vanilla JS functions on jQuery objects and vice versa.
 
