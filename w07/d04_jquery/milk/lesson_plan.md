@@ -6,13 +6,21 @@
 - Explain what a CDN is.
 - Use jQuery to create, modify, and add responsiveness to nodes in the DOM.
 
-[Cool website that shows runtimes for vanilla js vs jquery](http://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/)
+
+### Opening Framing
+So we've learned alot of javascript this week. We've learned how to access the DOM, add event listeners to it, and manipulate it. Wouldn't it be nice if there was a nice little library that abstracts some of this code out? Well there is.
+
+Enter jQuery.
+
 
 jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.
 
 - One important thing to know is that jQuery is just a JavaScript library.
 - you can use the two in conjunction with the other, but you can't call vanilla-JS functions/methods on jQuery objects, and vice versa
 
+- When should I use jQuery and when should i use vanilla JS? I'll be honest, jQuery might be a bit of a crutch for me. But its super important to understand the underlying JS behind it all. Often times run times are much faster with vanilla JS.
+
+[Cool website that shows runtimes for vanilla js vs jquery](http://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/)
 ### CDN
 - What's a CDN?
   - content delivery network
@@ -101,6 +109,12 @@ Create an html page and include jquery cdn
 
 ### Using `$(document).ready()`
 A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you. Code included inside `$( document ).ready()` will only run once the page Document Object Model (DOM) is ready for JavaScript code to execute.
+
+### Documentation Dive
+- Break up into groups of 3 or 4
+- Find 2 methods that haven't been discussed in class
+- Figure out what they do
+- Be prepared to explain them and potentially code them.
 
 ### Class Exercise
 - Refactor Pixel Art or Timer to incorporate jQuery
