@@ -13,3 +13,8 @@
 - Explain how separation of concerns applies to Javascript
 - Organize code into model and view folders, with a main app.js 'controller' file
 - Name the four patterns of function invocation, and the context assumed with each.
+
+## Rails API + ERB
+
+- Load from and post data to external servers, incorporating it in a page's content, without requiring a page refresh
+- Distinguish between when best to use AJAX versus server-side HTTP
