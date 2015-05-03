@@ -3,8 +3,8 @@
 ## Learning Objectives
 
 - Use getters and setters to access the properties of a Javascript object.
-- Create objects using a constructor function.
 - Emulate private methods with closures
+- Create objects using a constructor function.
 - Describe what prototype chains are, and what is at the top of every chain.
 - Describe what prototypal inheritance is, and how it differs from classical inheritance.
 - Explain the importance of namespacing in JavaScript
@@ -36,6 +36,13 @@ var Animal = function( name ){
 }
 ```
 
+The first example has a public property `name`. The second example only has a getter method to
+access the name property.
+
+**Question** Why are we doing this?
+
+We’re focusing on code quality and maintainability as your applications grow in complexity.
+
 Typically, you will only see variable declarations in the constructor function. All other functionality
 ( methods ) are added to the Object's prototype:
 
@@ -49,3 +56,15 @@ Animal.prototype = {
   }
 }
 ```
+
+## Prototypal Inheritance
+
+A prototype is a collection of attributes and methods. Every object in Javascript has one prototype.
+It can be defined as in the above example or point to another object
+
+<http://repl.it/mDe/4>
+
+## We do Object Oriented Tic Tac Toe
+
+## You do Trello
+
