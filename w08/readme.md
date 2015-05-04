@@ -14,10 +14,10 @@
 - Organize code into model and view folders, with a main app.js 'controller' file
 - Name the four patterns of function invocation, and the context assumed with each.
 
-## Rails API + ERB
+## Rails APIs
 
-- Load from and post data to external servers, incorporating it in a page's content, without requiring a page refresh
-- Distinguish between when best to use AJAX versus server-side HTTP
+- Use `render json: ` to render a JSON response from a rails controller
+- Use `respond_to` to render different formats based on the incoming request
 
 ## AJAX
 
@@ -28,3 +28,8 @@
 - Contrast the old ('success') style of handling async with the new style.
 - Render new HTML content using data loaded from an Ajax request.
 - Perform POST, PUT, and DELETE requests to an API to modify data.
+
+## Rails API + ERB
+
+- Load from and post data to external servers, incorporating it in a page's content, without requiring a page refresh
+- Distinguish between when best to use AJAX versus server-side HTTP
