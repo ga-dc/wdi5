@@ -18,3 +18,12 @@
 
 - Load from and post data to external servers, incorporating it in a page's content, without requiring a page refresh
 - Distinguish between when best to use AJAX versus server-side HTTP
+
+## AJAX
+- Explain the difference between synchronous and asynchronous program execution
+- Explain why synchronous program execution is not conducive to the front-end.
+- Utilize `$.getJSON` to get JSON response
+- Use jQuery $.ajax to make an asynchronous data request.
+- Provide a callback for success and errors
+- Render new HTML content using data loaded from an Ajax request.
+- Customize ajax requests with various HTTP methods
