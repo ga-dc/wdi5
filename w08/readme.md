@@ -18,6 +18,7 @@
 
 - Use `render json: ` to render a JSON response from a rails controller
 - Use `respond_to` to render different formats based on the incoming request
+- Build a rails app that supports CRUD actions using a JSON interface
 
 ## AJAX
 
