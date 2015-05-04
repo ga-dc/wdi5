@@ -20,10 +20,11 @@
 - Distinguish between when best to use AJAX versus server-side HTTP
 
 ## AJAX
+
 - Explain the difference between synchronous and asynchronous program execution
 - Explain why synchronous program execution is not conducive to the front-end.
-- Utilize `$.getJSON` to get JSON response
-- Use jQuery $.ajax to make an asynchronous data request.
-- Provide a callback for success and errors
+- Use jQuery $.ajax() method to make asynchronous GET requests for data.
+- Use jQuery's 'promise-like' methods to handle AJAX responses asynchronously.
+- Contrast the old ('success') style of handling async with the new style.
 - Render new HTML content using data loaded from an Ajax request.
-- Customize ajax requests with various HTTP methods
+- Perform POST, PUT, and DELETE requests to an API to modify data.
