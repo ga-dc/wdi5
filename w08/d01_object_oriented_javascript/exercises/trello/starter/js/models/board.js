@@ -1,3 +1,4 @@
-var Board = function(){
+var Board = function( title ){
   this.all = []
+  this.title = title || ""
 }
