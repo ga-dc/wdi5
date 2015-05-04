@@ -1,8 +1,6 @@
-var board = new Board()
-var boardView = new BoardView(".boards", board)
-board.all.push({
-  title: "WDI work"
-},{
-  title: "Bucket List"
-})
-boardView.render()
+var boards = Board.all
+var boardsView = new BoardsView(".boards", boards)
+new Board("WDI Work")
+new Board("Bucket List")
+
+boardsView.render()
