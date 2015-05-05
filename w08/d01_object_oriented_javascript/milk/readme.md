@@ -43,6 +43,12 @@ access the name property.
 
 We’re focusing on code quality and maintainability as your applications grow in complexity.
 
+### Function Invocation
+
+- `someFunc()`
+- `new SomeFunc()`
+- `call` and `apply`
+
 Typically, you will only see variable declarations in the constructor function. All other functionality
 ( methods ) are added to the Object's prototype:
 
@@ -63,6 +69,8 @@ A prototype is a collection of attributes and methods. Every object in Javascrip
 It can be defined as in the above example or point to another object
 
 <http://repl.it/mDe/4>
+
+## You do: Animal Prototypal Inheritance
 
 ## We do Object Oriented Tic Tac Toe
 
