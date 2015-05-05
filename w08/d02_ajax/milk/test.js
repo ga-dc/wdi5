@@ -6,7 +6,7 @@ $(document).ready(function(){
   }).fail(function(response){
     console.log("this has failed")
   }).done(function(response){
-    console.log(response)
+    console.log(response.current_observation.temp_f)
   }).always(function(response){
     console.log("this always happens")
   })
