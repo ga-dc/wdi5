@@ -1,5 +1,12 @@
 # Object Oriented JavaScript
 
+## Screencasts
+
+- <https://vimeo.com/126976235>
+- <https://vimeo.com/126976237>
+- <https://vimeo.com/126976234>
+- <https://vimeo.com/126976236>
+
 ## Learning Objectives
 
 - Use getters and setters to access the properties of a Javascript object.
