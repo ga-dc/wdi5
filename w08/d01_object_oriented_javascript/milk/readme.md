@@ -68,7 +68,7 @@ It can be defined as in the above example or point to another object
 
 What functionality should be in a model? What should be in a view?
 
-## You do Trello
+## You do Trillo
 
 
 
