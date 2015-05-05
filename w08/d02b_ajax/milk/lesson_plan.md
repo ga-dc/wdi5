@@ -45,6 +45,7 @@ Walk through the following code:
 var url = "https://api.wunderground.com/api/f28a93cae85945b6/geolookup/conditions/q/va/midlothian.json"
 $.ajax({
   url: url,
+  type: "get",
   dataType: "jsonp"
 }).done(function(){
   console.log("ajax request success!")
@@ -76,3 +77,43 @@ we can see that it's returning the current temperature.
 
 ### You do (until lunch)
 - ajax_weather_underground exercise
+
+
+### AJAX + Local API
+
+Talk about why we want / need to put our JS on top of a rails app.
+
+* Data storage across sessions
+* Validation of data
+
+#### jQuery AJAX
+
+#### Walkthrough of OOP Trillo
+
+Explain what's happening here.
+
+#### I Do
+
+Re-demo jQuery AJAX GET.
+
+Modify JS to fetch from server using AJAX.
+
+Demo simulating slowness using sleep in the index controller action. Can still interact with other JS while data loads.
+
+#### You do (delete)
+
+First, demo jQuery AJAX DELETE.
+
+They: Make it so clicking the delete button deletes on server.
+
+#### We Do
+
+DEMO passing data params in AJAX POST requests.
+
+Implement creating new todos.
+
+#### You Do
+
+Implement in-line editing. Demo how it works.
+
+Pairs.
