@@ -6,12 +6,15 @@
 
 <div>
 	<h1>Slip for: <%= @student %></h1>
-	<h2 class="slip"><%= @slip %></h2>
+	<h2 id="slip"><%= @slip %></h2>
 </div>
 
 <div>
 	<a href="/?class=<%= params[:class] %>">Next</a>
-	<a href="/?reset=true">Reset</a>
+	<a href="/?reset=true&class=<%= params[:class]%>">Reset</a>
+</div>
+
+<div class="images">
 </div>
 
 <div class='finished_students'>

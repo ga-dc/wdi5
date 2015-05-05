@@ -17,7 +17,7 @@ slips = [
 	"List at least 3 methods added to a class when it inherits from ActiveRecord::Base.",
 
 	"What is the purpose of `params`? Also list three ways in which Rails puts data in it.",
-	"Describe how the 'session' hash works in ruby.",
+	"Describe how the 'session' hash works in Ruby.",
 
 	"Explain how to represent one-to-many relationships in AR (including DB columns).",
 	"Explain what active record validations are for, and give an example of one.",
@@ -34,7 +34,7 @@ slips = [
 	"Differentiate between function declarations and expressions.",
 	"Explain the difference between referencing and invoking a function.",
 	"Explain the concept of events and event driven programming.",
-	"Explain the concept of a 'callback'.",
+	"Explain the concept of a <strike>doge</strike> 'callback' function.",
 	"Explain the difference between synchronous and asynchronous execution."
 ]
 
