@@ -17,7 +17,7 @@ slips = [
 	"List at least 3 methods added to a class when it inherits from ActiveRecord::Base.",
 
 	"What is the purpose of `params`? Also list three ways in which Rails puts data in it.",
-	"Describe how the 'session' hash works in Ruby.",
+	"Describe how the 'session' hash works in Ruby. Why might Chewbacca use it?",
 
 	"Explain how to represent one-to-many relationships in AR (including DB columns).",
 	"Explain what active record validations are for, and give an example of one.",

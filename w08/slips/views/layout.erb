@@ -51,6 +51,13 @@
 			{
 			background-color:rgba(255,255,255,1);
 			}
+			img {
+				margin: 10px;
+			}
+
+			.images {
+				background-color: whitesmoke;
+			}
 		</style>
 		<title>Slips!</title>
 	</head>
@@ -65,7 +72,7 @@
 		if (slip.indexOf("Ruby") > -1) {
 			for(var i=0; i < 10; i++) {
 				$('.images').append($("<img width=100 src='http://budiirawan.com/wp-content/uploads/2015/04/ruby-logo.png'>"));
-				$('.images').append($("<img width=100 src='http://i664.photobucket.com/albums/vv7/malandra_01/ruby.gif'>"));
+				$('.images').append($("<img width=200 src='http://i664.photobucket.com/albums/vv7/malandra_01/ruby.gif'>"));
 			}
 			$('body').css({'background-color': "#9B111E"});
 		}
