@@ -1,0 +1,21 @@
+<% if params[:reset] == "true" %>
+	<script type="text/javascript">
+		window.location = "/"
+	</script>
+<% end %>
+
+<div>
+	<h1>Slip for: <%= @student %></h1>
+	<h2 class="slip"><%= @slip %></h2>
+</div>
+
+<div>
+	<a href="/?class=<%= params[:class] %>">Next</a>
+	<a href="/?reset=true">Reset</a>
+</div>
+
+<div class='finished_students'>
+	<% @students_used_out.each do |student| %>
+		<span><%= student %></span>
+	<% end %>
+</div>

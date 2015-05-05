@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<style>
+			body
+			{
+			background-color: #<%= @background_color %>;
+			text-align: center;
+			color: #fff;
+			font-size:18px;
+			font-family: "Futura","Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+			}
+			h2
+			{
+			font-size:2em;
+			border:1px dotted #fff;
+			border-width:3px 0;
+			padding:1em;
+			min-height:200px;
+			}
+			div
+			{
+			margin:2em auto 0 auto;
+			max-width:800px;
+			}
+			span
+			{
+			display:inline-block;
+			border-radius:5px;
+			min-width:100px;
+			padding:0px 10px;
+			margin:2px;
+			}
+			span,a
+			{
+			background-color:rgba(255,255,255,0.7);
+			color: #<%= @background_color %>;
+			}
+			a
+			{
+			display:inline-block;
+			width:100px;
+			color:#222;
+			text-decoration:none;
+			margin:0 1em;
+			padding:10px;
+			border-radius:5px;
+			}
+			a:hover
+			{
+			background-color:rgba(255,255,255,1);
+			}
+		</style>
+		<title>Slips!</title>
+	</head>
+	<body>
+<!--CONTENT BEGINS-->
+
+<%= yield %>
+
+<!--CONTENT ENDS-->
+	<script>
+
+	</script>
+	</body>
+</html>
