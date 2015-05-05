@@ -16,9 +16,11 @@
 
 ## Rails APIs
 
+- Describe the concept of a resource, and how it may be represented in various formats.
+- Use `to_json` to represent a model instance as JSON.
 - Use `render json: ` to render a JSON response from a rails controller
-- Use `respond_to` to render different formats based on the incoming request
 - Build a rails app that supports CRUD actions using a JSON interface
+- Describe the purpose of `respond_to` in a Rails controller
 
 ## AJAX
 

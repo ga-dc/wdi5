@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  font-family: 'Arial';
+  background: #2978b1;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+h1, p {
+  margin-left: 24px;
+}
+
+#new-card-text {
+  margin: 0 0 0 24px;
+  padding: 12px;
+  width: 80%;
+
+  border: none;
+  border-radius: 10px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+
+  font-size: 16px;
+}
+
+#new-card-button {
+  margin: 0 0 0 24px;
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 10px;
+  border-bottom: 1px solid #198132;
+  border-right: 1px solid #198132;
+
+  font-size: 16px;
+  color: #fff;
+  background-color: #29b162;
+}
+
+.column {
+  box-sizing: content-box;
+
+  float: left;
+  width: 40%;
+  margin: 24px;
+  padding: 24px;
+
+  border-radius: 10px;
+
+  background-color: #ddd;
+  color: #444;
+}
+
+.column-heading {
+  margin: 0px;
+  border-bottom: 1px solid #bbb;
+}
+
+.card-list {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+.card {
+  box-sizing: padding-box;
+
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+
+  border-radius: 5px;
+  border-bottom: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+
+  background-color: #f7f7f7;
+}
+
+.card .delete {
+  color: #f66;
+  margin-left: 12px;
+  float: right;
+  cursor: pointer;
+}
+
+.card .finish {
+  color: #29b162;
+  margin-left: 12px;
+  float: right;
+  cursor: pointer;
+}
