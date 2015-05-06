@@ -1,12 +1,9 @@
 var TrilloView = function(trilloModel){
   var newCardButton = document.querySelector("#new-card-button")
   this.newCardText = document.querySelector("#new-card-text")
-
   this.toDoList = document.querySelector("#todo-column .card-list")
   this.doneList = document.querySelector("#completed-column .card-list")
-
   this.model = trilloModel
-
   newCardButton.addEventListener("click", this.addCard.bind(this))
   this.render()
 }
