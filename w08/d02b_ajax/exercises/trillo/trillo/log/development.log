@@ -1,0 +1,2263 @@
+  [1m[36m (24.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCards (20140727034052)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "cards" ("id" serial primary key, "description" character varying(255), "completed" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (12.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140727034052"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  INSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-05-06 01:38:14.194157"], ["description", "Wash the car"], ["updated_at", "2015-05-06 01:38:14.194157"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-05-06 01:38:14.210302"], ["description", "Wrap things in cash"], ["updated_at", "2015-05-06 01:38:14.210302"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-05-06 01:38:14.212202"], ["description", "Write blog post about selfies"], ["updated_at", "2015-05-06 01:38:14.212202"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-05-06 01:38:14.213411"], ["description", "Learn about javascript events"], ["updated_at", "2015-05-06 01:38:14.213411"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cards" ("completed", "created_at", "description", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["completed", "t"], ["created_at", "2015-05-06 01:38:14.214634"], ["description", "Do 20 jumping jacks"], ["updated_at", "2015-05-06 01:38:14.214634"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cards" ("completed", "created_at", "description", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["completed", "t"], ["created_at", "2015-05-06 01:38:14.216053"], ["description", "See the rain coming down on a sunny day"], ["updated_at", "2015-05-06 01:38:14.216053"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "cards" ("completed", "created_at", "description", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["completed", "t"], ["created_at", "2015-05-06 01:38:14.217359"], ["description", "Learn about jQuery DOM manipulation"], ["updated_at", "2015-05-06 01:38:14.217359"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 21:38:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as */*
+  [1m[35mCard Load (6.6ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 25ms (Views: 5.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 21:38:48 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 21:41:03 -0400
+Processing by CardsController#index as */*
+  [1m[35mCard Load (2.1ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 21:45:39 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cards?callback=jQuery2140826714658876881_1430880571223&_=1430880571224" for 127.0.0.1 at 2015-05-05 22:49:31 -0400
+Processing by CardsController#index as */*
+  Parameters: {"callback"=>"jQuery2140826714658876881_1430880571223", "_"=>"1430880571224"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 22:50:06 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.5ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 22:54:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 20ms (Views: 6.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 22:56:10 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 22:59:36 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 22:59:50 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.9ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:00:00 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:00:59 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:01:07 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (4.7ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:02:33 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.0ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:04:21 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (3.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:04:45 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards?callback=jQuery214045602245861664414_1430881485454&completed=true&_=1430881485455" for 127.0.0.1 at 2015-05-05 23:04:59 -0400
+Processing by CardsController#index as */*
+  Parameters: {"callback"=>"jQuery214045602245861664414_1430881485454", "completed"=>"true", "_"=>"1430881485455"}
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"  WHERE "cards"."completed" = 't'
+Completed 200 OK in 15ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:05:18 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.1ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+Started OPTIONS "/cards" for 127.0.0.1 at 2015-05-05 23:05:23 -0400
+
+ActionController::RoutingError (No route matches [OPTIONS] "/cards"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.5ms)
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:06:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 19ms (Views: 5.9ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/cards" for 127.0.0.1 at 2015-05-05 23:06:03 -0400
+
+ActionController::RoutingError (No route matches [PUT] "/cards"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
+  Rendered /Users/andrewkim/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:08:09 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.9ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 2.9ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:08:12 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"completed"=>"true", "id"=>"1"}
+  [1m[35mCard Load (6.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 400 Bad Request in 10ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:42:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:30:in `update'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:08:33 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:08:34 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"1"}
+  [1m[35mCard Load (1.0ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 1  [["completed", "t"], ["updated_at", "2015-05-06 03:08:34.719905"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:08:39 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (3.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 3.3ms)
+
+
+Started PUT "/cards/2" for 127.0.0.1 at 2015-05-05 23:08:44 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"2"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 2[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:08:44.569914"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+Completed 200 OK in 14ms (Views: 1.5ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:08:45 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:08:56 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (2.0ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:11:34 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.9ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 2.9ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:11:35 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"3"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3  [["completed", "t"], ["updated_at", "2015-05-06 03:11:35.910007"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:11:55 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.6ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:12:22 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"3"}
+  [1m[36mCard Load (0.7ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:12:23 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.9ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:12:57 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-05 23:12:59 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"completed"=>"true", "id"=>"4"}
+  [1m[35mCard Load (0.5ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 400 Bad Request in 3ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:42:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:30:in `update'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:14:57 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-05 23:14:59 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"4"}
+  [1m[35mCard Load (0.4ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.2ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 4  [["completed", "t"], ["updated_at", "2015-05-06 03:14:59.431166"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-05 23:15:29 -0400
+
+AbstractController::ActionNotFound - The action 'index' could not be found for ApplicationController:
+  actionpack (4.1.2) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70109002163960/variables" for 127.0.0.1 at 2015-05-05 23:15:29 -0400
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:15:30 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:16:29 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:16:44 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:16:53 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.7ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:16:57 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"5"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:16:58 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:17:24 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:17:26 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"5"}
+  [1m[36mCard Load (1.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 5[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:17:26.556600"]]
+  [1m[35m (8.3ms)[0m  COMMIT
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:17:28 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:17:36 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"5"}
+  [1m[35mCard Load (0.8ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 5  [["completed", "t"], ["updated_at", "2015-05-06 03:17:36.988719"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:17:38 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:17:41 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"5"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 5[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:17:41.569313"]]
+  [1m[35m (8.5ms)[0m  COMMIT
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:17:41 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.1ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:18:25 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:18:26 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"5"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (2.8ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 5[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:18:26.496065"]]
+  [1m[35m (8.2ms)[0m  COMMIT
+Completed 200 OK in 19ms (Views: 1.3ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:18:35 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/6" for 127.0.0.1 at 2015-05-05 23:18:39 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"6"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 6  [["completed", "f"], ["updated_at", "2015-05-06 03:18:39.111518"]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:22:34 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.7ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/cards/6" for 127.0.0.1 at 2015-05-05 23:22:36 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"6"}
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 6[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:22:36.632482"]]
+  [1m[35m (9.2ms)[0m  COMMIT
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:22:36 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:22:54 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:23:02 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/7" for 127.0.0.1 at 2015-05-05 23:23:05 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"7"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 7  [["completed", "f"], ["updated_at", "2015-05-06 03:23:05.338994"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 14ms (Views: 1.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:23:15 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.0ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:23:21 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.8ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/cards/7" for 127.0.0.1 at 2015-05-05 23:23:24 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"7"}
+  [1m[35mCard Load (0.9ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 7  [["completed", "t"], ["updated_at", "2015-05-06 03:23:24.443917"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:23:24 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:23:26 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 1[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:23:26.885563"]]
+  [1m[35m (7.7ms)[0m  COMMIT
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:23:26 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.0ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:23:59 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:24:00 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"1"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 1[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:24:00.330777"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:24:00 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:24:01 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"1"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:24:01 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.9ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:24:02 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.0ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:24:48 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:24:59 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (2.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/cards/2" for 127.0.0.1 at 2015-05-05 23:25:00 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"2"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 2[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:25:00.473350"]]
+  [1m[35m (7.4ms)[0m  COMMIT
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:00 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:25:01 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"3"}
+  [1m[35mCard Load (0.1ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3  [["completed", "f"], ["updated_at", "2015-05-06 03:25:01.680572"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:01 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.9ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-05 23:25:03 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"4"}
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 4[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:25:03.197795"]]
+  [1m[35m (8.3ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:03 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:03 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/2" for 127.0.0.1 at 2015-05-05 23:25:16 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"2"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 2[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:25:16.628572"]]
+  [1m[35m (5.7ms)[0m  COMMIT
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:16 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.7ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:39 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (2.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:25:40 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"3"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:25:40.916106"]]
+  [1m[35m (10.7ms)[0m  COMMIT
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:25:40 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:34 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (2.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-05 23:26:35 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"4"}
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 4[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:26:35.622899"]]
+  [1m[35m (8.4ms)[0m  COMMIT
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:35 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:36 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:26:39 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"3"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:26:39.762945"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:39 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/cards/2" for 127.0.0.1 at 2015-05-05 23:26:40 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"2"}
+  [1m[35mCard Load (0.5ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 2  [["completed", "f"], ["updated_at", "2015-05-06 03:26:40.493932"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:40 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.0ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:26:41 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 1[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:26:41.562130"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:41 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.0ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:43 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:26:47 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"3"}
+  [1m[36mCard Load (0.8ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:26:47.987964"]]
+  [1m[35m (5.7ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:48 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:55 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (2.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/cards/2" for 127.0.0.1 at 2015-05-05 23:26:58 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"2"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 2[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:26:58.736501"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:26:58 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:28:51 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (4.7ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 4.7ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:28:52 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"1"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 1[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:28:52.184797"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:28:52 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:28:54 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"5"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 5  [["completed", "f"], ["updated_at", "2015-05-06 03:28:54.440316"]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:28:54 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (1.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/cards/6" for 127.0.0.1 at 2015-05-05 23:28:55 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"6"}
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 6[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:28:55.657056"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:28:55 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/7" for 127.0.0.1 at 2015-05-05 23:28:56 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"7"}
+  [1m[35mCard Load (0.4ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 7  [["completed", "f"], ["updated_at", "2015-05-06 03:28:56.500807"]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:28:56 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (2.1ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:29:14 -0400
+Processing by CardsController#create as HTML
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:42:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:24:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:29:31 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.0ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:29:35 -0400
+Processing by CardsController#create as HTML
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:42:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:24:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:29:40 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:29:43 -0400
+Processing by CardsController#create as HTML
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:42:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:24:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:30:11 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:30:12 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:30:16 -0400
+Processing by CardsController#create as HTML
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:42:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:24:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:31:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 17ms (Views: 4.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:31:17 -0400
+Processing by CardsController#create as HTML
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:43:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:24:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:31:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 19ms (Views: 5.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:31:47 -0400
+Processing by CardsController#create as HTML
+{"action"=>"create", "controller"=>"cards"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:43:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:25:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:32:43 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:32:46 -0400
+Processing by CardsController#create as HTML
+  Parameters: {"card"=>"boop"}
+{"card"=>"boop", "action"=>"create", "controller"=>"cards"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError - undefined method `permit' for "boop":String:
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:43:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:25:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:33:12 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (3.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:33:15 -0400
+Processing by CardsController#create as HTML
+{"action"=>"create", "controller"=>"cards"}
+Completed 400 Bad Request in 2ms
+
+ActionController::ParameterMissing - param is missing or the value is empty: card:
+  actionpack (4.1.2) lib/action_controller/metal/strong_parameters.rb:183:in `require'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:43:in `card_params'
+   () Users/andrewkim/wdi/milk-and-cookies/w08/d02b_ajax/exercises/trillo_solution/trillo/app/controllers/cards_controller.rb:25:in `create'
+  actionpack (4.1.2) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.2) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.2) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.2) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.2) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+   () Users/andrewkim/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:32 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:41 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:34:44 -0400
+Processing by CardsController#create as HTML
+  Parameters: {"card"=>{"description"=>"adasdas", "completed"=>"false"}}
+{"card"=>{"description"=>"adasdas", "completed"=>"false"}, "action"=>"create", "controller"=>"cards"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-05-06 03:34:44.615883"], ["description", "adasdas"], ["updated_at", "2015-05-06 03:34:44.615883"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 31ms (Views: 1.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:44 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/8" for 127.0.0.1 at 2015-05-05 23:34:50 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"8"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 8[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:34:50.183609"]]
+  [1m[35m (8.3ms)[0m  COMMIT
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:50 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.7ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:51 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.6ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/cards/8" for 127.0.0.1 at 2015-05-05 23:34:54 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"8"}
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 8[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:34:54.087609"]]
+  [1m[35m (8.3ms)[0m  COMMIT
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:54 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.8ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/cards/8" for 127.0.0.1 at 2015-05-05 23:34:59 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"description"=>"Does it work?"}, "id"=>"8"}
+  [1m[35mCard Load (0.8ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "cards" SET "description" = $1, "updated_at" = $2 WHERE "cards"."id" = 8  [["description", "Does it work?"], ["updated_at", "2015-05-06 03:34:59.961611"]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:34:59 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:35:01 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (4.4ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:35:55 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:35:58 -0400
+Processing by CardsController#create as HTML
+  Parameters: {"card"=>{"description"=>"Boop!", "completed"=>"false"}}
+{"card"=>{"description"=>"Boop!", "completed"=>"false"}, "action"=>"create", "controller"=>"cards"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-05-06 03:35:58.956131"], ["description", "Boop!"], ["updated_at", "2015-05-06 03:35:58.956131"]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:35:58 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/cards/9" for 127.0.0.1 at 2015-05-05 23:36:01 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"9"}
+  [1m[36mCard Load (1.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 9[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:36:01.534503"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:36:01 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:37:16 -0400
+Processing by CardsController#index as */*
+  [1m[35mCard Load (1.6ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/cards/5" for 127.0.0.1 at 2015-05-05 23:37:18 -0400
+Processing by CardsController#update as */*
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"5"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 5[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:37:18.525707"]]
+  [1m[35m (6.1ms)[0m  COMMIT
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.6ms)
+
+
+Started PUT "/cards/6" for 127.0.0.1 at 2015-05-05 23:37:19 -0400
+Processing by CardsController#update as */*
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"6"}
+  [1m[36mCard Load (0.4ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 6[0m  [["completed", "t"], ["updated_at", "2015-05-06 03:37:19.317782"]]
+  [1m[35m (8.2ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/cards/5" for 127.0.0.1 at 2015-05-05 23:37:20 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 5]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 21ms (Views: 9.5ms | ActiveRecord: 8.9ms)
+
+
+Started DELETE "/cards/9" for 127.0.0.1 at 2015-05-05 23:37:21 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "cards" WHERE "cards"."id" = $1[0m  [["id", 9]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:37:24 -0400
+Processing by CardsController#create as */*
+  Parameters: {"card"=>{"description"=>"dfblkjfdb", "completed"=>"false"}}
+{"card"=>{"description"=>"dfblkjfdb", "completed"=>"false"}, "action"=>"create", "controller"=>"cards"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-05-06 03:37:24.114909"], ["description", "dfblkjfdb"], ["updated_at", "2015-05-06 03:37:24.114909"]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:37:25 -0400
+Processing by CardsController#index as */*
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:37:26 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.9ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/cards/7" for 127.0.0.1 at 2015-05-05 23:37:32 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "cards" WHERE "cards"."id" = $1  [["id", 7]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 8.0ms)
+
+
+Started DELETE "/cards/8" for 127.0.0.1 at 2015-05-05 23:37:33 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"8"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "cards" WHERE "cards"."id" = $1  [["id", 8]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:37:33 -0400
+Processing by CardsController#index as */*
+  [1m[35mCard Load (3.9ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:41:56 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:42:00 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (4.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.3ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-05 23:42:08 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"description"=>"alerkjgmaerevents"}, "id"=>"4"}
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "description" = $1, "updated_at" = $2 WHERE "cards"."id" = 4[0m  [["description", "alerkjgmaerevents"], ["updated_at", "2015-05-06 03:42:08.352069"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:42:08 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-05 23:42:16 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"description"=>"akrjgnaerg"}, "id"=>"1"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cards" SET "description" = $1, "updated_at" = $2 WHERE "cards"."id" = 1  [["description", "akrjgnaerg"], ["updated_at", "2015-05-06 03:42:16.061725"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:42:16 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.5ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-05 23:42:21 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"4"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 4[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:42:21.841532"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:42:21 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.8ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/cards/10" for 127.0.0.1 at 2015-05-05 23:48:57 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"10"}
+  [1m[35mCard Load (1.1ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 10  [["completed", "t"], ["updated_at", "2015-05-06 03:48:57.029745"]]
+  [1m[36m (6.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:48:57 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-05 23:48:58 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"3"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3[0m  [["completed", "f"], ["updated_at", "2015-05-06 03:48:58.288454"]]
+  [1m[35m (7.6ms)[0m  COMMIT
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:48:58 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/cards/2" for 127.0.0.1 at 2015-05-05 23:48:58 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"2"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 2  [["completed", "f"], ["updated_at", "2015-05-06 03:48:58.898322"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:48:58 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-05 23:49:12 -0400
+Processing by CardsController#create as HTML
+  Parameters: {"card"=>{"description"=>"new trillo", "completed"=>"false"}}
+{"card"=>{"description"=>"new trillo", "completed"=>"false"}, "action"=>"create", "controller"=>"cards"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-05-06 03:49:12.387056"], ["description", "new trillo"], ["updated_at", "2015-05-06 03:49:12.387056"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:49:12 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-05 23:59:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 16ms (Views: 4.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 00:02:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.4ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/cards/4" for 127.0.0.1 at 2015-05-06 00:02:18 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"4"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 4[0m  [["completed", "t"], ["updated_at", "2015-05-06 04:02:18.434045"]]
+  [1m[35m (11.8ms)[0m  COMMIT
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 00:02:18 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 01:37:01 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 01:37:03 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.9ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/cards/3" for 127.0.0.1 at 2015-05-06 01:37:04 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"true"}, "id"=>"3"}
+  [1m[35mCard Load (0.2ms)[0m  SELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 3  [["completed", "t"], ["updated_at", "2015-05-06 05:37:04.037611"]]
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 01:37:04 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.7ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/cards/1" for 127.0.0.1 at 2015-05-06 01:37:05 -0400
+Processing by CardsController#update as HTML
+  Parameters: {"card"=>{"completed"=>"false"}, "id"=>"1"}
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT  "cards".* FROM "cards"  WHERE "cards"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "cards" SET "completed" = $1, "updated_at" = $2 WHERE "cards"."id" = 1[0m  [["completed", "f"], ["updated_at", "2015-05-06 05:37:05.705163"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 01:37:05 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cards" for 127.0.0.1 at 2015-05-06 01:37:07 -0400
+Processing by CardsController#create as HTML
+  Parameters: {"card"=>{"description"=>"afba", "completed"=>"false"}}
+{"card"=>{"description"=>"afba", "completed"=>"false"}, "action"=>"create", "controller"=>"cards"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cards" ("created_at", "description", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-05-06 05:37:07.555286"], ["description", "afba"], ["updated_at", "2015-05-06 05:37:07.555286"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 01:37:07 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cards" for 127.0.0.1 at 2015-05-06 01:37:09 -0400
+Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.3ms)[0m  SELECT "cards".* FROM "cards"
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
