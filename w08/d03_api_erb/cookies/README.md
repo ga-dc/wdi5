@@ -14,9 +14,23 @@ rake assets:precompile
 
 ## Intro
 
-- Make our Trillo app work without HTTP requests
-  - Why?
-  - 
+- 
+
+## Getting your assets
+
+```
+rails new whatever -d postgresql
+rails g scaffold greeting
+```
+
+- Take a look at `application.erb.html:
+
+```
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+```
+
+- How does this show up in the HTML?
 
 ## Sprockets
 - The name of a Ruby gem (there isn't a single sprocket)
@@ -32,10 +46,3 @@ rake assets:precompile
       - Not to keep track of files
       - For **cache busting**
         - Browsers save coipes of the stuff they've downloaded from URLs. This shows them a new URL so they get new changes.
-
-- Getting your asset
-  - `rails new whatever -d postgresql`, `rails g scaffold greeting`, then look at `application.erb.html`
-
-
-
-https://github.com/ga-dc/trillo_static_ajax_rails_api
