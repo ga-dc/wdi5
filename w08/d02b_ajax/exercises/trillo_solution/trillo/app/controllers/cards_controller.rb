@@ -21,6 +21,7 @@ class CardsController < ApplicationController
   end
 
   def create
+    Rails.logger.info(params)
     @card = Card.create(card_params)
     render json: @card
   end

@@ -12,8 +12,7 @@ var CardView = function(card){
   input.addEventListener("click", function(){
     var completed = input.checked ? true : false
     // fix update to make this work
-    card.update({completed: completed})
-    trilloView.render()
+    card.update({completed: completed});
   })
   this.description.addEventListener("click", this.editCard.bind(this))
   this.container.appendChild(input)
