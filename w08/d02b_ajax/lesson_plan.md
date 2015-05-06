@@ -24,7 +24,7 @@ For the first part of this lesson, we'll be using the (weather underground api)[
 
 So if we go to this link, and we go to the example in the middle of the page, we can see a url, something like `http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json`
 
-You guys can signup and register for your very own key! For now, let's just use mine 
+You guys can signup and register for your very own key! For now, let's just use mine
 
 Milk: `http://api.wunderground.com/api/f28a93cae85945b6/conditions/q/CA/San_Francisco.json`
 Cookies: `http://api.wunderground.com/api/6ca0e2b375930c22/conditions/q/CA/San_Francisco.json`
@@ -38,6 +38,11 @@ Turns out we can access this json object using JS!
 
 ## ENTER `$.ajax` (30 m) I do
 The jquery library gives us access to this awesome thing called asynchronous json and xml(AJAX)
+- with AJAX we can do HTTP requests:
+  - get
+  - post
+  - delete
+  - put
 
 Go ahead and go to the starter code located in the milk and cookies repo(w08/d02_ajax/exercises/ajax_weather_underground)
 
