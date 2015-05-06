@@ -88,6 +88,22 @@ Talk about why we want / need to put our JS on top of a rails app.
 
 #### jQuery AJAX
 
+```javascript
+// model file
+var Card = function(){}
+
+Card.prototype = {
+  load: function(callback){
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: http://localhost:3000/
+    })
+  }
+}
+
+```
+
 #### Walkthrough of OOP Trillo
 
 Explain what's happening here.
