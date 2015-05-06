@@ -1,6 +1,8 @@
 # W08D02 Homework
 
-To begin with, complete the steps in the `ajax` branch of the Stock Tracker repo:
+## First...
+
+Complete the steps in the `ajax` branch of the Stock Tracker repo:
 
 https://github.com/ga-dc/stock-tracker/tree/ajax
 
