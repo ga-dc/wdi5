@@ -26,8 +26,10 @@ There's clearly some overlap here... introduce the spectrum of apps:
 * NINJAs (Nicely Interactive Nothing-but JavaScript Apps)
 
 Demo:
-* CRUD Rails App (PIRATE)
+* CRUD Rails App (PIRATE): Craig's List,
 * Single Page App: Trello or Gmail (NINJA)
+
+Note: even Trello is a mix (go through login process)
 
 #### Write-Pair-Share on Whiteboard (8 minutes)
 What are the advantages/disadvantages of the NINJA end of the spectrum?

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140727034052) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cards", force: true do |t|
+  create_table "cards", force: :cascade do |t|
     t.string   "description"
     t.boolean  "completed",   default: false
     t.datetime "created_at"
