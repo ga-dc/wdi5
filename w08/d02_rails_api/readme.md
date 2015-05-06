@@ -17,6 +17,8 @@ So far, we've written two kinds of web apps:
 
 There's clearly some overlap here... introduce the spectrum of apps:
 
+#### Pirates vs. Ninjas
+![Pirates vs. Ninjas](media/PvN_where_be_that_ninja.png)
 * PIRATES (Plain, Inherently Rails-y Apps That're Essentially  Static)
 * Rails Apps + Little bit of JS (no AJAX)
 * Rails Apps that serve static HTML but can respond to JS requests as well.
@@ -59,6 +61,8 @@ Quick refresher on JSON. Intro `to_json`.
 
 Test each one in PostMan
 
+Teaching Opportunity: `card[completed]`
+
 ##### I Do
 Demo adding an index method to CardsController that renders JSON.
 
@@ -70,3 +74,11 @@ Add create
 
 ##### You Do
 Add update & destroy
+
+##### You Do
+Enable index to filter by `completed`.
+```
+GET /cards
+GET /cards?completed=true
+GET /cards?completed=false
+```
