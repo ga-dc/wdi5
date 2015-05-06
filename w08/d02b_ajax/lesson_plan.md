@@ -16,7 +16,7 @@ We've been floating around this concept of synchronous vs asynchronus program ex
 Turn and talk to you neighbor, why might synchronus programming not be effective for the front end? Consider how http requests work with regard to front end functionality.
 
 
-We don't want to sit around and wait for code to execute before we we load the rest of our script. It would be really nice if we could just describe what we want to happen when the code finally does execute, in a callback.
+We don't want to sit around and wait for code to execute before we load the rest of our script. It would be really nice if we could just describe what we want to happen when the code finally does execute, in a callback.
 
 ## Getting JSON response using `$.ajax()` (15 m)
 For the first part of this lesson, we'll be using the (weather underground api)[http://www.wunderground.com/weather/api/d/docs]!
