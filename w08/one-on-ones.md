@@ -7,4 +7,4 @@
 | Jeff | Noah, Parmeet | Phil, Preston | Rodger, Sarah | Tyler, Zach |
 | Jesse | Aaron, Adrian | Ali, Ammie | Brittany, Damon | Diana |
 | Matt | Don, Eltahir | Enoch, Gwen | Haleigh, Isa | Janice |
-| Andy | Jocelyn, Kevin | Michael, Nick S | Ryan, Tamara | Toby |
+| Andy | Jocelyn, Kevin | Michael, Nic S | Ryan, Tamara | Toby |
