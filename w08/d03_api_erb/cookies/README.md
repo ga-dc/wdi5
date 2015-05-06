@@ -53,6 +53,9 @@ rails g scaffold greeting
 
 - How does this show up in the HTML?
 
+- Compare a locally-run app to a Heroku app
+  - Why does the local app have so many fewer JS/CSS files referenced in the HTML than the production app?
+
 ## Sprockets
 - The name of a Ruby gem (there isn't a single sprocket)
 - "Concatenates" (minifies) all CSS into one file, and all JS into one file
