@@ -24,7 +24,10 @@ For the first part of this lesson, we'll be using the (weather underground api)[
 
 So if we go to this link, and we go to the example in the middle of the page, we can see a url, something like `http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json`
 
-You guys can signup and register for your very own key! For now, let's just use mine `http://api.wunderground.com/api/f28a93cae85945b6/conditions/q/CA/San_Francisco.json`
+You guys can signup and register for your very own key! For now, let's just use mine 
+
+Milk: `http://api.wunderground.com/api/f28a93cae85945b6/conditions/q/CA/San_Francisco.json`
+Cookies: `http://api.wunderground.com/api/6ca0e2b375930c22/conditions/q/CA/San_Francisco.json`
 
 Lets not go crazy and screw your instructor though, we only have a rate limit of 500!
 
