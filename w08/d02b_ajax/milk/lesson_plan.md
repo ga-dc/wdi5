@@ -79,14 +79,12 @@ we can see that it's returning the current temperature.
 - ajax_weather_underground exercise
 
 
-### AJAX + Local API(10m)
+## AJAX + Local API(10m)
 
 Talk about why we want / need to put our JS on top of a rails app.
 
 * Data storage across sessions
 * Validation of data
-
-#### jQuery AJAX
 
 #### Walkthrough of OOP Trillo(30m)
 
@@ -249,23 +247,68 @@ New things in the most recent code additions:
 - card object's `.save()` function is not defined.
 - `CardView()` constructor function is not defined.
 
+Let's first define the `.save()` function, what do you guys think it should do? We've done a get request, i think save should encompass a post request. Lets go back to our `js/models/card.js` and extend the functionality of our Card constructor function with a prototype
 
+```javascript
+var Card = function(id, description, completed){
+  this.id = id;
+  this.description = description;
+  this.completed = completed;
+}
 
+Card.prototype = {
+  save: function(){
+    $.ajax({
+      type: 'POST',
+      data: { card: {description: this.description, completed: this.completed}},
+      dataType: 'json',
+      // have to add id to url
+      url: "http://localhost:3000/cards"
+    }).done(function(response){
+      console.log("model saved")
+      trilloModel.fetchCards();
+    }).fail(function(){
+      console.log("failed to save")
+    })
+  }
+}
+```
+In the `save` function we're going to make a POST request to our Rails API server, we're going to pass in an object that has a key of card and a value of an object that comprises of the attributes of our JS object. Upon the `.done` promise it will log "model saved" and call `fetchCards()` on the trilloModel again in order to render the view as well as updating the database
 
-#### You do (delete)
+The last piece of the puzzle is the `CardView()` constructor function. One thing you'll notice if you look in the `index.html` is that there is no elements to reference here for individual cards. Each of these `CardView`'s we generate will be an individual view for each `Card` object. If you notice in our `TrilloView` we're just appending the `CardView`'s to a DOM element. The actual dom elements that represent each individual `Card` will be created here in this constructor function. Let's go ahead and add content to the file `js/views/card.js`:
 
-First, demo jQuery AJAX DELETE.
+```javascript
+var CardView = function(card){
+  this.card = card
+  this.container = document.createElement("div")
+  this.container.className = "card"
+  this.description = document.createElement("p")
+  this.description.innerHTML = card.description
+  this.container.appendChild(this.description)
+  var input = document.createElement("input")
+  input.type = "checkbox"
+  input.checked = card.completed
+  input.className = "finish"
+  input.addEventListener("click", function(){
+    // FIGURE THIS OUT!!!!
+  })
+  this.description.addEventListener("click", this.editCard.bind(this))
+  // FIGURE THIS OUT!!!
+  this.container.appendChild(input)
+  return this.container
+}
+```
+We added code for the following:
+- made the `card` object that was passed in as an arguement, an attribute of the `CardView`
+- created a `<div>` element assigned it to container, as well as gave it the class "card"
+- created a `<p>` element and changed the inner html of it to have the card's description
+- append the `<p>` element to the `<div>` element
+- created a an `<input>` of type checkbox with the class "finish" and appended it to the `<div>` element
+- the return value of this function is the `<div>` dom element created or the `CardView` attribute, container
+- added a couple event listeners you all have to figure out!
 
-They: Make it so clicking the delete button deletes on server.
+#### You do (edit)
 
-#### We Do
-
-DEMO passing data params in AJAX POST requests.
-
-Implement creating new todos.
-
-#### You Do
-
-Implement in-line editing. Demo how it works.
-
-Pairs.
+- Students will try to add code to event listener to update completed status
+- Students will define editCard in a CardView prototype
+- Students will create an update method that contains an AJAX call inside the `Card` class
