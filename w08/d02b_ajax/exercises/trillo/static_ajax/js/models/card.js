@@ -5,17 +5,6 @@ var Card = function(id, description, completed){
 }
 
 Card.prototype = {
-  // load: function(callback){
-  //   $.ajax({
-  //     type: 'GET',
-  //     dataType: 'jsonp',
-  //     url: "http://localhost:3000/cards"
-  //   }).done(function(response){
-  //     callback(response);
-  //   }).fail(function(response){
-  //     console.log("js failed to load")
-  //   })
-  // },
   save: function(){
     $.ajax({
       type: 'POST',

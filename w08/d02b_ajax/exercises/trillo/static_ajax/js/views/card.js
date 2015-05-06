@@ -11,7 +11,6 @@ var CardView = function(card){
   input.className = "finish"
   input.addEventListener("click", function(){
     var completed = input.checked ? true : false
-    // fix update to make this work
     card.update({completed: completed});
   })
   this.description.addEventListener("click", this.editCard.bind(this))
@@ -28,7 +27,6 @@ CardView.prototype = {
     input.addEventListener("keyup", function(event){
       if (event.keyCode == 13){
         var value = input.value
-        // pending update function to work
         this.card.update({description:value})
         trilloView.render()
       }
