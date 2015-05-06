@@ -186,7 +186,7 @@ We added code for the following:
 
 But... we haven't defined what `render()` does or even the constructor function for the trilloView yet. Let's do that now in `js/views/trillo.js`. What kind of properties/functions should I insert into my TrilloView constructor function? I think we can look to the HTML for some answers to help us scope how we want our view to look. Ultimately though, from a programming perspective this depends on your own problem set when you try to utilize this on your own. There's no set standards heres. Again we'll use the Trillo solution from yesterday:
 
-I think the first thing we want to do is add the DOM elements that we want to utilize in the domain of this view:
+I think the first thing we want to do is add the DOM elements as attributes of `TrilloView` that we want to utilize in the domain of this view:
 
 ```javascript
 var TrilloView = function(trilloModel){
