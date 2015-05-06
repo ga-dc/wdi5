@@ -10,11 +10,11 @@ https://github.com/ga-dc/stock-tracker/tree/ajax
 
 ## Then...
 
-Pull down the `solution` branch of the Trillo repo, made by Jesse:
+Pull down the `solution` branch of the Trillo repo:
 
 https://github.com/ga-dc/trillo/tree/solution
 
-Walk through all of the Javascript in Jesse's code and add in comments saying **in plain English** what each portion does.
+Walk through all of the Javascript in the code and add in comments saying **in plain English** what each portion does.
 
 ## Finally...
 
