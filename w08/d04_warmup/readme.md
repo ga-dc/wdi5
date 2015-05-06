@@ -10,4 +10,4 @@ Example:  [1, 2, 3, 5, 10, 9, 8, 9, 10, 11, 7] would return [0, 4, 6, 7]
 
 ## CSS Problems
 
-You can go as far as you can here: [css problems](./css-problems.html)
+Open css-problems.html in a browser and follow the provided instructions.
