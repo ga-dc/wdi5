@@ -34,5 +34,8 @@
 
 ## Rails API + ERB
 
-- Load from and post data to external servers, incorporating it in a page's content, without requiring a page refresh
-- Distinguish between when best to use AJAX versus server-side HTTP
+- Represent any resource as HTML or JSON
+- Utilize AJAX within a Rails application to perform partial page updates
+- Render JS in Rails
+- Describe the benefits of the asset pipeline
+- Distinguish between production and development environments
