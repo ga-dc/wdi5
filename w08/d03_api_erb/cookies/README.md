@@ -3,18 +3,39 @@
 - Represent any resource as HTML or JSON
 - Utilize AJAX within a Rails application to perform partial page updates
 - Render JS in Rails
+- Combine multiple assets using manifests
 - Describe the benefits of the asset pipeline
 - Distinguish between production and development environments
+
+Code snippets to cover:
 
 ```
 respond_to
 rake assets:precompile
-//require and //require_tree . in CSS and JS
+//require
+//require_tree .
 ```
 
-## Intro
+## A couple ways to do JS in Rails
 
-- 
+- `.html.erb`
+```
+<script>
+$(document).ready(function(){
+  $("#<%= @user.id %>").on("click", function(){
+    alert("Hey there, <%= @user.name %>!");
+  });
+});
+</script>
+```
+
+- `.js.erb`
+  - Same thing, but the whole file is JS instead of HTML with inline JS
+  - Why don't we like these?
+
+- `.js`
+  - `app/assets/javascripts/[something].js`
+
 
 ## Getting your assets
 
