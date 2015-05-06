@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Trillo</title>
+    <link rel="stylesheet" href="application.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/models/card.js"></script>
+    <script src="js/models/trillo.js"></script>
+    <script src="js/views/card.js"></script>
+    <script src="js/views/trillo.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <h1>Trillo</h1>
+    <p><i>A HAMco Product</i></p>
+
+    <div id="new-card">
+      <input id="new-card-text" type="text" placeholder="What do you need to do?"/>
+      <button id="new-card-button">Add Card</button>
+    </div>
+
+    <div id="todo-column" class="column">
+      <h2 class="column-heading">To Do</h2>
+      <ul class="card-list">
+      </ul>
+    </div>
+
+    <div id="completed-column" class="column">
+      <h2 class="column-heading">Done</h2>
+      <ul class="card-list">
+
+      </ul>
+    </div>
+
+  </body>
+</html>
