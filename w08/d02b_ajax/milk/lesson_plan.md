@@ -88,33 +88,34 @@ Talk about why we want / need to put our JS on top of a rails app.
 
 #### jQuery AJAX
 
-```javascript
-// model file
-var Card = function(){}
-
-Card.prototype = {
-  load: function(callback){
-    $.ajax({
-      type: 'GET',
-      dataType: 'json',
-      url: http://localhost:3000/
-    })
-  }
-}
-
-```
-
 #### Walkthrough of OOP Trillo
 
 Explain what's happening here.
 
 #### I Do
 
-Re-demo jQuery AJAX GET.
+So we want this same sort of behavior on the front end, but we also want to communicate with our back end API and update the database accordingly.
+
+I think the first thing I want to do is create a constructor function for my cards.
+
+```javascript
+var Card = function(id, description, completed){
+  this.id = id;
+  this.description = description;
+  this.completed = completed;
+}
+```
+
+*Re-demo jQuery AJAX GET.*
+I think the next thing we should do is define a constructor function that will hold all of our individual cards.
+
+```javascript
+var Trillo = function(){
+  this.cards = []
+}
+```
 
 Modify JS to fetch from server using AJAX.
-
-Demo simulating slowness using sleep in the index controller action. Can still interact with other JS while data loads.
 
 #### You do (delete)
 
