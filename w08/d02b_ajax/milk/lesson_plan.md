@@ -58,7 +58,7 @@ $.ajax({
 
 cool, we see that it was a success! lets try messing up the url and see if the console.log changes.. annnnddd it does
 
-But, i thought we were able to access that big json object we saw before? Well you can, you have to add in an argument to the anonymous function callback
+But, i thought we were able to access that big json object we saw before? Well you can, you have to add in an argument to the anonymous function callback. The ajax call gives returns a response back that you can than in turn pass in as an argument for the promise.
 
 ```javascript
 .done(function(response)(){
@@ -79,7 +79,7 @@ we can see that it's returning the current temperature.
 - ajax_weather_underground exercise
 
 
-### AJAX + Local API
+### AJAX + Local API(10m)
 
 Talk about why we want / need to put our JS on top of a rails app.
 
@@ -88,15 +88,29 @@ Talk about why we want / need to put our JS on top of a rails app.
 
 #### jQuery AJAX
 
-#### Walkthrough of OOP Trillo
+#### Walkthrough of OOP Trillo(30m)
 
 Explain what's happening here.
 
-#### I Do
-
+## Break (10m)
+#### I Do/We do(maybe some you do creating edit functionality) (120m take breaks as you see fit)
 So we want this same sort of behavior on the front end, but we also want to communicate with our back end API and update the database accordingly.
 
-I think the first thing I want to do is create a constructor function for my cards.
+Framing: We stand on the shoulders of giants.
+
+Let's try to reverse engineer the solution for the standalone OOJS solution for trillo and incorporate AJAX calls along the way.
+
+I think a good place to start is to just instantiate two models like the solution for the OOJS standalone solution:
+
+```javascript
+$(document).ready(function(){
+  trilloModel = new Trillo();
+  trilloView = new TrilloView(trilloModel);
+});
+
+```
+
+I think the first thing I want to do is create a constructor function for my cards in `js/models/card.js`
 
 ```javascript
 var Card = function(id, description, completed){
@@ -107,7 +121,7 @@ var Card = function(id, description, completed){
 ```
 
 *Re-demo jQuery AJAX GET.*
-I think the next thing we should do is define a constructor function that will hold all of our individual cards.
+I think the next thing we should do is define a constructor function that will hold all of our individual cards in `js/models/trillo.js`
 
 ```javascript
 var Trillo = function(){
@@ -115,7 +129,128 @@ var Trillo = function(){
 }
 ```
 
-Modify JS to fetch from server using AJAX.
+- Modify JS to fetch from server using AJAX.
+We're going to at this point want to fetch the cards from our Rails API we created earlier today. Let's go ahead and create a `fetchCards()` function by prototyping Trillo
+
+```javascript
+Trillo.prototype = {
+  fetchCards: function(callback) {
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: "http://localhost:3000/cards"
+    }).done(function(response) {
+      console.log(response)
+    }).fail(function(response){
+      console.log("ajax get request failed")
+    })
+  }
+}
+```
+
+This is nice, but really, we want to add JS card objects for each of our ruby objects into our Trillo model. We can do this by creating an additional function we will call `loadCards()`. This function will be called in our `.done` promise. The entire file `js/models/trillo.js` should look like this:
+
+```javascript
+var Trillo = function(){
+  this.cards = []
+  this.fetchCards();
+}
+
+Trillo.prototype = {
+  fetchCards: function(callback) {
+    $.ajax({
+      type: 'GET',
+      dataType: 'json',
+      url: "http://localhost:3000/cards"
+    }).done(function(response) {
+      trilloModel.loadCards(response);
+      trilloView.render()
+    }).fail(function(response){
+      console.log("js failed to load")
+    })
+  },
+  loadCards: function(response) {
+    this.cards = [];
+    for(var i = 0; i < response.length; i++){
+      var card = new Card(response[i].id, response[i].description, response[i].completed);
+      this.cards.push(card);
+    }
+  }
+
+}
+```
+
+We added code for the following:
+- an invocation of `fetchCards()` on instantiation
+- invoked `loadCards` with a response argument on the `trilloModel` we instantiated in the global namespace in `app.js`
+- definition of `loadCards` which is creating a new `Card()` for each card we fetch
+- invoked `render()` on the `trilloView` we instantiated in the global namespace in `app.js`
+
+But... we haven't defined what `render()` does or even the constructor function for the trilloView yet. Let's do that now in `js/views/trillo.js`. What kind of properties/functions should I insert into my TrilloView constructor function? I think we can look to the HTML for some answers to help us scope how we want our view to look. Ultimately though, from a programming perspective this depends on your own problem set when you try to utilize this on your own. There's no set standards heres. Again we'll use the Trillo solution from yesterday:
+
+I think the first thing we want to do is add the DOM elements that we want to utilize in the domain of this view:
+
+```javascript
+var TrilloView = function(trilloModel){
+  this.newCardButton = document.querySelector("#new-card-button")
+  this.newCardText = document.querySelector("#new-card-text")
+  this.toDoList = document.querySelector("#todo-column .card-list")
+  this.doneList = document.querySelector("#completed-column .card-list")
+  this.model = trilloModel
+  this.newCardButton.addEventListener("click", this.addCard.bind(this))
+  this.render()
+}
+```
+
+We added code for the following:
+- key dom elements and made them attributes of our TrilloView object
+- made the argument(which is a trillo object) an attribute of the TrilloView object
+- an eventListener to the newCardButton with a call back of addCard, we also binded this
+- invocation of the `render()`
+
+You might be saying, we still don't know what `render()` does, and you've added another function (`addCard`) we don't know!
+
+## Break(10m)
+
+Let's shed some light on that. Let's prototype our TrilloView:
+
+```javascript
+TrilloView.prototype = {
+  addCard: function(event){
+    event.preventDefault();
+    var description = this.newCardText.value;
+    var card = new Card(null, description, false);
+    card.save();
+    this.render()
+  },
+  render: function(){
+    this.toDoList.innerHTML = ""
+    this.doneList.innerHTML = ""
+    for(var i = 0; i < this.model.cards.length; i++){
+      var cardView = new CardView(this.model.cards[i])
+      if(this.model.cards[i].completed){
+        this.doneList.appendChild(cardView)
+      }
+      else{
+        this.toDoList.appendChild(cardView)
+      }
+    }
+  }
+}
+```
+
+`addCard` is a function that grabs the value of the dom element we created an attribute for in the TrilloView constructor function it creates a new JS Card object with that value, and then calls `save()` function on that object. Then it invokes the `render()` function on `this` the TrilloView object.
+
+`render` is a function that empties the innerHTML of the DOM elements that we set as attributes in our TrilloView constructor function. It then loops through the model's(the trello object we passed in as an argument for the Trello View constructor function) Card objects and creates a `CardView` for each card inside of the trello model. Inside the loop is an if/else conditional that checks the completed status of the card objects and appends the CardView to either the `doneList` or the `toDoList`
+
+....more functions we haven't defined... Worry not! we will define them.
+
+New things in the most recent code additions:
+- card object's `.save()` function is not defined.
+- `CardView()` constructor function is not defined.
+
+
+
 
 #### You do (delete)
 
