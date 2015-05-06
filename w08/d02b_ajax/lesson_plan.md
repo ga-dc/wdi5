@@ -7,6 +7,7 @@
 - Use jQuery's 'promise-like' methods to handle AJAX responses asynchronously.
 - Render new HTML content using data loaded from an Ajax request.
 - Perform POST, PUT, and DELETE requests to an API to modify data.
+- integrate $.ajax into an OOJS solution for an application
 
 
 ## Opening Framing(5m)
