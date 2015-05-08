@@ -144,11 +144,6 @@ TODO! Need example to create a WHY for this.  A specific problem that we need to
 
 ## Getting your assets
 
-```
-rails new whatever -d postgresql
-rails g scaffold greeting
-```
-
 - Take a look at `application.erb.html:
 
 ```
