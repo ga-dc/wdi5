@@ -88,6 +88,8 @@ Test it:
 
 Productive struggle.
 
+From `static_ajax/solution/js/` to `trillo/app/assets/javascripts`
+
 Note:
 
 Simply copy the html into app/views/cards.html.erb
