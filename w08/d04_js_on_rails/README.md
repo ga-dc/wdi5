@@ -144,15 +144,47 @@ $(document).ready(function(){
 
 ##  Getting info into javascript
 
-TODO! Need example to create a WHY for this.  A specific problem that we need to solve that forces us to get data from rails into js.
+Framing: Car Makes and Models
+- When you click on a Make, update the list of Models
+
+Prompt:
+- Does this information change frequently?
+- What data type would you use for this?
+- Can you see that all this could easily be in your database?
+
+Leads to:
+- This means we can deliver all data to page when it is rendered.
+
+How?
+- How do we get this on the page so javascript can manipulate it?  Show it, hide it, animate it.
+
 
 - AJAX.
 - Generate js variable in `js.erb` file
+  - Connect to what they know.
+    - What format does our view files (*.html.erb) generate?  html
+  - This is code generation.  
   ``` erb
-  var card_id=<%= card.id %>
+  var vehicleMakes=<%= VehicleMake.all.collect {|make| [make.id, make.description]} %>
   ```
+  - generates
+  ```js
+  var vehicleMakes=["Acura", "Dodge", "Ford" "Honda", "Hyundai",...]
+  ```
+
+  - What language is being generated? javascript
+  - What are we using to generate it?  a text file template and ruby.
+
 - data attribute in html
-  - rails uses hash like js: `{data: {id: model.id}}`
+  - rails uses hash like js:
+  ```
+  <%= link_to(make.description, make_path(make), data: {id: model.id}
+  ```
+  - generates
+  ```
+  <a href="/makes/2" data-id="2">Honda</a>
+  ```
+
 - gon: https://github.com/gazay/gon
 
 
