@@ -60,6 +60,12 @@ Steps:
 
 ## We Do: Update CardsController to support HTML
 
+```
+git clone https://github.com/ga-dc/trillo_static_ajax_rails_api
+```
+Start from master branch.
+Solution is in 'solution' branch.
+
 
 ```rb
 respond_to do |format|
