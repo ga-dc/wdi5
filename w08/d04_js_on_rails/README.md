@@ -118,6 +118,11 @@ Discuss:
   - run.  Success!
 - show 'sources' tab in dev console
 
+
+---
+
+What changed? https://github.com/ga-dc/trillo_static_ajax_rails_api/pull/2/files
+
 ---
 
 ## A couple ways to do JS in Rails
