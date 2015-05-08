@@ -205,10 +205,22 @@ How?
 
 ## Sprockets
 - The name of a Ruby gem (there isn't a single sprocket)
+
+Show production-like assets via
+```
+rake assets:precompile
+ls public/assets
+```
+
+What do you see?
+ - do you see all the files we have in `app/assets`?
+ - what about these long names?
+
 - "Concatenates" (minifies) all CSS into one file, and all JS into one file
   - In **production only**
   - Why?
     - Faster
+    - We need to see details locally, but want speed in production.
 
 - The file is **fingerprinted**
   - Hashes the file's contents and uses that as the file name
