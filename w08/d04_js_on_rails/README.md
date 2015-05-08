@@ -95,7 +95,7 @@ Test it:
 
 Productive struggle.
 
-From `static_ajax/solution/js/` to `trillo/app/assets/javascripts`
+Guts from `static_ajax/solution/index.html` to `trillo/app/views/cards/index.html.erb`
 
 Note:
 
