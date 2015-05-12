@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CancancanApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p>
+<% if current_user %>
+  Welcome, <%= current_user.username %> |
+  <%= link_to 'Sign Out', sessions_path, method: :delete %>
+<% else %>
+  <%= link_to 'Sign In', sign_in_path %>
+<% end %>
+</p>
+<%= yield %>
+
+</body>
+</html>
