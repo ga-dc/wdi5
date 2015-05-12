@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Cochin', serif;
+  color: #333;
+}
+
+h1, h2 {
+  color: black;
+  font-family: 'DIN Alternate', sans-serif;
+}
+
+h1 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+a, a:active, a:visited {
+  color: gray;
+}
+
+a:hover {
+  color: #555;
+}
+
+.article {
+  border-bottom: 1px solid #ccc;
+}
+
+.article-author {
+  color: gray;
+  font-style: italic;
+}
+
+.article-links {
+  color: gray;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  padding: 6px;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type=submit] {
+  border: 1px solid gray;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  font-family: inherit;
+  font-size: 16px;
+  color: gray;
+  text-align: center;
+  padding: 6px 18px;
+}
+
+input[type=submit]:hover {
+  background: gray;
+  color: white;
+}
