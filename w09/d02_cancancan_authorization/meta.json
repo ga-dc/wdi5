@@ -1,0 +1,12 @@
+{
+  "description": "",
+  "contents": {
+    "i_do": [],
+    "we_do": ["`cancancan_app` - A Rails app with a user model and an article model, to demonstrate two-level user authorization"],
+    "you_do": []
+  },
+  "technologies": ["ruby", "rails", "bcrypt", "cancancan"],
+  "resources": [],
+  "lesson_id": "3012e8e1-c166-4920-bda0-822487d1abc8",
+  "objective": "Utilize CanCanCan to implement user authorization in a Rails application"
+}

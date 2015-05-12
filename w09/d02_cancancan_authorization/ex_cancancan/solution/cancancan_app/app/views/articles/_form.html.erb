@@ -1,0 +1,9 @@
+<%= form_for @article do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, autofocus: true %><br>
+
+  <%= f.label :content %><br>
+  <%= f.text_area :content %><br>
+
+  <%= f.submit %>
+<% end %>
