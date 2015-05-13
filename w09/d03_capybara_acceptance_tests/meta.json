@@ -1,0 +1,12 @@
+{
+  "description": "",
+  "contents": {
+    "i_do": [],
+    "we_do": [],
+    "you_do": []
+  },
+  "technologies": [],
+  "resources": [],
+  "lesson_id": "68be3858-839a-4f9a-98a8-1f5a65ef0dfc",
+  "objective": "Write acceptance tests for Rails apps using capybara"
+}
