@@ -2,8 +2,7 @@
 
 Learning Objectives
 
-- Explain Acceptance Tests
-- Think critically about the requirements of a user story
+- Define what an acceptance test is
 - Use Capybara to write acceptance tests
 
 ## Vocab
@@ -18,9 +17,6 @@ specification or contract are met.
 *Feature specs* high-level tests meant to exercise slices of functionality
 through an application.
 
-*Quality Assurance* the team that "assures quality." Or attempts to ascertain
-through testing the product.
-
 *Capybara* An Acceptance test framework for web applications
 
 *DOM* The Document Object Model. A way of representing objects in HTML.
@@ -32,7 +28,7 @@ the DOM without visualization
 
 Acceptance tests are created from user stories.
 
-What ever it takes to ensure the functionality works.
+Whatever it takes to ensure the functionality works.
 
 A user story is not considered complete until it has passed its acceptance
 tests.
