@@ -136,7 +136,7 @@ Using the emmet package for atom just gonna generate an html site:
 
 `header>nav>h1+p*6>lorem1`
 `section>div>p*3>lorem80`
-`aside>p*5>lorem5`(inside section)`
+`aside>p*5>lorem5`(inside section)
 `footer>div+nav+div`
 `p*3>lorem1`(inside nav)
 
