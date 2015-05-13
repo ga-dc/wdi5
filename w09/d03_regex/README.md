@@ -16,7 +16,7 @@ Regular Expressions -- almost always just called "RegEx" -- is a way of parsing 
 
 ## How?
 
-- www.regex101.com
+- https://www.regex101.com
 - `Robert AKA Robin`
   - `/Robin/`
   - Flags
