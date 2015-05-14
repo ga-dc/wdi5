@@ -32,5 +32,15 @@
 * Set up model and collection events on Backbone views
 * Set up user events on Backbone views
 
-
 ### Backbone Routers
+
+## Back-End JS
+
+### Express and NodeJS
+
+- Compare and contrast Javascript in the browser vs JS on the server
+- Use `module.exports` to organize code into models, views, and controllers
+- Use `npm` to manage project dependencies
+- Use Handlebars templates to simplify rendering on the back-end
+- Use and configure middleware like `body-parser` to handle form submissions
+- Link to static assets in an Express application
