@@ -8,6 +8,8 @@ https://gawdidc.typeform.com/to/sydRhf
 
 ## Also required!
 
+Sign up for a Front End or Back End track for next week:
+
 http://doodle.com/4yuasfgzgwg782a3
 
 ## Also also required! Reading on Responsive Web Design
