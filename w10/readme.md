@@ -44,3 +44,11 @@
 - Use Handlebars templates to simplify rendering on the back-end
 - Use and configure middleware like `body-parser` to handle form submissions
 - Link to static assets in an Express application
+
+### Mongo
+
+- Compare and contrast relational to document based (NoSql)
+- Setup local mongo db server
+- CRUD documents using mongo CLI
+- Use an ORM to persist data (Mongoose)
+- Connect ORM to an Express app, to persist data
