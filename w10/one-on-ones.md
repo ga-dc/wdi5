@@ -1,4 +1,4 @@
-# One-on-Ones (Week 1 of 2)
+# One-on-Ones (Week 2 of 2)
 
 | Instructor | Tuesday | Wednesday | Thursday | Friday |
 |---|---|---|---|---|
