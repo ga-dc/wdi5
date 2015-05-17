@@ -21,6 +21,16 @@
 ## Front-End JS
 
 ### Backbone Models and Collections
+- Explain how libraries differentiate from frameworks.
+- Describe the benefits of using a front end framework
+- Define a new backbone model and create multiple instances of it
+- Perform CRUD actions on a backbone model
+- explain what a collection is in backbone
+- define a new backbone collection
+- use the backbone collection to store models
+- create/add a new model to a collection
+- access models in a collection
+- remove models from a collection
 
 ### Backbone Views
 
