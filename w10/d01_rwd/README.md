@@ -47,3 +47,6 @@ Just jotting down ideas
 - `max-width` and `min-width`
 - What's wrong with `:hover`?
   - Smartphones can't really hover
+- Giving `<img />` a background image
+- page-break
+- margin and padding percentages are for the WIDTH of the containing block
