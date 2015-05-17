@@ -20,7 +20,7 @@ Create a portfolio page that incorporates Sass and Responsive Web Design by foll
     - A brief bio about yourself
     - A photo of you
     - A link to your LinkedIn, Twitter, and other social media pages
-- **Push your progress to Github.**
+- **Push your new branch to Github.**
 - Checkout a new branch called `step2normalize`.
 - Normalize the CSS of your `index.html`.
   - You can use an existing library, or do it yourself! The goal is to remove the most obvious default styling provided by your web browser, like margins around `<body>`. Note that you're not doing any styling yet; just removing the default styling!
