@@ -118,7 +118,7 @@ cid?! whats that?
 
 TLDR version: cid is short for client id, cid is assigned by backbone.js client side and is useful if you don't have an actual id.
 
-There's alot of other stuff happening here that backbone's doing but the important part of it is the attributes object nested without our backbone object.
+There's alot of other stuff happening here that backbone's doing but the important part of it is the attributes object nested within our backbone object.
 
 ### Getting and setting attributes
 #### Setting attributes(also updates)
