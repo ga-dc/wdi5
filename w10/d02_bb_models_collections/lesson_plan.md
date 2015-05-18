@@ -20,6 +20,7 @@ What's the purpose of a front end framework? JS and all of it's many libraries a
 - libraries gives us tools to utilize.
 - abstracts code and allows us to write our code more succinctly
 - allows us to write applications faster and easier
+
 #### frameworks (5m)
 - like libraries in that it gives us tools to utilize
 - additionally they provide structure and conventions users have to follow in order for them to work.
@@ -169,7 +170,7 @@ Reminder = Backbone.Model.extend({
 ```
 
 ## Lunch!
-### In class ex(radio? grumblr?)
+### In class ex(radio)
 
 ### Backbone Collections (60m)
 What is a backbone collection? A collection acts as an intelligent wrapper for like models. It provides a set of methods for performing the CRUD operations on models of the collection.
@@ -232,3 +233,13 @@ Collections can use the following:
 - unshift
 - shift
 - length
+
+### "AJAX" with BB
+#### Models
+Remember all that complex ajax stuff we used to get information from a server? Well BB obfuscates all of that for you and makes it much easier. All we have to do is change up our model definition! In `js/models/reminder.js`:
+
+```javascript
+var Reminder = Backbone.Model.extend({
+  urlRoot: "http://localhost:3000/reminders"
+});
+```
