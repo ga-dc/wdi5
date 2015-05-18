@@ -11,6 +11,9 @@
 - create/add a new model to a collection
 - access models in a collection
 - remove models from a collection
+- install backbone into a rails application
+- associate a backbone model and collection with a rails backend
+- perform CRUD actions using backbone's RESTful API
 
 ## Opening Framing
 What's the purpose of a front end framework? JS and all of it's many libraries are great, but you can start building and building upon your application and all of sudden you have no structure and everything's soupy.
@@ -235,12 +238,52 @@ Collections can use the following:
 - shift
 - length
 
-### "AJAX" with BB
+## BB on Rails
+
+So we've learned how to create backbone models and collections, but it'd be really nice if we could define our models/collections through an existing backend. Enter rails. But it doesn't have to be! But for the purposes of this class we'll use a nice and simple rails application that we've created for you.
+
+If you pull from the class repo, go to w10>d02_bb_models_collections. The rails app is located in bb_rails_reminder/starter.
+
+There's a bit of configuration we need to do on our application in order for it to work.
+
+In the `Gemfile`, add `gem "rails-backbone"`
+
+Next we want to load all of the JS we will need in our `app/assets/javascripts/application.js` file:
+
+```javascript
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require underscore
+//= require backbone
+//= require_tree ./backbone/routers
+//= require_tree ./backbone/models
+//= require_tree ./backbone/collections
+//= require_tree ./backbone/views
+//= require_tree .
+```
+
+Hmmm well, we don't have any of these folders, and what do they mean?!
+Lets create them now in our applications root directory and also create a couple js files to define our models and collections
+```bash
+mkdir app/assets/javascripts/backbone
+mkdir app/assets/javascripts/backbone/routers
+mkdir app/assets/javascripts/backbone/models
+mkdir app/assets/javascripts/backbone/collections
+mkdir app/assets/javascripts/backbone/views
+touch app/assets/javascripts/backbone/models/reminderModel.js
+touch app/assets/javascripts/backbone/collections/remindersCollection.js
+```
+
 #### Models
-Remember all that complex ajax stuff we used to get information from a server? Well BB obfuscates all of that for you and makes it much easier. All we have to do is change up our model definition! In `js/models/reminder.js`:
+Remember all that complex ajax stuff we used to get information from a server? Well BB obfuscates all of that for you and makes it much easier. All we have to do is change up our model definition slightly! In `app/assets/javascripts/backbone/models/reminderModel.js`:
 
 ```javascript
 var Reminder = Backbone.Model.extend({
-  urlRoot: "http://localhost:3000/reminders"
+  urlRoot: "/reminders"
 });
 ```
+
+> it should be noted that if you are to use an external api you would specify the endpoint here in the urlRoot
+
+// collection.create

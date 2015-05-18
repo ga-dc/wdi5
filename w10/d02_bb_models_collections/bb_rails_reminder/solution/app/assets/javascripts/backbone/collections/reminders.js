@@ -1,7 +1,7 @@
-var SongsCollection = Backbone.Collection.extend({
+var RemindersCollection = Backbone.Collection.extend({
   initialize: function() {
-    console.log('New Songs Collection');
+    console.log('New Reminders Collection');
   },
-  model: SongModel,
-  url: '/songs'
+  model: ReminderModel,
+  url: '/reminders'
 });
