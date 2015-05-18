@@ -24,7 +24,6 @@ Create a portfolio page that incorporates Sass and Responsive Web Design by foll
     - A link to your LinkedIn, Twitter, and other social media pages
   - You **must** run your HTML through the validator at <http://validator.w3.org/#validate_by_input> and fix any errors (in red). Bonus points for fixing warnings (in yellow).
 - **Validate, commit, and push**
-- Checkout a new branch called `gh-pages`, commit, and push.
   - Your page will now be published online! If your repository is named `myportfolio`, and your username is `HumptyDumpty1337`, it will be visible at `https://HumptyDumpty1337.github.io/`.
 - Normalize the CSS of your `index.html`.
   - You can use an existing library, or do it yourself! The goal is to remove the most obvious default styling provided by your web browser, like margins around `<body>`. Note that you're not doing any styling yet; just removing the default styling!
