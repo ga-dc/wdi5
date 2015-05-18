@@ -13,6 +13,15 @@
 - Not modular or encapsulated: doesn't have a good way to namespace where things should be, everything is "global"
 - white space
 
+## What can Sass do?
+
+- http://codepen.io/jshawl/pen/cLJal
+- http://codepen.io/jshawl/pen/nHDLz
+- http://codepen.io/jshawl/pen/wpeit
+- http://codepen.io/jshawl/pen/bcjyH
+- http://codepen.io/jshawl/pen/cJjIm
+- http://codepen.io/jshawl/pen/cnyrJ
+
 ## What is preprocessing?
 
 Sass is a meta-language we write that compiles to CSS. It's like a DSL for CSS that allows us
@@ -55,7 +64,7 @@ a{
     $ sass scss/styles.scss:css/styles.css
     $ sass --watch scss:css
 
-**Exercise**: Refactor the fashion blog.
+## You do: Refactor the fashion blog.
 
 ## Mixins && Inheritance
 
@@ -89,6 +98,14 @@ Autoprefixer is a post-processor. It minifies and auto-prefixes your css.
 
 ## We do: Setup with rails
 
-## `@import` and partials.
+## `@import` vs the asset pipeline.
 
-How does sass, minification, auto-prefixing, etc. fit in with the asset pipeline?
+use `@import` instead of sprockets to import your sass files: http://pivotallabs.com/structure-your-sass-files-with-import/
+
+## You do:
+
+Check out Sass' control directives - http://sass-lang.com/documentation/file.SASS_REFERENCE.html#control_directives__expressions
+
+Is Sass a programming language? Why or why not?
+
+When would you use a loop, a conditional, or a function?
