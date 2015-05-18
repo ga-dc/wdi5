@@ -133,8 +133,20 @@ http://pairprogrammingbot.herokuapp.com/
 
 Use `body-parser` to parse submitted form data.
 
+    $ npm install --save body-parser
+
+```js
+//index.js
+var bodyParser = require("body-parser")
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.post("/", function(req, res){
+  res.send( req.body.name )
+})
+```
+
 ## You do: Ultimate Compliment
 
 ## You do Instructor Code Challenge
 
-https://github.com/darthneel/instructor_code_challenge/blob/master/ruby-backend-starter-code/app.rb
+https://github.com/jshawl/instructor_code_challenge/tree/master/node-backend-starter-code
