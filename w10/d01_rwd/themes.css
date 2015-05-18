@@ -1,0 +1,68 @@
+*
+{
+  border:0;
+  margin:0;
+  padding:0;
+  font-weight:inherit;
+  font-size:inherit;
+  font-style:inherit;
+  font-family:inherit;
+  color:inherit;
+  text-decoration:inherit;
+  background-color:transparent;
+  box-sizing:border-box;
+}
+*:focus
+{
+  outline:0;
+}
+
+html
+{
+  background-color:#036;
+}
+body
+{
+  font-family:"Georgia";
+  font-size:18px;
+  color:#222;
+  background-color:#f3f3f3;
+  box-shadow:0px 0px 20px 0px black;
+}
+main
+{
+  border:1px solid #aaa;
+  border-width:1px 0;
+}
+h1
+{
+  font-family:"Futura";
+  font-size:3em;
+  color:#036;
+  text-align:center;
+}
+p
+{
+  line-height:1.4em;
+  text-align:justify;
+}
+p:not(:only-of-type)
+{
+  text-indent:1em;
+}
+img
+{
+  border-radius:10px;
+  box-shadow:0px 0px 20px 0px #666;
+}
+.biopic img
+{
+  display:block;
+  margin:1em auto;
+}
+footer p,
+.biopic p
+{
+  font-size:0.8em;
+  text-align:center;
+}
