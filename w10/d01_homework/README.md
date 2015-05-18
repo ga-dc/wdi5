@@ -6,7 +6,7 @@ If you have not yet signed up for a time slot, you can do so here: <https://docs
 
 In order to prepare for Thursday, you will create a portfolio page that incorporates Sass and Responsive Web Design.
 
-## Wat do?
+## Your Objective:
 
 Create a portfolio page that incorporates Sass and Responsive Web Design by following the steps below. Then, publish it on `github.io`.
 
