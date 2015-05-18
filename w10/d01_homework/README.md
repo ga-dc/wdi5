@@ -1,10 +1,10 @@
 # W10D01 Homework
 
-The Portfolio Standup is **this Thursday, May 28th** starting at 1:30pm.
+The Portfolio Standup is **next Thursday, May 28th** starting at 1:30pm.
 
 If you have not yet signed up for a time slot, you can do so here: <https://docs.google.com/spreadsheets/d/199rhWBQOytSUgIZEHDx_JtVdoawSJxF8/edit#gid=0>
 
-In order to prepare for Thursday, you will create a portfolio page that incorporates Sass and Responsive Web Design.
+In order to prepare for next week, you will create a portfolio page that incorporates Sass and Responsive Web Design.
 
 If any of your stylesheets is more than 50 lines long, you're working too hard!
 
