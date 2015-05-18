@@ -13,6 +13,14 @@
 - Not modular or encapsulated: doesn't have a good way to namespace where things should be, everything is "global"
 - white space
 
+## What can Sass do?
+
+- http://codepen.io/jshawl/pen/cLJal
+- http://codepen.io/jshawl/pen/nHDLz
+- http://codepen.io/jshawl/pen/wpeit
+- http://codepen.io/jshawl/pen/bcjyH
+- http://codepen.io/jshawl/pen/cJjIm
+
 ## What is preprocessing?
 
 Sass is a meta-language we write that compiles to CSS. It's like a DSL for CSS that allows us
