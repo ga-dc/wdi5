@@ -47,7 +47,7 @@ Three main things to remember:
     - Different tags are supported by different browsers, including FUTURE browsers
 
 #### You do
-- Make an HTML page. 
+- Turn to your partner, get 3 sentences, make a website about them
 
 ### 2. Normalize your CSS and HTML
 - Why is this important?
@@ -121,11 +121,12 @@ NOT border-width
 - Margin and padding percentages are for the WIDTH of the containing block
 
 ### 5. Define other layouts
-- Add auxilliary stylesheets for other view types
+- Media queries
   - `<link rel="stylesheet" media="screen and (min-width:500px)" href="whatever.css" />`
     - Note that this still loads everything at the start. If effectively just wraps a media query around it.
   - `@media (max-width:700px){}`
     - https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+- `vh` vs `vw` vs `rem`
 - What's wrong with `:hover`?
   - Smartphones can't really hover
 - Giving `<img />` a background image
