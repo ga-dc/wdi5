@@ -62,3 +62,10 @@
 - CRUD documents using mongo CLI
 - Use an ORM to persist data (Mongoose)
 - Connect ORM to an Express app, to persist data
+
+### WebSockets
+
+- Compare / Contrast the Request/Response model of HTTP with the bi-directional
+model of WebSockets
+- Use the Socket.io library to write a client & server that communicate over
+WebSockets.
