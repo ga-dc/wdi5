@@ -15,7 +15,6 @@ Don't feel like you have to make your page crazy-fancy! Your page should just lo
 Create a portfolio page that incorporates Sass and Responsive Web Design by following the steps below. Then, publish it on `github.io`.
 
 1. Create a new repository named `yourgithubusername.github.io`
-- Checkout a new branch called `gh-pages`.
 - Create an `index.html` portfolio page.
   - You **may not** include any CSS or Javascript (yet) -- just plain old HTML.
   - Things you might want to include:
