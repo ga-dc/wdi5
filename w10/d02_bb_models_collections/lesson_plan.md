@@ -171,7 +171,7 @@ Reminder = Backbone.Model.extend({
 ## Lunch!
 ### In class ex(radio? grumblr?)
 
-### Backbone Collections
+### Backbone Collections (60m)
 What is a backbone collection? A collection acts as an intelligent wrapper for like models. It provides a set of methods for performing the CRUD operations on models of the collection.
 
 #### Creating a collection
@@ -206,4 +206,29 @@ reminders.models
 
 // get model based on cid
 reminders.get("c1")
+
+// like active record you can use where to return an array of objects fitting the match
+reminders.where({attributeName: "valueOfAttribute"})
+// findWhere finds the first match
+reminders.findWhere({attributeName: "valueOfAttribute"})
 ```
+
+#### Removing models
+```javascript
+// removes accepts a single model object, a cid or array of model objects
+reminders.remove("c1")
+reminders.remove(objectVariable)
+reminders.remove([reminder1, reminder2])
+
+// reset if passed in an array of objects removes all models and replaces with the passed in model objects, if no argument is passed in, resets collection to have no models
+reminders.reset([reminder1, reminder2])
+reminders.reset()
+```
+
+#### Also of note
+Collections can use the following:
+- push
+- pop
+- unshift
+- shift
+- length
