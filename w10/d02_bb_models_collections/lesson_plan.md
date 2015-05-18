@@ -195,10 +195,10 @@ How are models added to a collection?
 var reminders = new Reminders([reminder1, reminder2, reminder3])
 
 // set on existing collection
-reminder.set([reminder1, reminder2])
+reminders.set([reminder1, reminder2])
 
 // added to existing collection
-reminder.add(reminder1)
+reminders.add(reminder1)
 ```
 
 #### Getting models from collection
