@@ -1,0 +1,151 @@
+$primary-color: #DA1700;
+
+* {
+  box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    color: #777;
+    font-weight: 300;
+    width: 60em;
+    line-height: 1.5;
+    margin: auto;
+    padding: 2em 0; }
+
+    img {
+      max-width: 100%; }
+
+      .clearfix:after {
+        content: ' ';
+        display: table;
+        clear: both; }
+
+        header h1,
+        .read-more,
+        a {
+          color: $primary-color;
+          text-decoration: none; }
+
+          a:hover {
+            text-decoration: underline; }
+
+            header {
+              h1, h2 {
+                display: inline-block;
+                font-weight: 300;
+                margin-top: 2em;
+                margin-bottom: .25em;
+              }
+
+              h2 {
+                color: #aaa;
+                font-size: 1.25em;
+                margin-left: 1em;
+              }
+
+              nav ul li {
+                width: 16.66%;
+
+                a {
+                  background: #000;
+                  color: #fff;
+                  text-decoration: none;
+                  display: block;
+                  text-align: center;
+                  border-right: 1px solid #fff;
+                  padding: 1em 0;
+                  transition: all .5s ease;
+
+                  &:hover {
+                    background: #fff;
+                    color: #000;
+                    transition: all .1s ease;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+
+            nav {
+              ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                  float: left;
+                }
+              }
+            }
+
+            section {
+              float: left;
+              width: 75%;
+              padding: 2em;
+              padding-left: 0em; }
+
+              aside {
+                float: left;
+                width: 25%;
+                margin-top: 7em; }
+
+                .border-top {
+                  border-top: 2px solid #eee; }
+
+                  .border-bottom {
+                    border-bottom: 2px solid #eee; }
+
+                    article {
+                      padding: 2em 0; }
+
+                      article time {
+                        font-size: 2em;
+                        color: #ccc; }
+
+                        article h3 {
+                          margin: 0 0 .5em 0;
+                          font-weight: 300;
+                          font-size: 1.75em;
+                          color: #333; }
+
+                          article p:first-letter {
+                            font-size: 5em;
+                            float: left;
+                            line-height: 1;
+                            padding-right: .25em;
+                            color: #aaa; }
+
+                            .read-more {
+                              font-weight: 400;
+                              display: block;
+                              text-align: right; }
+
+                              .ad {
+                                padding: 1em 0;
+                                margin: 1em 0; }
+
+                                footer {
+                                  clear: both; }
+
+                                  footer nav {
+                                    margin-bottom: 1.5em; }
+
+                                    footer nav li a {
+                                      display: block;
+                                      padding: 0 1em;
+                                      position: relative; }
+
+                                      footer nav li a:after {
+                                        content: '|';
+                                        color: #ccc;
+                                        position: absolute;
+                                        right: 0; }
+
+                                        footer nav li:last-child a:after {
+                                          display: none; }
+
+                                          footer nav li:first-child a {
+                                            padding-left: 0; }
+
+                                            /*# sourceMappingURL=style.css.map */
+                                            
