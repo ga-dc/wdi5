@@ -36,6 +36,7 @@ What's the purpose of a front end framework? JS and all of it's many libraries a
 Individual reading(10m)
 - Go to [backbonejs documentation](http://backbonejs.org/)
   - Read from Getting Started to Backbone.Model
+  
 T&T(5m)
 - With what you know about OOJS, jot down some ideas about what you think Backbone is and why you would use it.
 
