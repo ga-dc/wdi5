@@ -55,7 +55,7 @@ a{
     $ sass scss/styles.scss:css/styles.css
     $ sass --watch scss:css
 
-**Exercise**: Refactor the fashion blog.
+ ## You do: Refactor the fashion blog.
 
 ## Mixins && Inheritance
 
