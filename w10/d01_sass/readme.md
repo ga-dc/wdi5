@@ -82,7 +82,7 @@ body:after{
 
 **Color functions** - `darken()`, `lighten()`, and `rgba()`
 
-**Exercise**: Mixins && Inheritance
+## You do:  Mixins && Inheritance
 
 ## Compass && Autoprefixer
 
