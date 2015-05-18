@@ -1,47 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Responsive, Woo</title>
-    <style>
-*
-{
-	margin:0;
-	border:0;
-	padding:0;
-	border-collapse:collapse;
-	border-spacing:0;
-	font-weight:inherit;
-	font-size:inherit;
-	font-style:inherit;
-	color:inherit;
-	background-color:transparent;
-	box-sizing:border-box;
-	font-family:inherit
-}
-*:focus
-{
-	outline:0
-}
-h1
-{
-  text-align:center;
-  font-size:72px;
-  font-family:"Comic Sans MS";
-}
-body
-{
-  background-color:aqua;
-}
-@media (max-width: 700px){
-  body
-  {
-    background-color:red;
-  }
-}
-    </style>
-    <link rel="stylesheet" media="(max-width:500px)" href="500.css" />
+    <title>Biography of Michael Kendall</title>
+    <link rel="stylesheet" href="themes.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:600px)" />
   </head>
   <body>
-    <h1>Responsive web design!</h1>
+
+    <header>
+      <h1>Bio&shy;graphy of Michael Kendall</h1>
+    </header>
+
+    <main>
+      <div class="biopic">
+        <img src="mk.jpg" alt="I googled Michael Kendall and this popped up" />
+        <p>This looks exactly like him.</p>
+      </div>
+
+      <p>Michael was raised by a pack of hyper-intelligent wolves in the Antarctic tundra.</p>
+
+      <p>One day, he got pretty tired of seal meat and decided to move to Washington, DC, to become a web developer.</p>
+
+      <p>The wolves migrate up to Washington every 4th of July to see the fireworks with him.</p>
+
+    </main>
+
+    <footer>
+      <p>Michael can be reached at 867-5309.</p>
+    </footer>
+
   </body>
 </html>

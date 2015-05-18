@@ -1,0 +1,21 @@
+html
+{
+  height:100%;
+}
+body
+{
+  min-height:100%;
+  max-width:500px;
+  margin:0 auto;
+  padding:1em;
+}
+main
+{
+  padding:1em 0;
+  margin: 1em 0;
+}
+p
+{
+  margin-bottom:1em;
+}
+

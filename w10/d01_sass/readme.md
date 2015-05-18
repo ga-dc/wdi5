@@ -1,5 +1,10 @@
 # Sass
 
+## Screencasts
+
+- https://vimeo.com/128166935
+- https://vimeo.com/128166936
+
 ## Learning Objectives
 
 - Explain what a preprocessor is and what problem it solves
