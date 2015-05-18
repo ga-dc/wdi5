@@ -36,7 +36,7 @@ What's the purpose of a front end framework? JS and all of it's many libraries a
 Individual reading(10m)
 - Go to [backbonejs documentation](http://backbonejs.org/)
   - Read from Getting Started to Backbone.Model
-  
+
 T&T(5m)
 - With what you know about OOJS, jot down some ideas about what you think Backbone is and why you would use it.
 
@@ -44,8 +44,8 @@ T&T(5m)
 ### Backbone
 - a js library that was built to mimic the rMVC structure of Rails
 - router, views, models/collections
-  - organize code into separate components that are able to interact fluidly with each other to build robus, client/browser based web applications
-- not truly a "framework" in that their is much more flexibility and not nearly a rigidly defined structure like rails.
+  - organize code into separate components that are able to interact fluidly with each other to build robust, client/browser based web applications
+- not truly a "framework" in that there is much more flexibility and not nearly a rigidly defined structure like rails.
 - meant be able to be changed/altered/configured to suit your needs
 - provides objects that help separate concerns on the front end
 - provides an interface, API, for communicating with a server back end
