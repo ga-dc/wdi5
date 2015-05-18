@@ -17,8 +17,11 @@
 ## Steps to making a responsive website
 
 Three main things to remember:
+
 1. Progressively enhance
+
 2. Validate, validate, validate
+
 3. Test across browsers
 
 
