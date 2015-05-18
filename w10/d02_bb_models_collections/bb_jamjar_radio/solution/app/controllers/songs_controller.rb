@@ -10,15 +10,24 @@ class SongsController < ApplicationController
   end
 
   def create
-    render nothing: true
+    @song = Song.new(song_params)
+    if @song.save
+      render json: @song.to_json, status: 200
+    end
   end
 
   def update
-    render nothing: true
+    @song = Song.find(params[:id])
+    if @song.update(song_params)
+      render json: @song.to_json, status: 200
+    end
   end
 
   def destroy
-    render nothing: true
+    @song = Song.find(params[:id])
+    if @song.destroy
+      render json: @song.to_json, status: 200
+    end
   end
 
   private
