@@ -1,4 +1,4 @@
-Reminder = Backbone.Model.extend({
+var Reminder = Backbone.Model.extend({
   defaults:{
     completed: false
   },

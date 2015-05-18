@@ -175,3 +175,35 @@ Reminder = Backbone.Model.extend({
 What is a backbone collection? A collection acts as an intelligent wrapper for like models. It provides a set of methods for performing the CRUD operations on models of the collection.
 
 #### Creating a collection
+```javascript
+var Reminders = Backbone.Collection.extend({
+  initialize:function(){
+    console.log("created a new reminders collection")
+  },
+  model: Reminder
+})
+```
+
+We add the model as an attribute of the collection so that any objects we add to this collection will be passed in as objects of the Reminder Backbone model.
+
+#### Setting models on collections
+How are models added to a collection?
+```javascript
+// on instantiation of collection
+var reminders = new Reminders([reminder1, reminder2, reminder3])
+
+// set on existing collection
+reminder.set([reminder1, reminder2])
+
+// added to existing collection
+reminder.add(reminder1)
+```
+
+#### Getting models from collection
+```javascript
+// gets all models
+reminders.models
+
+// get model based on cid
+reminders.get("c1")
+```
