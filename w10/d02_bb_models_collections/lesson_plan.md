@@ -174,7 +174,7 @@ Reminder = Backbone.Model.extend({
 ```
 
 ## Lunch!
-### In class ex(radio)
+### Class ex on Models(JAMJAR radio models)
 
 ### Backbone Collections (60m)
 What is a backbone collection? A collection acts as an intelligent wrapper for like models. It provides a set of methods for performing the CRUD operations on models of the collection.
@@ -238,7 +238,9 @@ Collections can use the following:
 - shift
 - length
 
-## BB on Rails
+### Class Ex on collections(JAMJAR radio collections)
+
+## BB on Rails(60m)
 
 So we've learned how to create backbone models and collections, but it'd be really nice if we could define our models/collections through an existing backend. Enter rails. But it doesn't have to be! But for the purposes of this class we'll use a nice and simple rails application that we've created for you.
 
@@ -280,10 +282,36 @@ Remember all that complex ajax stuff we used to get information from a server? W
 
 ```javascript
 var Reminder = Backbone.Model.extend({
-  urlRoot: "/reminders"
+  urlRoot: "/reminders",
+  defaults: {
+    compelted:false
+  }
 });
 ```
 
 > it should be noted that if you are to use an external api you would specify the endpoint here in the urlRoot
 
-// collection.create
+Everything you did before is the same. The only difference now is if we want to make changes to the database. We just need to call `.save()` on the instance of the object.
+
+> Note that if you pass in attributes that are not whitelisted by strong params, it will fail to save to the database. So make sure you only pass in key value pairs that are associated with your backend.
+
+#### Collections
+Now let's create our collection definition in `app/assets/javascripts/backbone/collections/remindersCollection.js`:
+
+```javascript
+var RemindersCollection = Backbone.Collection.extend({
+  initialize: function() {
+    console.log('New Reminders Collection');
+  },
+  model: ReminderModel,
+  url: '/reminders'
+});
+```
+
+Again, the rules are much the same for manipulating data within the collection.
+Similarly to ActiveRecord there is a create method that can be called on a collection:
+
+```javascript
+  collection.create({attributeName: attibuteValue})
+```
+will actually save an instance of that model to the database, so long as you meet the strong params requirements.
