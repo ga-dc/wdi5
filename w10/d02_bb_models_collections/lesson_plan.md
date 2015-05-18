@@ -8,9 +8,7 @@
 - explain what a collection is in backbone
 - define a new backbone collection
 - use the backbone collection to store models
-- create/add a new model to a collection
-- access models in a collection
-- remove models from a collection
+- Perform CRUD on a collection
 - install backbone into a rails application
 - associate a backbone model and collection with a rails backend
 - perform CRUD actions using backbone's RESTful API
