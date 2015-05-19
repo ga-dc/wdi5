@@ -1,5 +1,4 @@
-var Reminder = Backbone.Model.extend({
-  urlRoot: "http://localhost:3000/reminders",
+var ReminderModel = Backbone.Model.extend({
   defaults:{
     completed: false,
     body: "some string"
