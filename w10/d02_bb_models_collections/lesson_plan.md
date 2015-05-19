@@ -1,17 +1,17 @@
 # Backbone Models and Collections
 
 ## Learning Objectives
-- Explain how libraries differentiate from frameworks.
+- Explain how libraries differ from frameworks.
 - Describe the benefits of using a front end framework
-- Define a new backbone model and create multiple instances of it
+- Define a new backbone model and create instances
 - Perform CRUD actions on a backbone model
-- explain what a collection is in backbone
-- define a new backbone collection
-- use the backbone collection to store models
+- Explain what a collection is in backbone
+- Define a new backbone collection
+- Use the backbone collection to store models
 - Perform CRUD on a collection
-- install backbone into a rails application
-- associate a backbone model and collection with a rails backend
-- perform CRUD actions using backbone's RESTful API
+- Install backbone into a rails application
+- Associate a backbone model and collection with a rails backend
+- Perform CRUD actions using backbone's RESTful API
 
 ## Opening Framing
 What's the purpose of a front end framework? JS and all of it's many libraries are great, but you can start building and building upon your application and all of sudden you have no structure and everything's soupy.
@@ -27,9 +27,9 @@ What's the purpose of a front end framework? JS and all of it's many libraries a
 - additionally they provide structure and conventions users have to follow in order for them to work.
 
 ### What is a front end framework? (10m)
-- a library that attempts to consolidate all application logic in the browser, while providing a simple interface for keeping the front-end in sync with the back-end
+- a library that attempts to move some or all application logic to the browser, while providing a simple interface for keeping the front-end in sync with the back-end
 - applications can run completely in the browser, minimizing server load since the server is only accessed when the front end needs to synchronize data with the backend
-- responds once with an HTTP request then handles all subsequent requests with AJAX
+- server sends over the app in the initial request (HTML/CSS/JS) then JS makes all subsequent requests with AJAX
 - provides more fluid user experience
 - loads everything from the database on page load (data and templates) then renders/updates the page content based on user interaction.
 
@@ -79,7 +79,7 @@ touch js/models/reminder.js
 
 > Something to note, backbone doesn't yell at you for having your code in the wrong folders. However, going forward it will be nice for you and future you to separate our concerns. You will see the more of this importance when we get into backbone views and routing.
 
-The first thing I want to do is make sure all of my CDN's are loaded.(order is important!) Retrieve cdns from [here](https://cdnjs.com/)
+The first thing I want to do is make sure all of our dependencies are loaded from a CDN.(Order is important!) Retrieve libraries from [here](https://cdnjs.com/)
 In my `index.html`:
 
 ```html
@@ -112,7 +112,9 @@ Reminder = Backbone.Model.extend({
 ```
 > Much like inheriting from `ActiveRecord::Base`. Were just extending backbone model functionality into our own model definitions.
 
-Awesome! Let spin up our sweet website. (include a document ready and a consolelog to show js/jquery dependency is working). Let's go into the console and create our very first instance of a backbone model. `var reminder = new Reminder` lets see what it's given us by typing in `reminder` and hitting enter.
+Awesome! Let spin up our sweet website. (include a document ready and a console.log to show js/jquery dependency is working).
+
+Let's go into the console and create our very first instance of a backbone model. `var reminder = new Reminder` lets see what it's given us by typing in `reminder` and hitting enter.
 
 cid?! whats that?
 [id vs cid vs idAttribute](http://stackoverflow.com/questions/12169822/backbone-js-id-vs-idattribute-vs-cid)
@@ -152,6 +154,8 @@ Reminder = Backbone.Model.extend({
 #### Getting attributes
 `reminder.get("attributeName")`
 `reminder.attributes.attributeName`
+
+Note: `.get` / `.set` are generally preferred over direct access via `.attributes`
 
 #### Deleting attributes
 `reminder.unset("attributeName")`
@@ -276,7 +280,7 @@ touch app/assets/javascripts/backbone/collections/remindersCollection.js
 ```
 
 #### Models
-Remember all that complex ajax stuff we used to get information from a server? Well BB obfuscates all of that for you and makes it much easier. All we have to do is change up our model definition slightly! In `app/assets/javascripts/backbone/models/reminderModel.js`:
+Remember all that complex ajax stuff we used to get information from a server? Well BB abstracts all of that for you and makes it much easier. All we have to do is change up our model definition slightly! In `app/assets/javascripts/backbone/models/reminderModel.js`:
 
 ```javascript
 var Reminder = Backbone.Model.extend({
