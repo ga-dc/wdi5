@@ -64,6 +64,11 @@ a {
   float: left;
   width: 65%;
 }
+.page:after{
+  content:' ';
+  display:table;
+  clear:both;
+}
 
   .main img {
     float: left;
@@ -90,8 +95,3 @@ a {
   .breadcrumbs li:first-child:before {
     content: none;
   }
-
-.footer {
-  clear: both;
-}
-
