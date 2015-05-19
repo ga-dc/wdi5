@@ -1,5 +1,12 @@
 # Express and NodeJS
 
+## Screencasts
+
+- https://vimeo.com/128284386
+- https://vimeo.com/128284418
+- https://vimeo.com/128300334
+- https://vimeo.com/128300333
+
 ## Learning Objectives
 
 - Compare and contrast Javascript in the browser vs JS on the server
