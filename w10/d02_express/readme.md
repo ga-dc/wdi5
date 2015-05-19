@@ -129,7 +129,7 @@ Use `module.exports` and `require()` to configure your routes, like:
 
 ```js
 //index.js
-var routes = require("routes")
+var routes = require("./routes")
 app.get("/", routes.index )
 ```
 http://pairprogrammingbot.herokuapp.com/
