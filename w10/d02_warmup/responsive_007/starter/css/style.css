@@ -95,32 +95,3 @@ a {
   clear: both;
 }
 
-
-@media (max-width: 720px) {
-
-  .nav {
-    float: none;
-    margin: 0;
-    width: auto;
-  }
-  
-    .nav li {
-      display: inline-block;
-    }
-
-    .nav a {
-      border-right: 1px solid #900;
-    }
-
-  .main {
-    float: none;
-    margin: 0;
-    padding: 15px;
-    width: auto;
-  }
-
-}
-
-@media (max-width: 400px) {
-
-}
