@@ -151,9 +151,3 @@ app.post("/", function(req, res){
 ```
 
 ## You do: Ultimate Compliment
-
-## You do Instructor Code Challenge
-
-https://github.com/jshawl/instructor_code_challenge/tree/master/node-backend-starter-code
-
-Seriously! This is the code challenge we designed for all prospective instructors.
