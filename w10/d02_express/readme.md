@@ -13,9 +13,56 @@
 
 And how does it compare to client-side JavaScript?
 
+>Node.js® is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+
+It's JavaScript that runs on the server. As a result, there are provided API's that give us lower level acess to things like the file system and
+TCP connections. NodeJS is a runtime for JavaScript that does not depend on a browser.
+
 ## Hello Express
 
+Express is the Sinatra of JavaScript
+
 We do: Create a simple hello-world express application
+
+1. Create a new directory
+1. `npm init`
+1. `npm install --save express`
+
+```js
+var express = require("express")
+var app = express()
+
+app.get("/", function( req, res ){
+  res.send("hello world")
+})
+
+app.listen(3000, function(){
+  console.log("app listening on port 3000")
+})
+```
+
+Stopping the server and restarting the application everytime you make
+a change slows us down. Use nodemon to run and restart your application:
+
+1. `npm install -g nodemon`
+1. `nodemon index.js`
+
+```js
+var express = require("express")
+var app = express()
+
+app.get("/", function( req, res ){
+  res.send("hello world. Say hi to <a href='/jesse'>Jesse</a>")
+})
+
+app.get("/:name", function( req, res ){
+  res.send("hello, " + req.params.name)
+})
+
+app.listen(3000, function(){
+  console.log("app listening on port 3000")
+})
+```
 
 You do: 99 Bottles of Beer
 
@@ -23,20 +70,90 @@ You do: 99 Bottles of Beer
 
 Use handlebars templates to provide layouts for the 99 bottles application.
 
-Configure a directory to serve static assets.
+    `$ npm install --save hbs`
+
+```js
+app.set("view engine", "hbs")
+```
+
+- Create a directory named 'views'.
+- Create a file named 'views/index.hbs'.
+- Create a file named 'views/layout.hbs'.
+
+```html
+<!-- layout.hbs -->
+<html>
+  <head></head>
+  <body>
+    {{{body}}} 
+  </body>
+</html>
+```
+
+### Configure a directory to serve static assets.
+
+```
+app.use(express.static(__dirname + '/public'))
+```
+
+Create a file "public/css/styles.css"
+
+Link to it: `href="/css/styles.css"`
 
 ## module.exports and MVC
 
+`module.exports` allows us to separate our js files by exposing their contents as one global variable, which is assigned
+when we `require()` the file.
+
+For example:
+
+```js
+//app.js
+var myTotallyCustomModule = require("./myTotallyCustomModule.js")
+myTotallyCustomModule.sayHello()
+```
+
+```js
+//myTotallyCustomModule.js
+myTotallyCustomModule.sayHello()
+module.exports = {
+  sayHello: function(){
+    console.log(" hello world ")
+  }
+}
+```
+
 ## You do: Pair Programming Bot
 
+Use `module.exports` and `require()` to configure your routes, like:
+
+```js
+//index.js
+var routes = require("routes")
+app.get("/", routes.index )
+```
 http://pairprogrammingbot.herokuapp.com/
 
 ## Middleware
 
 Use `body-parser` to parse submitted form data.
 
+    $ npm install --save body-parser
+
+```js
+//index.js
+var bodyParser = require("body-parser")
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.post("/", function(req, res){
+  res.send( req.body.name )
+})
+```
+
 ## You do: Ultimate Compliment
 
 ## You do Instructor Code Challenge
 
-https://github.com/darthneel/instructor_code_challenge/blob/master/ruby-backend-starter-code/app.rb
+https://github.com/jshawl/instructor_code_challenge/tree/master/node-backend-starter-code
+
+Seriously! This is the code challenge we designed for all prospective instructors.
