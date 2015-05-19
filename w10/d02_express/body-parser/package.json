@@ -9,8 +9,8 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "body-parser": "^1.12.4",
     "express": "~4.12.4",
-    "hbs": "~3.0.1",
-    "body-parser": "~1.12.4"
+    "hbs": "~3.0.1"
   }
 }
