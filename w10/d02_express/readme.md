@@ -13,6 +13,11 @@
 
 And how does it compare to client-side JavaScript?
 
+>Node.js® is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+
+It's JavaScript that runs on the server. As a result, there are provided API's that give us lower level acess to things like the file system and
+TCP connections. NodeJS is a runtime for JavaScript that does not depend on a browser.
+
 ## Hello Express
 
 Express is the Sinatra of JavaScript
@@ -150,3 +155,5 @@ app.post("/", function(req, res){
 ## You do Instructor Code Challenge
 
 https://github.com/jshawl/instructor_code_challenge/tree/master/node-backend-starter-code
+
+Seriously! This is the code challenge we designed for all prospective instructors.
