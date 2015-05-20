@@ -22,3 +22,19 @@
 //= require_tree ./backbone/collections
 //= require_tree ./backbone/views
 //= require_tree .
+
+$(document).ready(loadRadio);
+
+function loadRadio() {
+  mainCollection = new SongsCollection();
+  mainCollection.fetch().done(function(){
+
+    mainCollection.each(function(currentModel) {
+      var currentView = new SongView({model: currentModel});
+      $('#library').append(currentView.$el);
+    });
+
+  });
+
+  player = new PlayerView();
+}

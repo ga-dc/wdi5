@@ -2,7 +2,17 @@ var PlayerView = Backbone.View.extend({
   el: '#player',
 
   initialize: function() {
-    // this.$el.append("<h2>HELLO! THIS IS DOG!</h2>");
+    console.log("player view instantiated");
+  },
+
+  render: function() {
+    var renderedHTML = HandlebarsTemplates['songs/player'](this.song.toJSON());
+    this.$el.html(renderedHTML);
+  },
+
+  setSong: function(songToSet) {
+    this.song = songToSet;
+    this.render();
   }
 
 });
