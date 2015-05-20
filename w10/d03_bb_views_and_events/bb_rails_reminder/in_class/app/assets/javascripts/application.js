@@ -27,13 +27,6 @@ $(document).ready(loadRemindersApp);
 
 function loadRemindersApp() {
   mainCollection = new RemindersCollection();
-  mainCollection.fetch().done(function(){
-
-    mainCollection.each(function(currentModel) {
-      var currentView = new ReminderView({model: currentModel});
-      $('#reminders').append(currentView.$el);
-    });
-
-  });
-
+  mainCollectionView = new RemindersListView({collection: mainCollection});
+  mainCollection.fetch();
 }
