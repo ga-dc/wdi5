@@ -40,6 +40,11 @@ GEM
     ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
+    handlebars_assets (0.17.1)
+      execjs (>= 1.2.9)
+      multi_json
+      sprockets (>= 2.0.3)
+      tilt
     hike (1.2.3)
     httparty (0.13.4)
       json (~> 1.8)
@@ -133,6 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  handlebars_assets
   httparty
   jbuilder (~> 2.0)
   jquery-rails
