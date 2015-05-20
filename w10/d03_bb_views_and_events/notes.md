@@ -1,11 +1,3 @@
-Delivery Tips:
-
-* Think about how long you're talking
-* Move quicker sooner, slower later
-* Cold Call more often
-* Revisit LOs
-* Defer questions when appropriate
-
 # Backbone Views
 
 ## Learning Objectives
@@ -15,7 +7,7 @@ Delivery Tips:
   * Differentiate b/t an assigned 'el' and a constructed 'el'
 * Use a Backbone view to render a model to the page
 * Use Handlebars templates to simplify rendering on the front-end
-* Set up model and collection events on Backbone views
+* Set up model events on Backbone views
 * Set up user events on Backbone views
 
 ## Lesson Outline
@@ -32,170 +24,202 @@ Delivery Tips:
 6. Listening to DOM events
 7. Templates using Handlebars
 
-**Collection Views**
-
-1. Overview of Collection View
-2. The 'el' property
-3. renderOne function
-4. renderAll function
-5. Listening to collection events
-
 I do example:   'reminders'
 You do example: 'JAMJAR radio'
 Homework:       'Grumblr'
 
 
-### DRAFT BELOW
+## Backbone's MV* Pattern
 
-### Where are we so far?
+Backbone follows what is called the MV* pattern. It has Models, Views, and
+optionally Routers.
 
-**I do**
+The models are much like in Rails, they manage data (both logical operations on
+the data, as well as sync'ing with the server). Additionally, we have collections
+which contain sets of model instances, and aid in syncing data to the server as
+well.
 
-* Whiteboard backbone models and collections
-* Whiteboard the server space as well
+Views handle both the normal view tasks of rendering data to the screen (through
+the DOM, and optionally with the help of templates. In addition though, they act
+as controllers, by responding to events and taking action accordingly. Events
+may be both user events (e.g. clicks or typing), or model events (a model
+notifies us when it has been changed). In response the view may re-render part
+of itself based on the change, or perform an action such as an AJAX request to
+the server.
 
-* Let's concern ourselves with a single model
-* We want to see it on the page.
-* Whiteboard the backbone view-model MO
+We won't cover routers until tomorrow, but know that in short, they manage the
+URL, so that it stays up to date to reflect what's happening in the app.
 
-### Along came a view
 
-**You do**
+## Model Views
 
-* Add a `div#test` after `div#library-section`
-* Create the file `app/assets/javascripts/templates/songs/test.hbs`
-* Inside this file, create an html template for a song
-  * A div of class 'song-image'
-    * An image tag displaying the album art
-  * A div of class 'song-info'
-    * A paragraph tag containing the title of the song
-    * A paragraph tag containing the artist of the song
-* Create the file `app/assets/javascripts/backbone/views/testView.js`
-* Inside this file, create a view constructor as follows
+### Overview
 
-```javascript
-var TestView = Backbone.View.extend();
-```
+Model Views have three main responsibilities:
+1. Render an element or `el` (usually a div) that represents the model instance they are
+associated with.
+2. Listen for changes to that model instance, and update accordingly.
+3. Listen for events in their `el`, and respond accordingly. (e.g. clicking a
+  delete button).
 
-**I do - you follow**
+Let's demonstrate by building a model view for our reminder's app.
 
-* el - is for my piece of the big DOM tree
-* template - is for the way that you'll see me
-* render - is how you tell me to fill my el
-* toJSON - is to objectify a model for Handlebar eyes
+### Building a Model View
 
-```javascript
-var TestView = Backbone.View.extend({
-  el: '#test',
+We start by creating a file: `app/assets/javascripts/backbone/views/reminderView.js`.
+
+This view extends the Backbone.View object (i.e. class).
+
+```js
+var ReminderView = Backbone.View.extend({
+  className: "reminder",
+  tagName: "div",
+
   initialize: function() {
-    this.template = HandlebarsTemplates['songs/test'];
-  },
-  render: function() {
-    var testHtml = template(this.model.toJSON());
-    $el.html(testHtml);
+    console.log("loaded reminder view");
   }
 });
 ```
 
-* Demo this to put a song on the screen
-* Modify the song's attributes
-* Re-render the view
-* Now here's the BIG BACKBONE THING
-* Listen to that model! When it changes, you render!
-* I set up on change listener
+This view has a className and a tagName property, which means that the view will
+auto-generate it's `el` to be a div with class 'reminder'. The el will not be
+attached to the DOM until we do so explicitly however. Until then, it lives as
+a 'ghost' in JS.
 
-**We do - pairs**
+When we instantiate a model view, it's common to pass in a model instance as a
+'model' property:
 
-* Refer the backbone docs for a complete catalog of events and methods on a view
-* Use these two pieces of knowledge to set up a listener in the initialize method
-  that will remove the view from the page when the view's model is destroyed
-
-**BREAKTIME**
-
-**I do**
-
-* Whiteboard the collection holding models
-* Differentiate between 'absolute' views, and 'partial' views
-* Our goal is to have a single 'library' abs view, that will render a bunch of
-  'song' partial views
-
-```javascript
-var SongView = Backbone.View.extend({
-  className: 'song', // this used to be an el
-
-  initialize: function() {
-    this.template = HandlebarsTemplates['songs/song'];
-    this.listenTo(this.model, 'change', this.render);
-    this.listenTo(this.model, 'destroy', this.remove);
-    this.render();
-  },
-
-  render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
-  }
-});
-
+```js
+var myReminder = new ReminderModel({body: "Practice cornhole before Friday."});
+var myView = new ReminderView({model: myReminder});
 ```
 
-* Demo this in the console
+Let's look at `myView.$el;`, it's an empty div with class reminder! Let's fill
+it with information!
 
-**You do**
+### Adding a 'render' function
 
-* Set up a `SongsListView`
-  * Create the file
-  * Define the constructor
-  * Ensure that the view will be tied to `#library`
-  * Set up an initialize function that will `console.log('Song List View, reporting for duty')`
+Let's add a function that 'renders' the view, i.e. fills the `el` with the
+correct HTML.
 
-**We do - pairs**
+```js
+render: function() {
+  this.$el.empty();
+  this.$el.append("<p>" + this.model.get("body") + "</p>");
+  this.$el.append("<div class='finish'>Finish</div>");
+},
+```
 
-* Write a render function for the SongListView, and...
-* Instead of `console.log`-ing, have the initialize function call the render function
-* The render function should
-  * Empty the view's el
-  * Iterate over the view's collection. For each model,
-    * Create a SongView (like a partial view, remember?)
-    * Render the SongView
-    * Append the SongView's el to this view's el
+Let's also update the `initialize` function to render the view upon creation.
 
-* Get this working with a .fetch({success: callback})
-* Refactor to a .fetch({reset: true})
+```js
+initialize: function() {
+  console.log("loaded reminder view");
+  this.render();
+}
+```
 
-**BREAKTIME**
+Now when we create a new view and look at its `el`, it's got the correct info!
 
-### A player
+Let's test adding one to the page:
 
-**You do**
+```js
+var myReminder = new ReminderModel({body: "Practice cornhole before Friday."});
+var myView = new ReminderView({model: myReminder});
+$("#reminders").append(myView.$el);
+```
 
-* Set up a template for a player in `app/assets/javascripts/templates/songs/player.hbs`
-  * Make it identical to the song.hbs template for now!
-* Set up a `PlayerView`
-  * Create the file
-  * Define the constructor
-  * Ensure that the view will be tied to `#player`
-  * Set up an initialize function that will
-    * Assign `this.template` to the right Handlebars template
-    * Call the `render` function
-  * Set up a render function that will
-    * Empty the view's `el`
-    * Use the template to fill the view's `el` based on the view's model
+It works!
 
-**Checkpoint**
+### Add all Reminders on page load
 
-**I do - You follow**
+So our app feels more real, let's fetch all reminders and add them to our
+`reminders` container div (it's in the app layout).
 
-* Make it siiiiiiiiiiiing
+in `application.js`
+```js
+$(document).ready(loadRemindersApp);
 
-### Looking back
+function loadRemindersApp() {
+  mainCollection = new RemindersCollection();
+  mainCollection.fetch().done(function() {
+    mainCollection.each(function(currentModel){
+      var view = new ReminderView({model: currentModel});
+      $("#reminders").append(view.$el);
+    })
+  });
+}
+```
 
-* I whiteboard everything we just did conceptually
-* You take 10 minutes to look through the code we've written and write down questions
-* Then you ask questions, and I answer to the class
+### Listening to model events
 
-# Lesson Plan - Review Notes
+One great feature of backbones is the events system. Conceptually, they work
+much like DOM events, but there are a lot more of them. For example:
 
-* Are learning objectives present and complete?
-* What is the ratio of talking vs. doing? (60/40, TT/ST-wg vs ST-sg / individual)
-* What is the level of engagement?
-* Are exercise plans present?
-* Any pitfalls with the exercises?
+Whenever a model instance changes, wouldn't it be awesome if the view updated
+as well? We can do that!
+
+add to our view's `initialize` function:
+```js
+  this.listenTo(this.model, 'change', this.render);
+```
+
+let's test it:
+```js
+mainCollection.models[0].set({body: "does this even work?"});
+mainCollection.models[0].set({body: "it does!"});
+```
+
+### Listening to DOM events
+
+In addition to model events, we can also listen to DOM events, such as clicks,
+hovers, etc.
+
+in our view, add an events property:
+```js
+events: {
+  'click.finish': 'markComplete'
+},
+```
+
+This says, when the user clicks on anything with the class of finish, run the
+`markComplete` function. We should define that function:
+
+```js
+markComplete: function() {
+  var view = this;
+  this.model.destroy()
+    .done(function(){
+      view.$el.fadeOut();
+    })
+    .fail(function() {
+      alert("Oops! There was an error destroying that reminder. Please try again later.");
+    });
+}
+```
+
+### Templates using Handlebars
+
+Take 5 minutes to read [the handlebars site](http://handlebarsjs.com).
+
+Demonstrate / discuss the traditional method of delivering templates using
+`<script>` tags.
+
+Demonstrate the [`handlebars_assets` gem](https://github.com/leshill/handlebars_assets#installation) as a nicer alternative for rails apps.
+
+Let's install it by following the instructions in the github docs linked above.
+
+Next, let's define a template in `app/assets/javascripts/templates/reminders/show.hbs`:
+
+```
+<p>{{body}}</p>
+<span class="finish">Finish</span>
+```
+
+We can now update our render function:
+```js
+render: function() {
+  var renderedHTML = HandlebarsTemplates['reminders/show'](this.model.toJSON());
+  this.$el.html(renderedHTML);
+},
+```

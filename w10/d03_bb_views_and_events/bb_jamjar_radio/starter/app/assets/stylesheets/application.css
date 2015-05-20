@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  position: relative;
+  height: 100%;
+}
+body {
+  /*position: relative;*/
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  height: 100%;
+}
+
+#page-header {
+  border-bottom: 1px solid gray;
+}
+
+#player-section {
+  float:left;
+  width: 20%;
+}
+
+#player {
+  text-align: center;
+}
+
+#library-section {
+  width: 70%;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.song {
+  float:left;
+  width: 180px;
+  padding: 24px;
+  height: 200px;
+  text-align: center;
+}
+
+.song:hover {
+
+}
+
+div.song-image img {
+  width: 100px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
