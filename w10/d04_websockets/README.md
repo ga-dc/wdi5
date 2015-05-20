@@ -84,3 +84,27 @@
     - https://sandbox-tutorial.firebaseapp.com/#-JplZswBra_s9Qsf_-0T
     - https://tpe3ogy8c3x.firebaseio-demo.com/
     - It's updating instantly!
+
+## Socket.io
+
+- A library for websockets, which we're going to use to make your server a websocket server
+- Notice that you can make Websocket requests in both the front end and the back end:
+  - http://socket.io/docs/
+
+## You do
+- Do their walkthrough to make a chat app!
+  - Feeling adventurous? Do it using HBS, based on what we did yesterday!
+- http://socket.io/get-started/chat/
+- Solution
+  - https://github.com/ga-dc/socket.io-chat
+
+## What's the downside of what we just did?
+- No data persistence `:(`
+- Add in Mongo!
+  - https://github.com/ga-dc/socket.io-chat/tree/mongo
+
+## Make my server public!
+- Notes to self:
+  - Add `:3000` to end of URL
+
+## If time left, connect to Firebase
