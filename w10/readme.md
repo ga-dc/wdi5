@@ -47,11 +47,11 @@
 * Explain why a router is needed for a front-end application
 * Diagram the router's place in the Backbone stack
 * List the responsibilities of the Backbone router
-* Define routes, define routing functions, and initialize a router
-* Explain what a typical routing function does
+* Define routes, define actions, and initialize a router
+* Explain what a typical action does
 * Explain the difference between static and dynamic routes
-* Give examples of using `:params` and `*splats` in routes
-* Explain why a default route should be listed last in route definitions
+* Give examples of using `:params` in routes and actions
+* Recall the order in which routes are matched
 
 ## Back-End JS
 
