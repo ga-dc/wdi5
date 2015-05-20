@@ -1,7 +1,7 @@
 Congratulations!  You have completed the Instructor Code Challenge.
 Now you are qualified to...
 
-   change the peristence to mongoose.
+   change the persistence to mongoose.
 
 We are introducing a slightly different flow for this homework.  Since it is a continuation of yesterday, we are asking you to start from a particular branch.  Creating a branch from there for your work.
 
