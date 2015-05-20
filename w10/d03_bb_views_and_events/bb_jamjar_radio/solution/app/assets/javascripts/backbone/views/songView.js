@@ -3,7 +3,6 @@ var SongView = Backbone.View.extend({
   tagName: 'div',
 
   initialize: function() {
-    this.template = HandlebarsTemplates['songs/show'];
     this.listenTo(this.model, 'change', this.render);
     this.render();
   },
@@ -13,7 +12,8 @@ var SongView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
+    var renderedHTML = HandlebarsTemplates['songs/show'](this.model.toJSON());
+    this.$el.html(renderedHTML);
   },
 
   updatePlayer: function() {

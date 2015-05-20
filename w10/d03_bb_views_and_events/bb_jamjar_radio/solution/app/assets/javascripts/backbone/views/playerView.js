@@ -2,7 +2,7 @@ var PlayerView = Backbone.View.extend({
   el: '#player',
 
   initialize: function() {
-    this.template = HandlebarsTemplates['songs/player']
+    console.log("player loaded.")
   },
 
   setSong: function(song) {
@@ -11,6 +11,7 @@ var PlayerView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
+    var renderedHTML = HandlebarsTemplates['songs/player'](this.model.toJSON());
+    this.$el.html(renderedHTML);
   }
 })
