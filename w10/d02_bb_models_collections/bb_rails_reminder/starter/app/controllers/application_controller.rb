@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
       headers['Access-Control-Allow-Origin'] = "*"
       headers['Access-Control-Request-Method'] = %w{GET POST OPTIONS}.join(",")
   end
+
+  def index
+    render layout: 'application', text: ''
+  end
+
 end

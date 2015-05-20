@@ -10,15 +10,24 @@ class RemindersController < ApplicationController
   end
 
   def create
-    render nothing: true
+    @reminder = Reminder.new(reminder_params)
+    if @reminder.save
+      render json: @reminder.to_json, status: 200
+    end
   end
 
   def update
-    render nothing: true
+    @reminder = Reminder.find(params[:id])
+    if @reminder.update(reminder_params)
+      render json: @reminder.to_json, status: 200
+    end
   end
 
   def destroy
-    render nothing: true
+    @reminder = Reminder.find(params[:id])
+    if @reminder.destroy
+      render json: @reminder.to_json, status: 200
+    end
   end
 
   private
