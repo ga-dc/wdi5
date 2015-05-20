@@ -1,10 +1,8 @@
-[mongoose.js](http://mongoosejs.com)
-
 # MongoDB
 
-Note:
+- [ga-dc repo](https://github.com/ga-dc/milk-and-cookies/tree/master/w10/d03_back_end_mongo)
+- [A GinkoApp](https://gingkoapp.com/pr0d27)
 
-test
 
 ## Learning Objectives
 
@@ -15,21 +13,15 @@ test
 - Connect ORM to an Express app, to persist data
 
 
+
 ## Opening
 
-> MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling.
-
+> MongoDB is an open-source **document database** that provides:
 - High Performance
 - High Availability
 - Automatic Scaling
 
-## Documentation
-
-https://www.mongodb.org
-
-## Documents
-
-### Sample documents
+## Document Database?
 
 ### A basic sample:
 
@@ -41,10 +33,10 @@ https://www.mongodb.org
   groups: ["sass", "express"]
 }
 ```
+---
+TPS: What do you see? 
 
-Note:
-
-Prompt: What do you see?
+### A Document
 
 - json
 - different data types
@@ -80,15 +72,24 @@ Prompt: What do you see?
 }
 ```
 
+## Documentation
+
+https://www.mongodb.org
+
+
+
+## Documents
+
 ### A record in MongoDB is a document
 
 - a data structure composed of field(key) and value pairs.
   - similar to JSON objects.
+  - stored as BJSON
 - fields may include other documents, arrays, and arrays of documents.
 
 ## Collections
 
-### MongoDB stores documents in collections.
+MongoDB stores documents in collections.
 
 - Collections are analogous to tables in relational databases.
 - does **NOT** require its documents to have the same schema.
@@ -149,15 +150,26 @@ connecting to: test
 help
 ```
 
+ThinkShare (2min): 
+- What jumps out as important?
+- Try it
+
+## What jumped out to me
+- `show dbs`: show database names
+- `show collections`:  show collections in current database
+- `use <db_name>`: set current database
+- `db.foo.find()`: list objects in collection foo
+
+
+- `it`: result of the last line evaluated; use to further iterate
+  - ??? Not sure, but sounds like a helpful shortcut for future
+
 Also:
 
-- <tab> key completion
-- <up-arrow> and the <down-arrow> for history.
+- `<tab>` key completion
+- `<up-arrow>` and the `<down-arrow>` for history.
 
-## Introspection
 
-- `show dbs`
-- `show collections`
 
 ## Milk-n-Cookies.  Yum!
 
@@ -398,6 +410,7 @@ db.restaurants.remove({ conditions })
 - High Performance
 - High Availability
 - Automatic Scaling
+- No SQL :)
 
 ### Usability
 
@@ -425,21 +438,34 @@ replica set:
 - Automatic sharding distributes data across a cluster of machines.
 - Replica sets can provide eventually-consistent reads for low-latency high throughput deployments.
 
-## Exercise: Select the appropriate Database
+# [No SQL?](https://www.mongodb.com/nosql-explained)
 
-Which database would you choose for?
+## Group Exercise (10min): Which database would you choose for?
 - Blog: Posts have_many Comments
 - HR app: Companies have_many Managers have_many Employees
 - Gallery: Artists have_many Paintings
-- 
+
+## Come up with your own examples, for both
+
+
+## Vote for your best example for:
+
+- RDBMS
+- Document Database
 
 
 
 ![mongoose.js](https://www.filepicker.io/api/file/KDQZV88GTIaQn6p0GagE)
 
+---
+
+## http://mongoosejs.com
+
 ## Why?
 
-Let's face it, writing MongoDB validation, casting and business logic boilerplate is a drag. That's why we wrote Mongoose.
+> Let's face it, writing MongoDB validation, casting and business logic boilerplate is a drag. 
+
+That's why we wrote Mongoose.
 
 Review example on [mongoosejs.com](http://mongoosejs.com)
 
@@ -487,13 +513,13 @@ db.once('open', function (callback) {
 });
 ```
 
-### Get a restaurant:
+### Find restaurants by zip code:
 
 1. Define the Schema
 2. Instantiate a model.
 3. Find restaurants.
 4. Just list names.
-5. List names & zipcodes (w/o _id)
+5. List names & zip codes (w/o _id)
 
 ### Define the Schema
 
@@ -503,15 +529,54 @@ var restaurantSchema = mongoose.Schema({
 })
 ```
 
+---
+
+**You Do**: Update to match the restaurants in our Db.
+- yelp: the url to this restaurant on yelp.com
+- address: All we need is street and zipcode.
+
+http://mongoosejs.com/docs/guide.html
+
+```
+var restaurantSchema = mongoose.Schema({
+    name: String,
+    yelp: String,
+    address: {
+      street: String,
+      zipcode: Number
+    }
+})
+```
+
+## Find restaurants by zip code
+
+[X] 1. Define the Schema
+[ ] 2. Instantiate a model.
+[ ] 3. Find restaurants.
+[ ] 4. Just list names.
+[ ] 5. List names & zipcodes (w/o _id)
+
 ### Define a model
 
 ```
 var Restaurant = mongoose.model('Restaurant', restaurantSchema);
 ```
 
-### List restaurants in a zipcode
+## Find restaurants by zip code
+
+[X] 1. Define the Schema
+[X] 2. Instantiate a model.
+[ ] 3. Find restaurants.
+[ ] 4. Just list names.
+[ ] 5. List names & zipcodes (w/o _id)
+
+### List restaurants in a zip code
+
+**[Research](http://mongoosejs.com/docs/models.html):** How do I find or count restaurants with mongoose?
 
 
+- `Restaurant.find({ conditions })`
+- `Restaurant.count({ conditions })`
 
 ``` js
 // List restaurants in zipcode 20001
@@ -522,7 +587,13 @@ var Restaurant = mongoose.model('Restaurant', restaurantSchema);
   })
 ```
 
-Follow commits in [YUM!](https://github.com/ga-dc/yum): https://github.com/ga-dc/yum
+## Exercise: Find restaurants by zip code
+
+[X] 1. Define the Schema
+[X] 2. Instantiate a model.
+[ ] 3. Find restaurants.
+[ ] 4. Just list names.
+[ ] 5. List names & zipcodes (w/o _id)
 
 ## Exercise: complete CRUD via Mongoose
 
@@ -531,6 +602,8 @@ Follow commits in [YUM!](https://github.com/ga-dc/yum): https://github.com/ga-dc
 - Delete
 
 ## ORM in Express
+
+See: `w10/d03_back_end_homework`
 
 ## Exercises:
 
