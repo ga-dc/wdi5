@@ -1,5 +1,12 @@
 # Express and NodeJS
 
+## Screencasts
+
+- https://vimeo.com/128284386
+- https://vimeo.com/128284418
+- https://vimeo.com/128300334
+- https://vimeo.com/128300333
+
 ## Learning Objectives
 
 - Compare and contrast Javascript in the browser vs JS on the server
@@ -129,7 +136,7 @@ Use `module.exports` and `require()` to configure your routes, like:
 
 ```js
 //index.js
-var routes = require("routes")
+var routes = require("./routes")
 app.get("/", routes.index )
 ```
 http://pairprogrammingbot.herokuapp.com/
@@ -151,9 +158,3 @@ app.post("/", function(req, res){
 ```
 
 ## You do: Ultimate Compliment
-
-## You do Instructor Code Challenge
-
-https://github.com/jshawl/instructor_code_challenge/tree/master/node-backend-starter-code
-
-Seriously! This is the code challenge we designed for all prospective instructors.

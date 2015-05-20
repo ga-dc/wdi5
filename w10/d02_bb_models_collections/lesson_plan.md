@@ -1,5 +1,6 @@
 # Backbone Models and Collections
-
+## ScreenCasts for this lesson
+[https://www.youtube.com/playlist?list=PLr-f6JB1aX931bFvLAAoq0fTy1C7zxUqP](https://www.youtube.com/playlist?list=PLr-f6JB1aX931bFvLAAoq0fTy1C7zxUqP)
 ## Learning Objectives
 - Explain how libraries differ from frameworks.
 - Describe the benefits of using a front end framework
