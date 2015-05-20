@@ -1,4 +1,10 @@
+[mongoose.js](http://mongoosejs.com)
+
 # MongoDB
+
+Note:
+
+test
 
 ## Learning Objectives
 
@@ -279,6 +285,7 @@ db.restaurants.insert([
   {name: "Captain Cookie and the Milk Man", address: { street: "Dupont Circle", zipcode: 20036 }, yelp: "http://www.yelp.com/biz/captain-cookie-and-the-milk-man-washington-5" },
   {name: "J’s Cookies", address: { street: "1700 N Moore St", zipcode: 22209}, yelp: "http://www.yelp.com/biz/js-cookies-arlington" }
 ])
+db.restaurants.count()
 ```
 
 ## [Primary key](http://docs.mongodb.org/manual/reference/glossary/#term-primary-key)
@@ -426,29 +433,104 @@ Which database would you choose for?
 - Gallery: Artists have_many Paintings
 - 
 
-## ORM: Mongoose
-
-## ORM: Create a record
-
----
-
-## ORM: List records
-
----
 
 
+![mongoose.js](https://www.filepicker.io/api/file/KDQZV88GTIaQn6p0GagE)
 
-## ORM: Get a record
+## Why?
 
----
+Let's face it, writing MongoDB validation, casting and business logic boilerplate is a drag. That's why we wrote Mongoose.
 
-## ORM: Update a record
+Review example on [mongoosejs.com](http://mongoosejs.com)
 
----
+``` js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+
+var Cat = mongoose.model('Cat', { name: String });
+
+var kitty = new Cat({ name: 'Zildjian' });
+kitty.save(function (err) {
+  if (err) // ...
+  console.log('meow');
+});
+```
+
+## Exercise: YUM!  
+
+It's time to play with our restaurants.
+
+Refer to [Getting Started](http://mongoosejs.com/docs/index.html)
+
+### Create a new js "app"
+
+```
+mkdir
+npm init
+npm install --save mongoose
+```
+
+### Create a Connection.  Verify it.
+
+```
+nodemon index.js
+```
+
+``` js
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/milk-n-cookies');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log("Connection established to: ", db.name)
+});
+```
+
+### Get a restaurant:
+
+1. Define the Schema
+2. Instantiate a model.
+3. Find restaurants.
+4. Just list names.
+5. List names & zipcodes (w/o _id)
+
+### Define the Schema
+
+```
+var restaurantSchema = mongoose.Schema({
+    name: String
+})
+```
+
+### Define a model
+
+```
+var Restaurant = mongoose.model('Restaurant', restaurantSchema);
+```
+
+### List restaurants in a zipcode
+
+
+
+``` js
+// List restaurants in zipcode 20001
+  var searchZipcode = 20001
+  Restaurant.count({"address.zipcode": searchZipcode}, function (err, restaurantCount) {
+    if (err) return handleError(err);
+    console.log("We have", restaurantCount, "in", searchZipcode)
+  })
+```
+
+Follow commits in [YUM!](https://github.com/ga-dc/yum): https://github.com/ga-dc/yum
+
+## Exercise: complete CRUD via Mongoose
+
+- Create
+- Update
+- Delete
 
 ## ORM in Express
-
----
 
 ## Exercises:
 
