@@ -50,8 +50,8 @@
 * Define routes, define routing functions, and initialize a router
 * Explain what a typical routing function does
 * Explain the difference between static and dynamic routes
-* Give examples of using `:params` and `*splats` in routes
-* Explain why a default route should be listed last in route definitions
+* Give examples of using `:params` in routes and route functions
+* Recall the order in which routes are matched
 
 ## Back-End JS
 
