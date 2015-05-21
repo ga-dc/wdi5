@@ -1,6 +1,12 @@
 class RemindersController < ApplicationController
   def index
-    @reminders = Reminder.all
+    if params[:completed] == "false"
+      @reminders = Reminder.where(completed: true)
+    elsif params[:completed] == "true"
+      @reminders = Reminder.where(completed: false)
+    else
+      @reminders = Reminder.all
+    end
     render status: 200, json: @reminders.to_json
   end
 

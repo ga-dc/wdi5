@@ -20,12 +20,6 @@ var RemindersRouter = Backbone.Router.extend({
     },
 
     incomplete: function incomplete () {
-        var collection = new RemindersCollection();
-        collection = new RemindersCollection(collection.where({completed: false}));
-
-        console.log(collection)
-
-        new RemindersListView({collection: collection});
-        collection.fetch({reset: true});
+      collection.fetch({reset: true, data: {completed: false}});
     }
 });

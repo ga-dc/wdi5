@@ -7,6 +7,7 @@ var RemindersListView = Backbone.View.extend({
   },
 
   renderAll: function() {
+    console.log("renderAll")
     this.$el.empty();
     this.collection.each(this.renderOne.bind(this));
   },
