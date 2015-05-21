@@ -15,8 +15,26 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require handlebars.runtime
+//= require_tree ./templates
 //= require_tree ./backbone/routers
 //= require_tree ./backbone/models
 //= require_tree ./backbone/collections
 //= require_tree ./backbone/views
 //= require_tree .
+
+$(document).ready(loadRadio);
+
+function loadRadio() {
+  mainCollection = new SongsCollection();
+  mainCollection.fetch().done(function(){
+
+    mainCollection.each(function(currentModel) {
+      var currentView = new SongView({model: currentModel});
+      $('#library').append(currentView.$el);
+    });
+
+  });
+
+  player = new PlayerView();
+}
