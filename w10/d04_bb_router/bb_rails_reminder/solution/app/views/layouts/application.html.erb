@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rmnd.me</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header>
+      <%= image_tag('reminder.png', class: "logo") %>
+      <h1>rmnd.me</h1>
+
+      <nav>
+        <ul>
+          <li><a id="all" href="#">All</a></li>
+          <li><a id="incomplete" href="#incomplete">Inbox</a></li>
+          <li><a id="complete" href="#complete">Archive</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="reminders">
+    </div>
+  </body>
+</html>
