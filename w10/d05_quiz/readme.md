@@ -13,6 +13,7 @@ Take this quiz - https://gawdidc.typeform.com/to/NsITqO
 Write a short coding challenge in pure JS, and then solve it. (aim for something you can solve in 5 minutes or less)
 
 To submit your coding challenge, [create a new issue](https://github.com/ga-dc/milk-and-cookies/issues/new?title=w10d05%20quiz)
+with both your challenge and solution, either as the body of the issue or a link to a gist.
 
 **Unformatted code will not be accepted**. 
 
