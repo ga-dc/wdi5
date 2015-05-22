@@ -9,12 +9,12 @@
 > "Clear eyes, full hearts, can't lose."
 
 > Though specific assignments will differ from course to course, there are two main requirements to be considered for graduation:
-> - Complete and submit 80% of all homework assignments, and
+> - Complete and submit 80% of all homework assignments, [(check your grade here)](https://wdidc5-hw.herokuapp.com/) and
 > - Complete and submit each of the four course projects
 
 #### Our slightly-revised version:
 
-- Complete at least 80% of assigned homework.
+- Complete at least 80% of assigned homework. [check your grade here](https://wdidc5-hw.herokuapp.com/)
 - Earn no more than one "Does not meet expectations" on Project 4.
 
 If all of these requirements are met the student will graduate.
