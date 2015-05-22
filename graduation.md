@@ -14,7 +14,7 @@
 
 #### Our slightly-revised version:
 
-- Complete at least 80% of assigned homework. [Check your grade here.](https://wdidc5-hw.herokuapp.com/)
+- Complete at least 80% of assigned homework. [Check your completeness here.](https://wdidc5-hw.herokuapp.com/)
 - Earn no more than one "Does not meet expectations" on Project 4.
 
 If all of these requirements are met the student will graduate, unless otherwise discussed.
