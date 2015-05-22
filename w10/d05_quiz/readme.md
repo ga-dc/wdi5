@@ -16,4 +16,4 @@ To submit your coding challenge, [create a new issue](https://github.com/ga-dc/m
 
 **Unformatted code will not be accepted**. 
 
-Use "```ruby" and "```js" to format inline code, or link to a gist with the appropriate file extension.
+Use backticks and or indentation to format inline code, or link to a gist with the appropriate file extension.
