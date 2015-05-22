@@ -37,7 +37,7 @@ Perhaps most importantly, ask for help. Make *that* your challenge for yourself,
 
 - They have the highest career-placement priority with Outcomes.
 - They are welcome to present at the Meet and Hire.
-- Perhaps most importantly, they have GA's blessing to inform potential employers (and anyone else) that they are graduates.
+- They have GA's blessing to inform potential employers (and anyone else) that they are graduates.
 
 #### What does it mean for a student to *not* graduate?
 
