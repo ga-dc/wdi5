@@ -17,7 +17,7 @@
 - Complete at least 80% of assigned homework.
 - Earn no more than one "Does not meet expectations" on Project 4.
 
-If all of these requirements are met the student will graduate.
+If all of these requirements are met the student will graduate, unless otherwise discussed.
 
 If any of these requirements are not met the student will not be allowed to graduate.
 
