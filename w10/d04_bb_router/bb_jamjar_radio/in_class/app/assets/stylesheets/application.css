@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  position: relative;
+  height: 100%;
+}
+body {
+  /*position: relative;*/
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  height: 100%;
+}
+
+#page-header {
+  border-bottom: 1px solid gray;
+}
+
+#player-section {
+  float:left;
+  width: 20%;
+}
+
+#player {
+  text-align: center;
+}
+
+#library-section {
+  width: 70%;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.song {
+  float:left;
+  width: 180px;
+  padding: 24px;
+  height: 200px;
+  text-align: center;
+}
+
+.song:hover {
+
+}
+
+div.song-image img {
+  width: 100px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
