@@ -6,7 +6,12 @@
 
 ## Front End Track
 
-### CSS Animations
+### Digital Product Design
+
+- Use pure CSS transitions and animations in place of Javascript
+- Explain what "keyframes" and "tweening" are and how they relate to CSS
+- Implement Bootstrap on a webpage
+- Incorporate fonts from a CDN
 
 ### jQuery Plugins
 
