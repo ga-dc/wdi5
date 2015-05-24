@@ -1,0 +1,43 @@
+*{
+  box-sizing:border:box;
+}
+body{
+  font-family:'Helvetica Neue';
+}
+.posts{
+  max-width:40em;
+  margin:auto;
+}
+
+.post{
+  border:1px solid #eee;
+  padding:1em;
+  width:25%;
+  float:left;
+  margin:0 1em 1em 0;
+}
+
+.post img{
+  display:block;
+  width:100%;
+}
+.filter-nav{
+  margin:0; 
+  padding:0;
+  margin-bottom:2em;
+}
+.filter-nav li{
+  display:inline-block;
+  margin-right:1em;
+}
+
+.post ul{
+  padding:0;
+}
+
+.post li{
+  color:#555;
+  font-size:.8em;
+  list-style:none;
+  line-height:1.5;
+}
