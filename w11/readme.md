@@ -15,7 +15,19 @@
 
 ### jQuery Plugins
 
+- Research and utilize a existing jQuery Plugin
+- Desribe basic anatomy of a jQuery Plugin
+- Create your own jQuery Plugin
+
 ### Testing JavaScript with Jasmine
+
+- Setup Jasmine via CDN
+- Setup Jasmine for a Node Project
+- Setup Jasmine for a Rails project
+- Compare/Contrast Jasmine & RSpec
+- Explain how `this` is used within Jasmine
+- Explain when to use Jasmine Spies
+- Create a custom matcher
 
 ## Back End Track
 
