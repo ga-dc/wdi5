@@ -167,6 +167,16 @@ They have executables that may be called from the command line:
 
 >Adding an executable to a gem is a simple process. You just need to place the file in your gem’s bin directory, and then add it to the list of executables in the gemspec.
 
+```rb
+s.executables << "name of exe."
+```
+    $ mkdir bin/
+
+Create a file without a ruby extension in the `bin/` folder. At the top of this file,
+add `#!/usr/bin/env ruby`. This is a shebang!
+
+Within this file require your gem, and do necessary setup or parse command line options
+
 ### You do: Create an Executable for your Ruby Gem
 
 ### We do: Upload our gem to rubygems.org
@@ -174,8 +184,4 @@ They have executables that may be called from the command line:
 Visit https://rubygems.org/users/new and create a new account.
 
     $ gem push *.gem
-
-
-
-
 
