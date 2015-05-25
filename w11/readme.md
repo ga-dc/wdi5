@@ -58,6 +58,6 @@ Note that both tracks will include the same Computer Science class.
 ### Deployment without Heroku
 
 * Launch a server ('droplet') on Digital Ocean
-* Explain the difference between a web and applicaiton server, and how they work
+* Explain the difference between a web and application server, and how they work
   together
 * Use linux commands to install ruby, rubygems, nginx, and passenger
