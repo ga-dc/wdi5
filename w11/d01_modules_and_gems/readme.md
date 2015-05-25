@@ -80,6 +80,14 @@ Cat.new.swim
 
 >RubyGems.org is the Ruby community’s gem hosting service. 
 
+### Gems worth mentioning:
+
+- Rails
+- Sass
+- Jekyll
+- Pry
+- Figaro
+
 ### Anatomy of a Ruby Gem
 
 ```
@@ -112,4 +120,62 @@ Gem::Specification.new do |s|
 end
 ```
 
+Versions correspond to semver. Once a version is pushed, it cannot
+be edited! 
+
 ### We do: Create a ruby gem!
+
+Let’s build a simple ruby gem that tells us the weather
+given a zip code.
+
+1. Create a gemspec
+2. Build out the folder structure
+3. `gem build ./*.gemspec`
+4. `gem install ./*.gem`
+
+`gem build` will complain about missing required specifications.
+
+**Question**: How do we know this worked?
+
+**Answer**: Use `pry` to require the file and test out the methods
+functionality.
+
+### You do: Create a Ruby Gem!
+
+Create a ruby gem that does something interesting!
+
+- Easy
+  - print hello to the console
+- Medium
+  - get information from a 3rd party public REST API (GitHub, Giphy, etc.)
+- Hard
+  - Uploads a file to s3, or DropBox
+
+**Hints**:
+
+- Start small
+
+### We do: Ruby Gems with Executables
+
+Including a ruby gem from another Ruby program is useful,
+but think about some of the more popular gems like Figaro and Pry.
+
+They have executables that may be called from the command line:
+
+   $ figaro install
+   $ pry
+
+>Adding an executable to a gem is a simple process. You just need to place the file in your gem’s bin directory, and then add it to the list of executables in the gemspec.
+
+### You do: Create an Executable for your Ruby Gem
+
+### We do: Upload our gem to rubygems.org
+
+Visit https://rubygems.org/users/new and create a new account.
+
+    $ gem push *.gem
+
+
+
+
+
