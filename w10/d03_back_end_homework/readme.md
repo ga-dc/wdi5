@@ -9,6 +9,7 @@ This flow will occur regularly in a development environment.  You will pick up a
 
 ```
 cd path/to/last_nights_homework
+git fetch upstream # get the latest from upstream repo, to ensure we know about all the branches
 git checkout starter_with_mongoose
 git checkout -b solution_with_mongoose_YOUR_NAME # i.e. solution_with_mongoose_matt_s
 ...
