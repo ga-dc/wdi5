@@ -21,8 +21,8 @@ Note that both tracks will include the same Computer Science class.
 
 ### jQuery Plugins
 
-- Research and utilize a existing jQuery Plugin
-- Desribe basic anatomy of a jQuery Plugin
+- Research and utilize a published jQuery Plugin
+- Describe basic anatomy of a jQuery Plugin
 - Create your own jQuery Plugin
 
 ### Testing JavaScript with Jasmine
