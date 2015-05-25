@@ -1,5 +1,11 @@
 # Week 11
 
+Please sign up for either the front-end or the back-end track here:
+
+http://doodle.com/zzin7waihin24cbk
+
+Note that both tracks will include the same Computer Science class.
+
 ## Learning Objectives
 
 ### Computer Science
