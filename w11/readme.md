@@ -32,4 +32,14 @@
 
 ### Rails Caching and Performance
 
+* Explain what server-side caching is, and why we might use it.
+* Explain what cache invalidation is, and common techniques for performing it.
+* Use Rails' cache helper to implement server-side caching in a rails app.
+* List and explain the challenges / pitfalls of server-side caching.
+
 ### Deployment without Heroku
+
+* Launch a server ('droplet') on Digital Ocean
+* Explain the difference between a web and applicaiton server, and how they work
+  together
+* Use linux commands to install ruby, rubygems, nginx, and passenger
