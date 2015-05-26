@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel='stylesheet' type='text/css' href='css/styles.css'>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
-</head>
+  <head>
+    <link rel='stylesheet' type='text/css' href='css/styles.css'>
+  </head>
 <body>
   <div class='posts'>
     <h1>Jesse's Portfolio</h1>
@@ -15,97 +14,74 @@
     </ul>
     <div class='filter'>
       <div class='post dadaist metaphysical-painting'>
-        <img src='http://lorempixel.com/200/200/abstract/'>
-        <ul>
-          <li><a href='#'>Dadaist</a></li>
-          <li><a href='#'>Metaphysical Painting</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/'>
+	<ul>
+	  <li><a href='#'>Dadaist</a></li>
+	  <li><a href='#'>Metaphysical Painting</a></li>
+	</ul>
       </div>
       <div class='post postminimalist geometric-abstract-art'>
-        <img src='http://lorempixel.com/200/200/abstract/?2'>
-        <ul>
-          <li><a href='#'>Postminimalist</a></li>
-          <li><a href='#'>Geometric Abstract Art</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?2'>
+	<ul>
+	  <li><a href='#'>Postminimalist</a></li>
+	  <li><a href='#'>Geometric Abstract Art</a></li>
+	</ul>
       </div>
       <div class='post dadaist geometric-abstract-art'>
-        <img src='http://lorempixel.com/200/200/abstract/?3'>
-        <ul>
-          <li><a href='#'>Dadaist</a></li>
-          <li><a href='#'>Geometric Abstract Art</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?3'>
+	<ul>
+	  <li><a href='#'>Dadaist</a></li>
+	  <li><a href='#'>Geometric Abstract Art</a></li>
+	</ul>
       </div>
       <div class='post postminimalist'>
-        <img src='http://lorempixel.com/200/200/abstract/?4'>
-        <ul>
-          <li><a href='#'>Postminimalist</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?4'>
+	<ul>
+	  <li><a href='#'>Postminimalist</a></li>
+	</ul>
       </div>
       <div class='post postminimalist geometric-abstract-art'>
-        <img src='http://lorempixel.com/200/200/abstract/?5'>
-        <ul>
-          <li><a href='#'>Postminimalist</a></li>
-          <li><a href='#'>Geometric Abstract Art</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?5'>
+	<ul>
+	  <li><a href='#'>Postminimalist</a></li>
+	  <li><a href='#'>Geometric Abstract Art</a></li>
+	</ul>
       </div>
       <div class='post dadaist metaphysical-painting'>
-        <img src='http://lorempixel.com/200/200/abstract/'>
-        <ul>
-          <li><a href='#'>Dadaist</a></li>
-          <li><a href='#'>Metaphysical Painting</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/'>
+	<ul>
+	  <li><a href='#'>Dadaist</a></li>
+	  <li><a href='#'>Metaphysical Painting</a></li>
+	</ul>
       </div>
       <div class='post postminimalist geometric-abstract-art'>
-        <img src='http://lorempixel.com/200/200/abstract/?2'>
-        <ul>
-          <li><a href='#'>Postminimalist</a></li>
-          <li><a href='#'>Geometric Abstract Art</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?2'>
+	<ul>
+	  <li><a href='#'>Postminimalist</a></li>
+	  <li><a href='#'>Geometric Abstract Art</a></li>
+	</ul>
       </div>
       <div class='post dadaist geometric-abstract-art'>
-        <img src='http://lorempixel.com/200/200/abstract/?3'>
-        <ul>
-          <li><a href='#'>Dadaist</a></li>
-          <li><a href='#'>Geometric Abstract Art</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?3'>
+	<ul>
+	  <li><a href='#'>Dadaist</a></li>
+	  <li><a href='#'>Geometric Abstract Art</a></li>
+	</ul>
       </div>
       <div class='post postminimalist'>
-        <img src='http://lorempixel.com/200/200/abstract/?4'>
-        <ul>
-          <li><a href='#'>Postminimalist</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?4'>
+	<ul>
+	  <li><a href='#'>Postminimalist</a></li>
+	</ul>
       </div>
       <div class='post postminimalist geometric-abstract-art'>
-        <img src='http://lorempixel.com/200/200/abstract/?5'>
-        <ul>
-          <li><a href='#'>Postminimalist</a></li>
-          <li><a href='#'>Geometric Abstract Art</a></li>
-        </ul>
+	<img src='http://lorempixel.com/200/200/abstract/?5'>
+	<ul>
+	  <li><a href='#'>Postminimalist</a></li>
+	  <li><a href='#'>Geometric Abstract Art</a></li>
+	</ul>
       </div>
     </div>
   </div>
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    initIsotope();
-  });
-  function initIsotope() {
-    var elem = document.querySelector('.posts');
-    var iso = new Isotope( elem, {
-      // options
-      itemSelector: '.post',
-      // layoutMode: 'fitRows'
-    });
-
-    var filters = document.querySelectorAll('ul.filter-nav li')
-    for (i = 0; i < filters.length; ++i) {
-      var filterer = filters[i];
-      filterer.addEventListener("click", function(){
-        var filterBy = filterer.innerText;
-        iso.arrange({ filter: ".postminimalist"});
-        // iso.arrange({ filter: "." + filterBy});
-      });
-    }
-  }
-  </script>
 </body>
 </html>
