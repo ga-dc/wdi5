@@ -10,10 +10,10 @@ Note that both tracks will include the same Computer Science class.
 
 ### Computer Science
 
-- Identify what Big-O time-complexity measures
 - Define "algorithm"
-- Predict the time-complexity of a particular algorithm
+- Identify what Big-O time-complexity measures
 - Give an example of a divide-and-conquer algorithm
+- Predict the time-complexity of a given algorithm
 - Describe a few basic data structures by listing three traits of each
 - Identify the time-complexity of search for a particular data structure
 
