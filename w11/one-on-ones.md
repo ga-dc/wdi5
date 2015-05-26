@@ -1,4 +1,4 @@
-# One-on-Ones (Week 2 of 2)
+# One-on-Ones (Week 1 of 2)
 
 One on ones this week are by **appointment only**. If you'd like to meet
 with an instructor, please contact them directly via slack to set up a time
