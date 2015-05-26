@@ -4,7 +4,7 @@ One on ones this week are by **appointment only**. If you'd like to meet
 with an instructor, please contact them directly via slack to set up a time
 that works for you. 
 
-One on ones will resume next week.
+One on ones will resume normal scheduling next week.
 
 | Instructor | Tuesday | Wednesday | Thursday | Friday |
 |---|---|---|---|---|
