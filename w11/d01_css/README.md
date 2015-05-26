@@ -1,5 +1,12 @@
 # W11D01: Digital Product Design
 
+## Learning Objectives
+
+- Apply basic principles of design to a project
+- Use pure CSS transitions and animations in place of Javascript
+- Explain what "keyframes" and "tweening" are and how they relate to CSS
+- Incorporate fonts from a CDN
+
 ## Intro
 
 - The biggest "suck" about being a developer
@@ -28,5 +35,40 @@ Things to consider:
   - Widths of elements relative other elements
   - Fonts
   - Color schemes
+    - Off-white backgrounds with white accents
   - Border styles and radii
   - Animations
+
+## Do not underestimate the power of the Fonts
+
+- What's the significance of this order?
+  - `font-family: "Helvetica Neue", Helvetica, sans-serif;`
+  - Some fonts aren't web-safe. Embed to be sure.
+
+```
+@font-face
+{
+  font-family: "Comic Sans";
+  src: url("Comic Sans.eot?") format("eot"), url("Comic Sans.ttf") format("truetype");
+}
+div
+{
+  font-family: "Comic Sans";
+}
+```
+
+- eot: Embedded OpenType
+  - For < IE9
+- ttf and otf: TrueType Format and OpenType Format
+  - Fonts that you can install directly onto your computer
+  - ttc: TrueType collection, includes bold and stuff
+- woff: Web Open Font Format
+  - Can't be installed directly onto your computer
+- svg: Scalable Vector Graphic
+  - iOS
+
+```
+
+```
+
+#### Interlude: Look at an SVG
