@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animations</title>
+    <style>
+    *
+    {
+      border:0;
+      margin:0;
+      padding:0;
+      font-family:inherit;
+      font-style:inherit;
+      text-decoration:inherit;
+      font-size:inherit;
+      color:inherit;
+      background-color:transparent;
+    }
+    html
+    {
+      position:relative;
+      width:100%;
+      height:100%;
+      font-family:"Futura";
+      background-color:black;
+    }
+    body
+    {
+      min-height:100%;
+    }
+    header
+    {
+      position:relative;
+      z-index:100;
+      background-color:#333;
+      text-transform:lowercase;
+      text-align:center;
+      color:white;
+      font-size:0;
+      line-height:50px;
+      opacity:0.5;
+      transition:opacity .1s;
+    }
+    header:hover
+    {
+      opacity:1;
+    }
+    nav li
+    {
+      display:inline-block;
+      vertical-align:top;
+      width:25%;
+    }
+    nav a
+    {
+      display:block;
+      font-size:18px;
+    }
+    nav a:hover
+    {
+      background-color:#eee;
+      color:#333;
+    }
+    h1,h2,h3,h4,h5,h6
+    {
+      text-align:center;
+      font-weight:normal;
+    }
+    main,
+    main>div
+    {
+      position:absolute;
+      display:block;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
+    main>div
+    {
+      background-size:cover;
+      background-repeat:no-repeat;
+      opacity:0;
+      transition: opacity .5s;
+    }
+    main>div:target
+    {
+      opacity:1;
+    }
+
+    h1
+    {
+      font-size:96px;
+      position:absolute;
+      z-index:200;
+      left:0;
+      bottom:0;
+      color:white;
+      padding:0 10px;
+      text-transform:lowercase;
+      animation-name: jiggle;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    @keyframes jiggle
+    {
+      0%
+      {
+        transform: rotateX(0deg);
+      }
+      10%
+      {
+        transform: rotateX(180deg);
+      }
+      20%, 100%
+      {
+        transform: rotateX(360deg);
+      }
+    }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#back">back</a></li>
+          <li><a href="#beesting">beesting</a></li>
+          <li><a href="#laundry">laundry</a></li>
+          <li><a href="#yawn">yawn</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Atti</h1>
+      <div id="back" style="background-image:url('back.jpg');"></div>
+      <div id="beesting" style="background-image:url('beesting.jpg');"></div>
+      <div id="laundry" style="background-image:url('laundry.jpg');"></div>
+      <div id="yawn" style="background-image:url('yawn.jpg');"></div>
+    </main>
+
+  </body>
+</html>

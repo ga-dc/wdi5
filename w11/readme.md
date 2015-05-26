@@ -10,21 +10,23 @@ Note that both tracks will include the same Computer Science class.
 
 ### Computer Science
 
-- Explain what Big-O time-complexity measures
-- Explain what an algorithm is
-- Analyze an algorithm for its time-complexity
-- Explain what a divide and conquer algorithm is
-- Describe a few basic data structures
-- Explain the time-complexity of search for a particular data structure
+- Define "algorithm"
+- Identify what Big-O time-complexity measures
+- Give an example of a divide-and-conquer algorithm
+- Predict the time-complexity of a given algorithm
+- Describe a few basic data structures by listing three traits of each
+- Identify the time-complexity of search for a particular data structure
 
 ## Front End Track
 
 ### Digital Product Design
 
-- Use pure CSS transitions and animations in place of Javascript
-- Explain what "keyframes" and "tweening" are and how they relate to CSS
-- Implement Bootstrap on a webpage
+- Apply basic principles of design to a project
+- Embed fonts into a website
 - Incorporate fonts from a CDN
+- Distinguish between appropriate uses of different image types
+- Use pure CSS transitions and animations in place of Javascript
+- Explain what "keyframes", "easing", "tweening" are and how they relate to CSS
 
 ### jQuery Plugins
 

@@ -87,11 +87,13 @@ and a module to share functionality?
 
 ### Gems worth mentioning:
 
-- Rails
-- Sass
-- Jekyll
-- Pry
-- Figaro
+- [Rails](https://github.com/rails/rails)
+- [Sass](https://github.com/sass/sass)
+- [Jekyll](https://github.com/jekyll/jekyll)
+- [Pry](https://github.com/pry/pry)
+- [Figaro](https://github.com/laserlemon/figaro)
+
+http://guides.rubygems.org/make-your-own-gem/
 
 ### Anatomy of a Ruby Gem
 
@@ -130,8 +132,7 @@ be edited!
 
 ### We do: Create a ruby gem!
 
-Let’s build a simple ruby gem that tells us the weather
-given a zip code.
+Let’s build a simple ruby gem 
 
 1. Create a gemspec
 2. Build out the folder structure
@@ -150,7 +151,7 @@ functionality.
 Create a ruby gem that does something interesting!
 
 - Easy
-  - print hello to the console
+  - print the current time to the console
 - Medium
   - get information from a 3rd party public REST API (GitHub, Giphy, etc.)
 - Hard

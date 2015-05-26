@@ -1,14 +1,22 @@
 # Responsive Web Design
 
-- Use `@media` queries and `meta` tags to adjust layouts based on screen size
+- Create a webpage that incorporates both `@media` queries and `meta` tags to adjust layouts based on screen size
 - Distinguish between dimensions expressed as viewport units, pixels, percentages, and ems
 - Test a website in various browsers using cross-browser testing tools
-- Incorporate progressive enhancement into the development of a web application
-- Describe which CSS and Javascript properties are accepted by which browsers
+- Judge whether or not a product development plan incorporates progressive enhancement
+- Write a chart of which CSS and Javascript properties are accepted by which browsers
 
 ---
 
 ## Intro
+
+Once upon a time, everyone used desktop computers. Then along came mobile phones. Things that look great on a big desktop screen might look heinous on a tiny mobile screen. This gave birth to the art of responsive web design: making sites look great regardless of what you're using to look at them.
+
+We'll be looking at "red flags" to watch out for, and specific steps to take when creating your sites, to ensure audiences everywhere can see them the way you intended.
+
+By the end of this class, you should be able to...
+
+---
 
 - 10 minutes:
   - http://motherfuckingwebsite.com/
