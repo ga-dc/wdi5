@@ -3,15 +3,19 @@
 <head>
   <title>Art</title>
   <link rel='stylesheet' type='text/css' href='css/styles.css'>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.0/isotope.pkgd.js"></script>
 </head>
 <body>
   <div class='portfolio'>
     <h1>Jesse's Portfolio</h1>
     <ul class='filter-nav'>
-      <li><a href='#'>Dadaist</a></li>
-      <li><a href='#'>Geometric Abstract Art</a></li>
-      <li><a href='#'>Metaphysical Painting</a></li>
-      <li><a href='#'>Postminimalist</a></li>
+      <li><a href='#' data-filterby="*">Show All</a></li>
+      <li><a href='#' data-filterby=".dadaist">Dadaist</a></li>
+      <li><a href='#' data-filterby=".geometric-abstract-art">Geometric Abstract Art</a></li>
+      <li><a href='#' data-filterby=".metaphysical-painting">Metaphysical Painting</a></li>
+      <li><a href='#' data-filterby=".postminimalist">Postminimalist</a></li>
     </ul>
     <div class='paintings'>
       <div class='painting dadaist metaphysical-painting'>
@@ -46,9 +50,16 @@
         <ul>
           <li><a href='#'>Postminimalist</a></li>
           <li><a href='#'>Geometric Abstract Art</a></li>
-        </div>
+        </ul>
       </div>
     </div>
   </div>
+  
+  <script src="./javascript/isotope_setup.js"></script>
+  <script>
+    $(document).ready(function() {
+      initIsotope();
+    });
+  </script>
 </body>
 </html>
