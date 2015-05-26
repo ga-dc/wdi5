@@ -87,11 +87,11 @@ and a module to share functionality?
 
 ### Gems worth mentioning:
 
-- Rails
-- Sass
-- Jekyll
-- Pry
-- Figaro
+- [Rails](https://github.com/rails/rails)
+- [Sass](https://github.com/sass/sass)
+- [Jekyll](https://github.com/jekyll/jekyll)
+- [Pry](https://github.com/pry/pry)
+- [Figaro](https://github.com/laserlemon/figaro)
 
 ### Anatomy of a Ruby Gem
 
