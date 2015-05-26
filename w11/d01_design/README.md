@@ -7,7 +7,7 @@
 - Incorporate fonts from a CDN
 - Distinguish between appropriate uses of different image types
 - Use pure CSS transitions and animations in place of Javascript
-- Explain what "keyframes" and "tweening" are and how they relate to CSS
+- Explain what "keyframes", "easing", "tweening" are and how they relate to CSS
 
 ## Intro
 

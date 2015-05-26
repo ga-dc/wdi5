@@ -21,10 +21,12 @@ Note that both tracks will include the same Computer Science class.
 
 ### Digital Product Design
 
-- Use pure CSS transitions and animations in place of Javascript
-- Explain what "keyframes" and "tweening" are and how they relate to CSS
-- Implement Bootstrap on a webpage
+- Apply basic principles of design to a project
+- Embed fonts into a website
 - Incorporate fonts from a CDN
+- Distinguish between appropriate uses of different image types
+- Use pure CSS transitions and animations in place of Javascript
+- Explain what "keyframes", "easing", "tweening" are and how they relate to CSS
 
 ### jQuery Plugins
 
