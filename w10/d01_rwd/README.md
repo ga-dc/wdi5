@@ -10,6 +10,14 @@
 
 ## Intro
 
+Once upon a time, everyone used desktop computers. Then along came mobile phones. Things that look great on a big desktop screen might look heinous on a tiny mobile screen. This gave birth to the art of responsive web design: making sites look great regardless of what you're using to look at them.
+
+We'll be looking at "red flags" to watch out for, and specific steps to take when creating your sites, to ensure audiences everywhere can see them the way you intended.
+
+By the end of this class, you should be able to...
+
+---
+
 - 10 minutes:
   - http://motherfuckingwebsite.com/
   - http://bettermotherfuckingwebsite.com/
