@@ -4,12 +4,12 @@
 body{
   font-family:'Helvetica Neue';
 }
-.posts{
+.portfolio{
   max-width:40em;
   margin:auto;
 }
 
-.post{
+.painting{
   border:1px solid #eee;
   padding:1em;
   width:25%;
@@ -17,12 +17,12 @@ body{
   margin:0 1em 1em 0;
 }
 
-.post img{
+.painting img{
   display:block;
   width:100%;
 }
 .filter-nav{
-  margin:0; 
+  margin:0;
   padding:0;
   margin-bottom:2em;
 }
@@ -31,11 +31,11 @@ body{
   margin-right:1em;
 }
 
-.post ul{
+.painting ul{
   padding:0;
 }
 
-.post li{
+.painting li{
   color:#555;
   font-size:.8em;
   list-style:none;
