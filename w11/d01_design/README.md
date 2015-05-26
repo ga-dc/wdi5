@@ -3,9 +3,11 @@
 ## Learning Objectives
 
 - Apply basic principles of design to a project
+- Embed fonts into a website
+- Incorporate fonts from a CDN
+- Distinguish between appropriate uses of different image types
 - Use pure CSS transitions and animations in place of Javascript
 - Explain what "keyframes" and "tweening" are and how they relate to CSS
-- Incorporate fonts from a CDN
 
 ## Intro
 
@@ -105,4 +107,32 @@ div
   - Rename to .txt, look at code
   - It's code, not an image at all!
 
-## Animations and Transitions
+## Animations
+
+- animation-duration
+  - How long each animation should take
+- animation-iteration-count
+  - How many times it should repeat
+- animation-direction
+  - Should it repeat from the top, or go backwards and then forwards?
+- animation-timing-function
+  - "Easing"
+    - Determines the duration of "tweening" between "keyframes"
+      - "Keyframe"
+        - Sort of a "checkpoint" in the process of an animation where you specify how it should look
+      - "Tweening"
+        - The transitions between keyframes
+
+- Keyframes
+  - Simplest: `from` and `to`
+  - More complicated: define the different percentages of progress
+
+#### Animate the cat!
+
+## Transitions
+
+- Just specify the properties you want to change on a particular event
+
+#### Add transitions to the cat
+
+When it's hovered over, it should do backflips.
