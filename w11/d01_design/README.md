@@ -127,12 +127,25 @@ div
   - Simplest: `from` and `to`
   - More complicated: define the different percentages of progress
 
+- You can't animate everything
+  - Only things that can be incremented
+
 #### Animate the cat!
 
 ## Transitions
 
 - Just specify the properties you want to change on a particular event
 
+## Transform
+
+- scale
+- translate
+  - Move, basically
+- skew
+- perspective
+- rotate
+
 #### Add transitions to the cat
 
 When it's hovered over, it should do backflips.
+
