@@ -10,6 +10,13 @@ Note that both tracks will include the same Computer Science class.
 
 ### Computer Science
 
+- Explain what Big-O time-complexity measures
+- Explain what an algorithm is
+- Analyze an algorithm for its time-complexity
+- Explain what a divide and conquer algorithm is
+- Describe a few basic data structures
+- Explain the time-complexity of search for a particular data structure
+
 ## Front End Track
 
 ### Digital Product Design
@@ -58,6 +65,6 @@ Note that both tracks will include the same Computer Science class.
 ### Deployment without Heroku
 
 * Launch a server ('droplet') on Digital Ocean
-* Explain the difference between a web and application server, and how they work
+* Explain the difference between a web and applicaiton server, and how they work
   together
 * Use linux commands to install ruby, rubygems, nginx, and passenger
