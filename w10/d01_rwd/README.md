@@ -1,10 +1,10 @@
 # Responsive Web Design
 
-- Use `@media` queries and `meta` tags to adjust layouts based on screen size
+- Create a webpage that incorporates both `@media` queries and `meta` tags to adjust layouts based on screen size
 - Distinguish between dimensions expressed as viewport units, pixels, percentages, and ems
 - Test a website in various browsers using cross-browser testing tools
-- Incorporate progressive enhancement into the development of a web application
-- Describe which CSS and Javascript properties are accepted by which browsers
+- Judge whether or not a product development plan incorporates progressive enhancement
+- Write a chart of which CSS and Javascript properties are accepted by which browsers
 
 ---
 
