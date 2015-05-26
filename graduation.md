@@ -15,7 +15,9 @@
 #### Our slightly-revised version:
 
 - Complete at least 80% of assigned homework. [Check your completeness here.](https://wdidc5-hw.herokuapp.com/)
-- Earn no more than one "Does not meet expectations" on Project 4.
+- Project 4:
+  - For students working individually: Earn no more than one "Does not meet expectations" on Project 4.
+  - For students working in pairs: Earn **no** "Does not meet expectations", and at least one "Exceeds expectations".
 
 If all of these requirements are met the student will graduate, unless otherwise discussed.
 
