@@ -74,6 +74,11 @@ Dog.new.swim
 Cat.new.swim
 ```
 
+## You do: think pair share
+
+Can you think of an example hierarchical relationship
+and a module to share functionality?
+
 ## Break
 
 ## Ruby Gems
