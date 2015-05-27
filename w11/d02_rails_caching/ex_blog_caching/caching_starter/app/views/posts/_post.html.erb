@@ -1,0 +1,18 @@
+<%= div_for post do %>
+  <h2><%= link_to post.title, post %></h2>
+
+  <div class="info">
+      by <%= post.author_name %> <%= time_ago_in_words(post.created_at) %> ago
+  </div>
+
+  <div class="body">
+    <%= simple_format(post.content) %>
+  </div>
+
+  <div class="comments">
+    <% post.comments.each do |current_comment|  %>
+      <%= render current_comment %>
+    <% end  %>
+  </div>
+
+<% end %>

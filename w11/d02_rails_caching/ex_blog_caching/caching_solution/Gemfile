@@ -1,0 +1,23 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.2.0'
+gem 'pg'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder'
+gem 'sdoc',          group: :doc
+gem 'spring',        group: :development
+gem 'faker'
+
+
+# Don't log CSS/JS file requests to log file
+gem 'quiet_assets'
+
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'rack-mini-profiler'
+end
