@@ -1,5 +1,7 @@
 # WDI Portfolio Standup
 
+##When: Thursday, May 28th 1:30-4:30pm##
+
 The Portfolio Standup is an opportunity for you to get first hand experience sharing your portfolio for the first time and learning from industry mentors. You should push to discover what hiring managers are looking for in candidates' portfolios. 
 
 You are **not** expected to have completed portfolio pieces. Your reviewer knows that you have not graduated and your portfolio is in draft form. This is an opportunity for you to improve your portfolio and prepare for your job search after the class ends.
