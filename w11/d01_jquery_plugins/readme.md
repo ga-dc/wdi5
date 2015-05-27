@@ -68,3 +68,8 @@ w11/d02_diy_plugin/
 ## Your Own Plugin
 
 w11/d03_gif_of_the_day/
+
+## Screencasts
+
+- 1 of 2: https://youtu.be/RamVN6mwlkQ
+- 2 of 2: https://youtu.be/i41txYNeN2Y
