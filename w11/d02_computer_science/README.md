@@ -14,11 +14,14 @@ Learning Objectives
 Introduction
 ------------
 
-- What's this lesson about? High-level summary. Intro to jargon. Interviews!
-- What's this not about? Efficient programming, language design, optimization
+What does computer science have to do with modern web development? Not much, on the surface. As application developers, we can do our job well by following best practices, guided by our experience. There will rarely be a time when you are interested in the time-complexity of a method you write. Complexity and data structures are something **language** designers worry about, not developers, right?
+
+Well, no. While it is true that we don't usually care much about optimization, there are a few reasons why developers should care a bit about classic topics in introductory computer science (CS). First, classic problems allow us to practice our problem solving skills; in fact, most of our lesson today can be completed without coding. Second, being familiar with the tradeoffs inherent in choosing an algorithm or a data structure have direct parallels in choices you make writing your application code. Lastly, ome of your colleagues will have CS degrees, and being able to understand the jargon and figures of speech they use will help you communicate with them. Perhaps most importantly, these colleagues will probably have a say in hiring you! Nearly every technical interview touches on these topics.
 
 Algorithms
 ----------
+
+> algorithm (n.) - a process or set of rules to be followed
 
 - Strategy
 - Steps for problem solving
