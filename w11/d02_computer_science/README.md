@@ -38,6 +38,8 @@ If Robin needed to make sandwiches for all of us, how would he do that? What's t
 
 **Exercise:** Take a few minutes to describe your morning algorithm... uh, routine. Share it with a neighbor. How many steps are there? How do you save time if you're in a rush?
 
+**Exercise:** I have a deck of unsorted playing cards. Describe in English an algorithm for sorting them. How would this algorithm change if my goal were not only to sort the deck, but to kill time while doing it?
+
 A well-known problem in computer science is sorting an array. There are many strategies (read: algorithms) for accomplishing this. Here is an abbreviated list:
 
 - Bubble sort
@@ -48,6 +50,8 @@ A well-known problem in computer science is sorting an array. There are many str
 This illustrates something important about algorithms: you nearly always have a choice. There is no "one way" to solve a problem, no "right" way. Different algorithms are better in different contexts, or with different constraints. It's up to you to consider the options and pick the one that best meets your needs.
 
 **Exercise:** Work with a partner to read the [pseudocode](http://rosettacode.org/wiki/Sorting_algorithms/Quicksort) and [ruby](http://rosettacode.org/wiki/Sorting_algorithms/Quicksort#Ruby) implementations of quick sort. One of you will be asked to explain quick sort in your own words.
+
+**Exercise:** Visualize quick sort with six volunteers holding number cards.
 
 Big-O (Asymptotic Analysis)
 ---------------------------
@@ -92,13 +96,15 @@ Here's a party trick that is sure to make you popular. Bet someone you can state
 > ...
 > 10. Guess "10". You win!
 
-The algorithm that gets you there in three guess is called "divide and conquer". It goes like this:
+The algorithm that gets you there in three guess is called "binary search". It goes like this:
 
 > 1. Divide the range in half. Guess the number in the middle. If you win, great!
 > 2. If not, the answer is either in the upper half-range or lower half-range.
 > 3. Divide the upper or lower half-range in half, and guess the middle. Repeat until done.
 
-It's easiest to see in a tree diagram.
+It's easiest to see in a tree diagram. Can you see the binary structure of the tree?
+
+**Question:** Explain why this algorithm is an example of divide-and-conquer in your own words.
 
 **Exercise:** Determine the time-complexity of the divide-and-conquer number guessing algorithm. Guessing and checking is OK! Work with a partner to try the algorithm out for numbers between one and ten, as well as numbers between one and one-hundred.
 
