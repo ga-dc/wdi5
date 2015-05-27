@@ -36,7 +36,7 @@ Algorithm is a fancy word for recipe. When we have a problem, we take a series o
 
 If Robin needed to make sandwiches for all of us, how would he do that? What's the "easy" or naïve way to obtain many sandwiches? What is a more effiecent way?
 
-Exercise: Take a few minutes to describe your morning algorithm... uh, routine. Share it with a neighbor. How many steps are there? How do you save time if you're in a rush?
+**Exercise:** Take a few minutes to describe your morning algorithm... uh, routine. Share it with a neighbor. How many steps are there? How do you save time if you're in a rush?
 
 A well-known problem in computer science is sorting an array. There are many strategies (read: algorithms) for accomplishing this. Here is an abbreviated list:
 
@@ -47,7 +47,7 @@ A well-known problem in computer science is sorting an array. There are many str
 
 This illustrates something important about algorithms: you nearly always have a choice. There is no "one way" to solve a problem, no "right" way. Different algorithms are better in different contexts, or with different constraints. It's up to you to consider the options and pick the one that best meets your needs.
 
-Exercise: Work with a partner to read the [pseudocode](http://rosettacode.org/wiki/Sorting_algorithms/Quicksort) and [ruby](http://rosettacode.org/wiki/Sorting_algorithms/Quicksort#Ruby) implementations of quick sort. One of you will be asked to explain quick sort in your own words.
+**Exercise:** Work with a partner to read the [pseudocode](http://rosettacode.org/wiki/Sorting_algorithms/Quicksort) and [ruby](http://rosettacode.org/wiki/Sorting_algorithms/Quicksort#Ruby) implementations of quick sort. One of you will be asked to explain quick sort in your own words.
 
 Big-O (Asymptotic Analysis)
 ---------------------------
@@ -75,7 +75,7 @@ This procedure prints two lines to the screen on each iteration, for a total of 
 
 Another way of saying we care about the "family" of scaling functions is to say we care about the shape of the scaling function for an alogithm. In both of the previous examples, graphing input (\\(n\\)) against completion time yields a straight line, hence we say that the procedures scale linearly.
 
-Exercise: Study the [Big-O table](http://www.daveperrett.com/articles/2010/12/07/comp-sci-101-big-o-notation/) to become familiar with these scaling functions, and compare the table to the [running time graph](http://science.slc.edu/~jmarshall/courses/2002/spring/cs50/BigO/).
+**Exercise:** Study the [Big-O table](http://www.daveperrett.com/articles/2010/12/07/comp-sci-101-big-o-notation/) to become familiar with these scaling functions, and compare the table to the [running time graph](http://science.slc.edu/~jmarshall/courses/2002/spring/cs50/BigO/).
 
 How can you predict the complexity of a given algorithm? We can look for certain features to help us characterize it.
 
@@ -100,7 +100,7 @@ The algorithm that gets you there in three guess is called "divide and conquer".
 
 It's easiest to see in a tree diagram.
 
-Exercise: Determine the time-complexity of the divide-and-conquer number guessing algorithm. Guessing and checking is OK! Work with a partner to try the algorithm out for numbers between one and ten, as well as numbers between one and one-hundred.
+**Exercise:** Determine the time-complexity of the divide-and-conquer number guessing algorithm. Guessing and checking is OK! Work with a partner to try the algorithm out for numbers between one and ten, as well as numbers between one and one-hundred.
 
 Data Structures
 ---------------
