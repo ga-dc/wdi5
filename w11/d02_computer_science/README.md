@@ -105,13 +105,46 @@ Exercise: Determine the time-complexity of the divide-and-conquer number guessin
 Data Structures
 ---------------
 
-- Lists (Primitive Arrays, Stacks, Queues)
-- Linked Lists (bonus doubly-linked list)
-- Associative Array (Hash)
-- Tree
-- Graph
-- Research Activity
-- Characterize search method for each (bonus: other methods like insertion, deletion)
+For learning about data structures, we'll break into groups, each assigned a particular data structure and set of guiding questions. After group research is complete, we'll compile our notes into a single study guide. Accompanying diagrams may be made on the whiteboard.
+
+### Lists (Primitive Arrays, Stacks, Queues)
+
+1. What is a list, also known as a primitive array?
+2. What is the time-complexity of search for a primitive array?
+3. What differentiates a queue from a stack?
+4. **Bonus:** What is the time-complexity of insertion? Deletion?
+
+### Linked Lists
+
+1. What is a linked list? How is it different from a primitive array?
+2. What is the time-complexity to search for a linked list?
+3. Does it matter whether the list is sorted or not? Why?
+4. **Bonus:** What is a doubly linked list?
+5. **Bonus:** What is the time-complexity of insertion? Deletion?
+
+### Associative Array
+
+1. What is an associative array? When would you use one?
+2. What is the time-complexity to search an associative array?
+3. What is a hash function?
+4. What is a hash collision?
+5. **Bonus:** What is the time-complexity of insertion? Deletion?
+
+### Tree
+
+1. What is a tree? When would you use one?
+2. What is a binary search tree?
+3. What is the time-complexity to search a binary tree?
+4. What are some applications of recursion to trees?
+5. **Bonus:** What is the time-complexity of insertion? Deletion?
+
+### Graph
+
+1. What is a graph? When would you use one?
+2. What is depth-first search? Breadth-first search?
+3. What is the time-complexity to search a graph?
+4. How is a graph different from a tree?
+5. **Bonus:** What is the time-complexity of insertion? Deletion?
 
 Additional Resources
 --------------------
