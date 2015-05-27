@@ -15,6 +15,6 @@ To run python programs, create a file with a `.py` extension, and run this progr
 ## Bonus
 
 - Complete this challenge without using loops 
-- Complete this challenge without repeating the words "Fizz" or "Buzz"
+- Complete this challenge without repeating the words "Fizz" or "Buzz" in your code
 - Complete this challenge using a class and object instance
 - Answer: What is the difference between Python 2 and Python 3?
