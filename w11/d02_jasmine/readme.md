@@ -1,12 +1,10 @@
 ## Objectives
 
 - Describe Jasmine
-- Setup Jasmine via CDN
 - Setup Jasmine for a Node Project
 - Setup Jasmine for a Rails project
 - Compare/Contrast Jasmine & RSpec
 - Explain how `this` is used within Jasmine
-- Explain when to use Jasmine Spies
 - Create a custom matcher
 
 ---
@@ -41,6 +39,27 @@ It's BDD, what can you expect?
 
 ---
 
+## Why?
+
+- trust
+- small steps
+- live documentation
+
+Note:
+
+You might be able to trust the docs or that tutorial.
+Code and specs must be in sync (as long as they pass)
+
+---
+
+# It's BDD
+
+- Setup/Teardown
+- Specs: *describe, it*
+- Expectations: *matchers*
+
+---
+
 ## Expect the *thing we are testing* to Match our Expectation
 ## Expect the *Unit Under Test* to Match our Expectation
 
@@ -50,12 +69,12 @@ It's BDD, what can you expect?
 
 rspec
 ~~~~ rspec
-expect(product).to be(6)
+expect(sum(2,3)).to be(5)
 ~~~~
 
 jasmine
 ~~~~ javascript
-expect(product).toBe(6);
+expect(sum(2,3)).toBe(5);
 ~~~~
 
 ---
@@ -66,7 +85,7 @@ expect(product).toBe(6);
     - `$ npm install jasmine-node -g`
 
 2. Create new play dir (in your class_work area):
-    - `jasmine_node/`
+    - `jasmine_node_intro/`
 
 Note:
 
@@ -171,6 +190,18 @@ calculator.multiply(2, 3);
 exports.multiply = function (multiplier1, multiplier2) {
 };
 ~~~~
+
+Note:
+
+// equivalent to:
+module.exports = {
+  multiply: function (multiplier1, multiplier2) {
+    return 6;
+  };
+}
+
+// var exports = module.exports = {};
+
 
 ---
 
