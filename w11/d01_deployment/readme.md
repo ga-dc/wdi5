@@ -6,6 +6,8 @@
 * Explain the difference between a web (HTTP) and applicaiton server, and how they work
   together
 * Use linux commands to install ruby, rubygems, nginx, and passenger phusion
+* Use capistrano to deploy code for an application to a production server
+* Distinguish between the various RAILS_ENV settings (development, production, test)
 
 ## Production Web Server Architecture
 

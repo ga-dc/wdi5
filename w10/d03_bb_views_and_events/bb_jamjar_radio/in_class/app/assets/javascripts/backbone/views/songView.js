@@ -4,7 +4,7 @@ var SongView = Backbone.View.extend({
 
   // for DOM EVENTS
   events: {
-
+    'click': 'updatePlayer'
   },
 
   initialize: function() {
@@ -16,6 +16,10 @@ var SongView = Backbone.View.extend({
   render: function() {
     var renderedHTML = HandlebarsTemplates['songs/show'](this.model.toJSON());
     this.$el.html(renderedHTML);
+  },
+
+  updatePlayer: function() {
+    player.setSong(this.model);
   }
 
 });

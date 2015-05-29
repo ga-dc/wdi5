@@ -5,10 +5,10 @@
 * Define the role of a view in a BB app
 * Describe the purpose of an 'el' in a BB View
   * Differentiate b/t an assigned 'el' and a constructed 'el'
-* Use a Backbone view to render a model to the page
-* Use Handlebars templates to simplify rendering on the front-end
-* Set up model events on Backbone views
-* Set up user events on Backbone views
+* Render a model to the page using a BB view.
+* Simplify rendering a view using Handlebars templates
+* Add an events property to a view to respond to DOM events.
+* Setup listeners using 'listenTo' for model events on a BB view.
 
 ## Lesson Outline
 
