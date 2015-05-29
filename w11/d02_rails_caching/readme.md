@@ -195,8 +195,8 @@ Most commonly, we use it to cache a view partial for a model object.
 
 
 Reading:
-[DHH's Intro to key-based cache expiration](https://signalvnoise.com/posts/3113-how-key-based-cache-expiration-works)
-[RailsGuide on Caching](http://guides.rubyonrails.org/caching_with_rails.html)
+* [DHH's Intro to key-based cache expiration](https://signalvnoise.com/posts/3113-how-key-based-cache-expiration-works)
+* [RailsGuide on Caching](http://guides.rubyonrails.org/caching_with_rails.html)
 
 #### Exercise: Use Caching to Speed Up App (30 minutes)
 
