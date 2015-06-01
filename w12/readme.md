@@ -26,4 +26,8 @@ We'll briefly cover the top few tricks and tips to make the most of Rails, such 
 * view helpers 
 * common gems to speed up development
 
+#### Tuesday
 
+##### Make a PHP Contact Form @ 11am - Robin
+
+PHP is the simplest way to add back-end logic to small sites. For an example, scroll to the bottom of http://www.magnetichtml.com.
