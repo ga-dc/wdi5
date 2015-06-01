@@ -23,6 +23,10 @@
     <%= f.label :author_name %><br>
     <%= f.text_field :author_name %>
   </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select options_for_select(Post::CATEGORIES) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

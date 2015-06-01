@@ -13,9 +13,7 @@
 
 
     <div class="comments">
-      <% post.comments.each do |current_comment|  %>
-        <%= render current_comment %>
-      <% end  %>
+      <%= render post.comments %>
     </div>
 
   <% end %>

@@ -32,6 +32,7 @@ renders one instance of a type of AR Model object. For an example, see the
 If you have an instance of a model object, e.g. `@post`: you can then do this:
 
 ```
+<%= render partial: "post", locals: {post: @post} %>
 <%= render @post >
 ```
 
@@ -140,8 +141,13 @@ end
 
 class Post < ActiveRecord::Base
   has_many :comments
-  scope :recent,    -> { where("created_at > ?", 1.week.ago) }
+  # SELECT * FROM posts WHERE created_at > "2015-05-25 10:55
+  scope :recent,    -> { where("created_at > ?", 1.week.ago)}
+  scope :within,    -> (date) { where("created_at > ?", date)}
+  # Post.within(2.days.ago)
+
   scope :published, -> { where(:published, true) }
+
 end
 ```
 
