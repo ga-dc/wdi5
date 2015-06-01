@@ -49,3 +49,31 @@ PHP should output the contents to a file AND return a success message in JSON.
 It doesn't really have any. You just download a library and put it in your root folder.
 
 Download PHPmailer: https://github.com/PHPMailer/PHPMailer 
+
+## Make the form!
+
+```
+require "PHPMailerAutoload.php";
+$mail = new PHPMailer;    
+$mail->isSMTP();
+$mail->Host = "something.website.come";
+$mail->SMTPAuth = true;
+$mail->Username = "hello@robertakarobin.com";
+$mail->Password = $_password;
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;    
+$mail->SetFrom($emailMe, $fromName);
+$mail->AddReplyTo($emailMe, $fromName);
+$mail->AddAddress($emailThem);
+$mail->AddCC($emailMe);
+$mail->WordWrap = 5000;
+$mail->isHTML(false);
+$mail->ContentType = "text/plain";
+$mail->Subject = $subject;
+$mail->Body = $body;
+if($mail->send()){
+  echo(json_encode(array("success" => true, "message" => "yay")));
+}else{
+  echo(json_encode(array("success" => false, "message" => "boo")));
+}
+```
