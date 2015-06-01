@@ -1,0 +1,24 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.2.0'
+gem 'pg'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder'
+gem 'sdoc',          group: :doc
+gem 'spring',        group: :development
+gem 'faker'
+
+
+group :development do
+  gem 'pry-rails'           # switch rails console to use pry instead of irb
+  gem 'better_errors'       # improved rails error pages
+  gem 'binding_of_caller'   # adds a REPL to better_errors pages
+  gem 'meta_request'        # required for the RailsPanel Chrome extension
+  gem 'rack-mini-profiler'  # include information on timing for each requests
+  gem 'quiet_assets'        # prevents requests for static assets busying your logs
+  gem 'awesome_print'       # format output on the console to be even nicer
+end

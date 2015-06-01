@@ -1,0 +1,2 @@
+namespace :boop do
+end
