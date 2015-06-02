@@ -77,3 +77,15 @@ if($mail->send()){
   echo(json_encode(array("success" => false, "message" => "boo")));
 }
 ```
+
+## Afterthoughts
+
+Oops. Installing PHP is tricky. Shouldn't just use built-in Apache. Download XAMPP:
+
+https://www.apachefriends.org
+
+```
+cd /Applications/XAMPP/xamppfiles/htdocs
+```
+
+Set permissions for `htdocs` folder.
