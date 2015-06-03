@@ -20,4 +20,4 @@ var Cookie = function Cookie () {
 
 var thinMint = Cookie();
 console.log(typeof thinMint); //=> "object"
-console.log(window.flavor); //=> "Mint"
+console.log(thinMint.flavor); //=> "Mint"
