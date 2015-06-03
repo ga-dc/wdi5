@@ -25,3 +25,5 @@ console.log(batman.name, batman.power());
 var xmen = new Mutant();
 console.log(xmen.power());
 
+var cyclops = new Mutant("Cyclops", "lazors");
+console.log(cyclops.name, cyclops.power());

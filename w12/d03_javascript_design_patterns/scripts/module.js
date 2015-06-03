@@ -1,5 +1,5 @@
-(function (window) {
-    module = {};
+(function () {
+    var module = {};
 
     module.ready = function ready () {
         module.$body = $('body');
@@ -10,7 +10,7 @@
     };
 
     window.MyModule = module;
-})(window);
+})();
 
 $(document).ready(MyModule.ready);
 
