@@ -13,6 +13,8 @@ Learning Objectives
 Additional Reading
 ------------------
 
+* [Javascript - Splitting Modules Across Files](https://github.com/ga-wdi-boston/wdi_9_js_demo_splitting_modules)
+* [Javascript Namespacing & Modules](https://github.com/ga-wdi-boston/wdi_6_js_demo_namespacing_modules)
 * [Simple JavaScript Inheritance](http://ejohn.org/blog/simple-javascript-inheritance/)
 * [A Base Class for JavaScript Inheritance](http://dean.edwards.name/weblog/2006/03/base/)
 * [Extend.js](http://extendjs.org)
