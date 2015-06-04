@@ -3,9 +3,22 @@ require 'rubygems'
 
 # gem install contest or github.com/citrusbyte/contest
 require "contest"
-$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../lib")
 
-require "text_edit_naive"
+version = ""
+loop do
+  puts "which version would you like to test?"
+  puts "(n)aive"
+  puts "(d)ynamic"
+  version = gets.chomp.downcase
+  break if ["d", "n"].include?(version)
+end
+
+case version
+when 'd'
+  require_relative "../lib/text_edit_dynamic"
+when 'n'
+  require_relative "../lib/text_edit_naive"
+end
 
 class DocumentTest < Test::Unit::TestCase
 

@@ -46,7 +46,7 @@ module TextEditor
       return if @reverted.empty?
       current_reverted = @reverted.pop
       snapshot(false, current_reverted[:undo], current_reverted[:redo] )
-      contents.send(current_reverted[:redo][0], *current_reverted[:redo][1])
+      contents.send(current_reverted[:redo][:name], *current_reverted[:redo][:args])
     end
 
   end

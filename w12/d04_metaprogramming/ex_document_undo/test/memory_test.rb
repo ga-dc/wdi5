@@ -1,4 +1,19 @@
-require_relative "lib/text_edit_dynamic"
+version = ""
+loop do
+  puts "which version would you like to test?"
+  puts "(n)aive"
+  puts "(d)ynamic"
+  version = gets.chomp.downcase
+  break if ["d", "n"].include?(version)
+end
+
+case version
+when 'd'
+  require_relative "../lib/text_edit_dynamic"
+when 'n'
+  require_relative "../lib/text_edit_naive"
+end
+
 
 start_time = Time.now
 
