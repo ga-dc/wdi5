@@ -2,8 +2,7 @@
 
 ## Learning Objectives
 
-* Understand and explain how to be a great developer
-
+* List techniques to grow as a developer
 
 ## Outline
 
@@ -44,15 +43,26 @@
 * Focus on quality.
 
 
-Some Recommendations:
+### Select Recommendations:
 
-* Practical Object-Oriented Design in Ruby (Sandi Metz)
-* Confident Ruby (by Avdi Grimm)
-* Agile Web Development with Rails (reference)
-* RailsCasts
-* RubyTapas
-* RubyWeekly
-* RubyRogues
-* SuperheroJS
-* EloquentJS
-*
+### Books
+
+* [Practical Object-Oriented Design in Ruby by Sandi Metz](http://www.poodr.com)
+* [Confident Ruby by Avdi Grimm](http://www.confidentruby.com)
+* [Agile Web Development with Rails (reference)](https://pragprog.com/book/rails4/agile-web-development-with-rails-4)
+* [EloquentJS by Marijn Haverbeke](http://eloquentjavascript.net)
+
+### Podcasts / VideoCasts
+
+* [RailsCasts](http://railscasts.com)
+* [RubyTapas](http://www.rubytapas.com)
+* [RubyRogues](http://devchat.tv/ruby-rogues/)
+* [Javascript Jabber](http://devchat.tv/js-jabber)
+* [CodeNewbies](http://www.codenewbie.org)
+
+### Other
+* [Ruby Weekly](http://rubyweekly.com) weekly ruby news emails
+* [Javascript Weekly](http://javascriptweekly.com) weekly JS news emails
+
+### Sites
+* [SuperheroJS](http://superherojs.com)
