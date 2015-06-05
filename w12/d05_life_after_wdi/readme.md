@@ -59,10 +59,16 @@
 * [RubyRogues](http://devchat.tv/ruby-rogues/)
 * [Javascript Jabber](http://devchat.tv/js-jabber)
 * [CodeNewbies](http://www.codenewbie.org)
+* [Confreaks - Videos from Dev Conferences](http://confreaks.tv)
+
+### Challlenges
+
+* [CodeKata](http://codekata.com)
+* [PuzzleNode](http://www.puzzlenode.com)
+* [CodeWars](http://www.codewars.com)
 
 ### Other
+
 * [Ruby Weekly](http://rubyweekly.com) weekly ruby news emails
 * [Javascript Weekly](http://javascriptweekly.com) weekly JS news emails
-
-### Sites
-* [SuperheroJS](http://superherojs.com)
+* [SuperheroJS](http://superherojs.com) - collection of awesome JS resources
